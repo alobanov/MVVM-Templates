@@ -19,7 +19,7 @@
  */
 @interface ProfileModuleAssembly ()
 
-@property (weak, nonatomic, readonly) ProfileModuleViewController *controller;
+@property (str, nonatomic, readonly) ProfileModuleViewController *controller;
 @property (strong, nonatomic, readonly) ProfileModuleRouter *router;
 @property (strong, nonatomic, readonly) ProfileModulePresenter *presenter;
 

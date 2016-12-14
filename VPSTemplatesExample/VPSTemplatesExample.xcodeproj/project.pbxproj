@@ -8,13 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		0A0FB03BACF470689B54E80C /* Pods_VPSTemplatesExample.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C269B39184E28C4ACD72E0D5 /* Pods_VPSTemplatesExample.framework */; };
-		14B1F03C69C4E8340005D7E1 /* ProfileModulePresenter.m in Sources */ = {isa = PBXBuildFile; fileRef = 29FB46043C9DBF99EF1FA1D7 /* ProfileModulePresenter.m */; };
-		4B73D8459A29DA9967C7DB10 /* ProfileModuleViewControllerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E85BC27A13C0C5CE10126EDB /* ProfileModuleViewControllerTests.m */; };
-		5007370B9E2F2CDD8EC9398D /* ProfileModuleAssembly.m in Sources */ = {isa = PBXBuildFile; fileRef = 34F23CA28572CE909E58F7DA /* ProfileModuleAssembly.m */; };
-		8C39378034E9408D36C85FA4 /* ProfileModuleRouterTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B741E4A06535578EDBE6106 /* ProfileModuleRouterTests.m */; };
-		90B46BB4830FB6A7A3B0EE4B /* ProfileModuleAssemblyTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CEFA50309A69B8EB7C732A0 /* ProfileModuleAssemblyTests.m */; };
+		31C28EC6F8500C6876DD1A89 /* ProfileModuleRouterTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F2F1B787DC8A6D6C929C0EF6 /* ProfileModuleRouterTests.m */; };
+		6961F095352B908050108AC9 /* ProfileModuleRouter.m in Sources */ = {isa = PBXBuildFile; fileRef = FA828B72FBD8267DCA2D1D67 /* ProfileModuleRouter.m */; };
 		93032917150E5009619E8639 /* Pods_VPSTemplatesExampleTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BF125F2A59C63DFB846327A /* Pods_VPSTemplatesExampleTests.framework */; };
-		BCF6D54731C47085F808679F /* ProfileModuleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 106F04AC7C4E11BC04A4D015 /* ProfileModuleViewController.m */; };
+		950A95EC55CCEB0EB4CB0680 /* ProfileModuleViewControllerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DA9ED8C47C0E452F0F8FA6F /* ProfileModuleViewControllerTests.m */; };
+		A67AC5A4BFB05183EB885C8A /* ProfileModuleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E8133340C7948D6A1FEEB620 /* ProfileModuleViewController.m */; };
+		A7739FF6CF370AF79108726E /* ProfileModulePresenterTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C32F2BB11C409C5E5EB0E661 /* ProfileModulePresenterTests.m */; };
+		D3C08A2CD49E2C44ACF6E283 /* ProfileModuleAssembly.m in Sources */ = {isa = PBXBuildFile; fileRef = B42C10D3A10E72748DFABF66 /* ProfileModuleAssembly.m */; };
+		D9666B21ED92A1EFA4E9ECFC /* ProfileModulePresenter.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C43295DCB90ED1D8E70852E /* ProfileModulePresenter.m */; };
 		E8B681961E01685300C0175B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E8B681951E01685300C0175B /* main.m */; };
 		E8B681991E01685300C0175B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E8B681981E01685300C0175B /* AppDelegate.m */; };
 		E8B6819C1E01685300C0175B /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E8B6819B1E01685300C0175B /* ViewController.m */; };
@@ -22,8 +23,7 @@
 		E8B681A11E01685300C0175B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E8B681A01E01685300C0175B /* Assets.xcassets */; };
 		E8B681A41E01685300C0175B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E8B681A21E01685300C0175B /* LaunchScreen.storyboard */; };
 		E8B681AF1E01685300C0175B /* VPSTemplatesExampleTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E8B681AE1E01685300C0175B /* VPSTemplatesExampleTests.m */; };
-		ECD1BB60027653E135A2329C /* ProfileModulePresenterTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 755AF53117FAB7BE94E03363 /* ProfileModulePresenterTests.m */; };
-		FBCF6B4039DA86520E984169 /* ProfileModuleRouter.m in Sources */ = {isa = PBXBuildFile; fileRef = E2AC9FD8D450E33D2AD32964 /* ProfileModuleRouter.m */; };
+		EC38F4A663F5C98C6688B9B8 /* ProfileModuleAssemblyTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0657B2712EC53945CB2DF426 /* ProfileModuleAssemblyTests.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,29 +37,26 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		00DD6C14ED4F1BAAEF3503C3 /* ProfileModuleAssembly.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = ProfileModuleAssembly.h; sourceTree = "<group>"; };
 		03E45EA89211E38B9517EB39 /* Pods-VPSTemplatesExampleTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VPSTemplatesExampleTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-VPSTemplatesExampleTests/Pods-VPSTemplatesExampleTests.release.xcconfig"; sourceTree = "<group>"; };
-		07ABCFE5D7558192FBD38E57 /* ProfileModuleAssembly.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = ProfileModuleAssembly.h; sourceTree = "<group>"; };
-		0A98BFF16D073E54B521278A /* ProfileModuleViewOutput.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = ProfileModuleViewOutput.h; sourceTree = "<group>"; };
-		0B741E4A06535578EDBE6106 /* ProfileModuleRouterTests.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = ProfileModuleRouterTests.m; sourceTree = "<group>"; };
-		106F04AC7C4E11BC04A4D015 /* ProfileModuleViewController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = ProfileModuleViewController.m; sourceTree = "<group>"; };
-		267DF242EE6C99006677FB13 /* ProfileModuleAssembly_Testable.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = ProfileModuleAssembly_Testable.h; sourceTree = "<group>"; };
-		29FB46043C9DBF99EF1FA1D7 /* ProfileModulePresenter.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = ProfileModulePresenter.m; sourceTree = "<group>"; };
-		34F23CA28572CE909E58F7DA /* ProfileModuleAssembly.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = ProfileModuleAssembly.m; sourceTree = "<group>"; };
-		5FBACC932432708DD559001E /* ProfileModuleViewController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = ProfileModuleViewController.h; sourceTree = "<group>"; };
+		0657B2712EC53945CB2DF426 /* ProfileModuleAssemblyTests.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = ProfileModuleAssemblyTests.m; sourceTree = "<group>"; };
+		0AB66B82C2A9FFB83697C80F /* ProfileModuleViewOutput.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = ProfileModuleViewOutput.h; sourceTree = "<group>"; };
+		0C43295DCB90ED1D8E70852E /* ProfileModulePresenter.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = ProfileModulePresenter.m; sourceTree = "<group>"; };
+		294079870DBBD6C81358F322 /* ProfileModuleViewController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = ProfileModuleViewController.h; sourceTree = "<group>"; };
+		469DEB453287D38982179759 /* ProfileModulePresenter.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = ProfileModulePresenter.h; sourceTree = "<group>"; };
+		6AFDCE3564AA263DCE1484FA /* ProfileModuleRouter.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = ProfileModuleRouter.h; sourceTree = "<group>"; };
 		6BF125F2A59C63DFB846327A /* Pods_VPSTemplatesExampleTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VPSTemplatesExampleTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6DA9ED8C47C0E452F0F8FA6F /* ProfileModuleViewControllerTests.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = ProfileModuleViewControllerTests.m; sourceTree = "<group>"; };
+		706591F45AEF4036AA25D97D /* ProfileModuleModuleInput.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = ProfileModuleModuleInput.h; sourceTree = "<group>"; };
 		713504C60A45DFC9163ACFD1 /* Pods-VPSTemplatesExample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VPSTemplatesExample.debug.xcconfig"; path = "Pods/Target Support Files/Pods-VPSTemplatesExample/Pods-VPSTemplatesExample.debug.xcconfig"; sourceTree = "<group>"; };
-		755AF53117FAB7BE94E03363 /* ProfileModulePresenterTests.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = ProfileModulePresenterTests.m; sourceTree = "<group>"; };
-		7CEFA50309A69B8EB7C732A0 /* ProfileModuleAssemblyTests.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = ProfileModuleAssemblyTests.m; sourceTree = "<group>"; };
-		809842FCB34FEDE4595AADC6 /* ProfileModulePresenter.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = ProfileModulePresenter.h; sourceTree = "<group>"; };
-		82200EF6EE413D927D69616F /* ProfileModuleRouter.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = ProfileModuleRouter.h; sourceTree = "<group>"; };
-		974D0CB44D1755278B2B1E1E /* ProfileModuleRouterInput.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = ProfileModuleRouterInput.h; sourceTree = "<group>"; };
-		BB384ED35F0C0705D4204007 /* ProfileModuleViewInput.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = ProfileModuleViewInput.h; sourceTree = "<group>"; };
+		71EB4299BDA6D8A70BC36EE1 /* ProfileModuleRouterInput.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = ProfileModuleRouterInput.h; sourceTree = "<group>"; };
+		A29DCB37DE3AD87C4AB3342C /* ProfileModuleAssembly_Testable.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = ProfileModuleAssembly_Testable.h; sourceTree = "<group>"; };
+		B42C10D3A10E72748DFABF66 /* ProfileModuleAssembly.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = ProfileModuleAssembly.m; sourceTree = "<group>"; };
 		BC35B479C777A700941B9171 /* Pods-VPSTemplatesExampleTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VPSTemplatesExampleTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-VPSTemplatesExampleTests/Pods-VPSTemplatesExampleTests.debug.xcconfig"; sourceTree = "<group>"; };
-		BCDB7791777BF911C7937829 /* ProfileModuleModuleInput.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = ProfileModuleModuleInput.h; sourceTree = "<group>"; };
 		C269B39184E28C4ACD72E0D5 /* Pods_VPSTemplatesExample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VPSTemplatesExample.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C32F2BB11C409C5E5EB0E661 /* ProfileModulePresenterTests.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = ProfileModulePresenterTests.m; sourceTree = "<group>"; };
 		E0B2F621D1C5C0D9C11769D5 /* Pods-VPSTemplatesExample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VPSTemplatesExample.release.xcconfig"; path = "Pods/Target Support Files/Pods-VPSTemplatesExample/Pods-VPSTemplatesExample.release.xcconfig"; sourceTree = "<group>"; };
-		E2AC9FD8D450E33D2AD32964 /* ProfileModuleRouter.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = ProfileModuleRouter.m; sourceTree = "<group>"; };
-		E85BC27A13C0C5CE10126EDB /* ProfileModuleViewControllerTests.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = ProfileModuleViewControllerTests.m; sourceTree = "<group>"; };
+		E8133340C7948D6A1FEEB620 /* ProfileModuleViewController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = ProfileModuleViewController.m; sourceTree = "<group>"; };
 		E8B681911E01685300C0175B /* VPSTemplatesExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VPSTemplatesExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E8B681951E01685300C0175B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		E8B681971E01685300C0175B /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -73,6 +70,9 @@
 		E8B681AA1E01685300C0175B /* VPSTemplatesExampleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VPSTemplatesExampleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E8B681AE1E01685300C0175B /* VPSTemplatesExampleTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VPSTemplatesExampleTests.m; sourceTree = "<group>"; };
 		E8B681B01E01685300C0175B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		ED34F998C7A4FA3D3D2C5EA7 /* ProfileModuleViewInput.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = ProfileModuleViewInput.h; sourceTree = "<group>"; };
+		F2F1B787DC8A6D6C929C0EF6 /* ProfileModuleRouterTests.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = ProfileModuleRouterTests.m; sourceTree = "<group>"; };
+		FA828B72FBD8267DCA2D1D67 /* ProfileModuleRouter.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = ProfileModuleRouter.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,14 +95,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		0D20AA7387FEBE394A41CB97 /* view */ = {
-			isa = PBXGroup;
-			children = (
-				E85BC27A13C0C5CE10126EDB /* ProfileModuleViewControllerTests.m */,
-			);
-			path = view;
-			sourceTree = "<group>";
-		};
 		16A9F8D76D5123FD48921D74 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -112,42 +104,50 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		3A4B9DEB048936C39700577B /* ProfileModule */ = {
+		185E00D208CC5B06E841ACC9 /* protocol */ = {
 			isa = PBXGroup;
 			children = (
-				F771060EDDD6627A9D88C33E /* assembly */,
-				0D20AA7387FEBE394A41CB97 /* view */,
-				DF11F5068DC31F200E6679B1 /* presenter */,
-				686E4DF106912388631C8B5D /* router */,
+				ED34F998C7A4FA3D3D2C5EA7 /* ProfileModuleViewInput.h */,
+				0AB66B82C2A9FFB83697C80F /* ProfileModuleViewOutput.h */,
 			);
-			path = ProfileModule;
+			path = protocol;
 			sourceTree = "<group>";
 		};
-		53770342C77C9DAEE73EA2B9 /* presenter */ = {
+		2625A8CF0E24C2CDB43DB738 /* assembly */ = {
 			isa = PBXGroup;
 			children = (
-				BCDB7791777BF911C7937829 /* ProfileModuleModuleInput.h */,
-				809842FCB34FEDE4595AADC6 /* ProfileModulePresenter.h */,
-				29FB46043C9DBF99EF1FA1D7 /* ProfileModulePresenter.m */,
+				00DD6C14ED4F1BAAEF3503C3 /* ProfileModuleAssembly.h */,
+				B42C10D3A10E72748DFABF66 /* ProfileModuleAssembly.m */,
+			);
+			path = assembly;
+			sourceTree = "<group>";
+		};
+		392E39E4D5970749E16D88BB /* presenter */ = {
+			isa = PBXGroup;
+			children = (
+				C32F2BB11C409C5E5EB0E661 /* ProfileModulePresenterTests.m */,
 			);
 			path = presenter;
 			sourceTree = "<group>";
 		};
-		686E4DF106912388631C8B5D /* router */ = {
+		3A4B9DEB048936C39700577B /* ProfileModule */ = {
 			isa = PBXGroup;
 			children = (
-				0B741E4A06535578EDBE6106 /* ProfileModuleRouterTests.m */,
+				F51E28BB86D1A4B01BBC5B76 /* assembly */,
+				BCBB19BE0D35A80C034CFE89 /* view */,
+				392E39E4D5970749E16D88BB /* presenter */,
+				B0AFE318A3855268418F8F59 /* router */,
 			);
-			path = router;
+			path = ProfileModule;
 			sourceTree = "<group>";
 		};
 		6CBC5DB64E2223D2815BCAD5 /* ProfileModule */ = {
 			isa = PBXGroup;
 			children = (
-				BACBEF4EC106CBC411A9CA26 /* assembly */,
-				A1FF4A7FE9A408586F08CA81 /* view */,
-				53770342C77C9DAEE73EA2B9 /* presenter */,
-				E3E11032431B674FC9F0C385 /* router */,
+				2625A8CF0E24C2CDB43DB738 /* assembly */,
+				D2A527311F5E26D334606CD4 /* view */,
+				EC872B0EB6973D0D5AA1DCE0 /* presenter */,
+				CE7BDA1DEC3A58351567AFD7 /* router */,
 			);
 			path = ProfileModule;
 			sourceTree = "<group>";
@@ -171,14 +171,12 @@
 			path = controllers;
 			sourceTree = "<group>";
 		};
-		A1FF4A7FE9A408586F08CA81 /* view */ = {
+		B0AFE318A3855268418F8F59 /* router */ = {
 			isa = PBXGroup;
 			children = (
-				E268930EFE15117FB01C005C /* protocol */,
-				5FBACC932432708DD559001E /* ProfileModuleViewController.h */,
-				106F04AC7C4E11BC04A4D015 /* ProfileModuleViewController.m */,
+				F2F1B787DC8A6D6C929C0EF6 /* ProfileModuleRouterTests.m */,
 			);
-			path = view;
+			path = router;
 			sourceTree = "<group>";
 		};
 		B8FBBD468532070FE974147D /* controllers */ = {
@@ -189,40 +187,32 @@
 			path = controllers;
 			sourceTree = "<group>";
 		};
-		BACBEF4EC106CBC411A9CA26 /* assembly */ = {
+		BCBB19BE0D35A80C034CFE89 /* view */ = {
 			isa = PBXGroup;
 			children = (
-				07ABCFE5D7558192FBD38E57 /* ProfileModuleAssembly.h */,
-				34F23CA28572CE909E58F7DA /* ProfileModuleAssembly.m */,
+				6DA9ED8C47C0E452F0F8FA6F /* ProfileModuleViewControllerTests.m */,
 			);
-			path = assembly;
+			path = view;
 			sourceTree = "<group>";
 		};
-		DF11F5068DC31F200E6679B1 /* presenter */ = {
+		CE7BDA1DEC3A58351567AFD7 /* router */ = {
 			isa = PBXGroup;
 			children = (
-				755AF53117FAB7BE94E03363 /* ProfileModulePresenterTests.m */,
-			);
-			path = presenter;
-			sourceTree = "<group>";
-		};
-		E268930EFE15117FB01C005C /* protocol */ = {
-			isa = PBXGroup;
-			children = (
-				BB384ED35F0C0705D4204007 /* ProfileModuleViewInput.h */,
-				0A98BFF16D073E54B521278A /* ProfileModuleViewOutput.h */,
-			);
-			path = protocol;
-			sourceTree = "<group>";
-		};
-		E3E11032431B674FC9F0C385 /* router */ = {
-			isa = PBXGroup;
-			children = (
-				974D0CB44D1755278B2B1E1E /* ProfileModuleRouterInput.h */,
-				82200EF6EE413D927D69616F /* ProfileModuleRouter.h */,
-				E2AC9FD8D450E33D2AD32964 /* ProfileModuleRouter.m */,
+				71EB4299BDA6D8A70BC36EE1 /* ProfileModuleRouterInput.h */,
+				6AFDCE3564AA263DCE1484FA /* ProfileModuleRouter.h */,
+				FA828B72FBD8267DCA2D1D67 /* ProfileModuleRouter.m */,
 			);
 			path = router;
+			sourceTree = "<group>";
+		};
+		D2A527311F5E26D334606CD4 /* view */ = {
+			isa = PBXGroup;
+			children = (
+				185E00D208CC5B06E841ACC9 /* protocol */,
+				294079870DBBD6C81358F322 /* ProfileModuleViewController.h */,
+				E8133340C7948D6A1FEEB620 /* ProfileModuleViewController.m */,
+			);
+			path = view;
 			sourceTree = "<group>";
 		};
 		E8B681881E01685300C0175B = {
@@ -280,11 +270,21 @@
 			path = VPSTemplatesExampleTests;
 			sourceTree = "<group>";
 		};
-		F771060EDDD6627A9D88C33E /* assembly */ = {
+		EC872B0EB6973D0D5AA1DCE0 /* presenter */ = {
 			isa = PBXGroup;
 			children = (
-				7CEFA50309A69B8EB7C732A0 /* ProfileModuleAssemblyTests.m */,
-				267DF242EE6C99006677FB13 /* ProfileModuleAssembly_Testable.h */,
+				706591F45AEF4036AA25D97D /* ProfileModuleModuleInput.h */,
+				469DEB453287D38982179759 /* ProfileModulePresenter.h */,
+				0C43295DCB90ED1D8E70852E /* ProfileModulePresenter.m */,
+			);
+			path = presenter;
+			sourceTree = "<group>";
+		};
+		F51E28BB86D1A4B01BBC5B76 /* assembly */ = {
+			isa = PBXGroup;
+			children = (
+				0657B2712EC53945CB2DF426 /* ProfileModuleAssemblyTests.m */,
+				A29DCB37DE3AD87C4AB3342C /* ProfileModuleAssembly_Testable.h */,
 			);
 			path = assembly;
 			sourceTree = "<group>";
@@ -493,10 +493,10 @@
 				E8B6819C1E01685300C0175B /* ViewController.m in Sources */,
 				E8B681991E01685300C0175B /* AppDelegate.m in Sources */,
 				E8B681961E01685300C0175B /* main.m in Sources */,
-				5007370B9E2F2CDD8EC9398D /* ProfileModuleAssembly.m in Sources */,
-				BCF6D54731C47085F808679F /* ProfileModuleViewController.m in Sources */,
-				14B1F03C69C4E8340005D7E1 /* ProfileModulePresenter.m in Sources */,
-				FBCF6B4039DA86520E984169 /* ProfileModuleRouter.m in Sources */,
+				D3C08A2CD49E2C44ACF6E283 /* ProfileModuleAssembly.m in Sources */,
+				A67AC5A4BFB05183EB885C8A /* ProfileModuleViewController.m in Sources */,
+				D9666B21ED92A1EFA4E9ECFC /* ProfileModulePresenter.m in Sources */,
+				6961F095352B908050108AC9 /* ProfileModuleRouter.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -505,10 +505,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				E8B681AF1E01685300C0175B /* VPSTemplatesExampleTests.m in Sources */,
-				90B46BB4830FB6A7A3B0EE4B /* ProfileModuleAssemblyTests.m in Sources */,
-				4B73D8459A29DA9967C7DB10 /* ProfileModuleViewControllerTests.m in Sources */,
-				ECD1BB60027653E135A2329C /* ProfileModulePresenterTests.m in Sources */,
-				8C39378034E9408D36C85FA4 /* ProfileModuleRouterTests.m in Sources */,
+				EC38F4A663F5C98C6688B9B8 /* ProfileModuleAssemblyTests.m in Sources */,
+				950A95EC55CCEB0EB4CB0680 /* ProfileModuleViewControllerTests.m in Sources */,
+				A7739FF6CF370AF79108726E /* ProfileModulePresenterTests.m in Sources */,
+				31C28EC6F8500C6876DD1A89 /* ProfileModuleRouterTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
