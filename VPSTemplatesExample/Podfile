@@ -1,0 +1,45 @@
+platform :ios, '8.0'
+
+project 'VPSTemplatesExample.xcodeproj'
+use_frameworks!
+inhibit_all_warnings!
+
+def commom_pods
+    # Common
+    # pod 'Fabric'
+    # pod 'Crashlytics'
+
+    # DB
+    # pod 'MagicalRecord'
+    # pod 'Mantle'
+
+    # Network
+    pod 'AFNetworking'
+    # pod "Reachability"
+
+    # Utils
+    # pod 'DateTools'
+    # pod 'TLIndexPathTools'
+    # pod 'CocoaLumberjack'
+    # pod 'ReactiveCocoa', '~> 2.5'
+
+    # UI
+    # pod 'MJRefresh'
+    # pod 'UIImage+Additions'
+    # pod 'UIAlertView-Blocks'
+    # pod 'IQKeyboardManager'
+    # pod 'BonMot'
+    # pod 'SwiftMessages'
+end
+
+def tests_pods
+    pod 'OCMock'
+end
+
+target "VPSTemplatesExample" do
+    commom_pods
+end
+
+target "VPSTemplatesExampleTests" do
+    tests_pods
+end

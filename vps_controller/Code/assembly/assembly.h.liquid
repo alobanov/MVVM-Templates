@@ -1,0 +1,14 @@
+{% include 'header' %}
+
+#import "{{ prefix }}{{ module_info.name }}ViewController.h"
+
+/**
+ @author {{ developer.name }}
+
+ {{ module_info.description }}
+ */
+@interface {{ prefix }}{{ module_info.name }}Assembly : NSObject
+
+- (void)assembly:({{ prefix }}{{ module_info.name }}ViewController *)vc;
+
+@end

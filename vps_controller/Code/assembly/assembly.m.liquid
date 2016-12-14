@@ -1,0 +1,29 @@
+{% include 'header' %}
+
+#import "{{ prefix }}{{ module_info.name }}Assembly.h"
+
+#import "{{ prefix }}{{ module_info.name }}ViewController.h"
+#import "{{ prefix }}{{ module_info.name }}Presenter.h"
+#import "{{ prefix }}{{ module_info.name }}Router.h"
+
+@interface {{ prefix }}{{ module_info.name }}Assembly ()
+
+@property (weak, nonatomic) {{ prefix }}{{ module_info.name }}ViewController *controller;
+@property (strong, nonatomic) {{ prefix }}{{ module_info.name }}Router *router;
+@property (strong, nonatomic) {{ prefix }}{{ module_info.name }}Presenter *presenter;
+
+@end
+
+@implementation {{ prefix }}{{ module_info.name }}Assembly
+
+- (void)assembly:({{ prefix }}{{ module_info.name }}ViewController *)vc {
+    self.controller = vc;
+    self.presenter = [[{{ prefix }}{{ module_info.name }}Presenter alloc] init];
+    self.router = [{{ prefix }}{{ module_info.name }}Router new];
+
+    // Dependencies
+    self.controller.output = self.presenter;
+    self.presenter.view = self.controller;
+    self.presenter.router = self.router;
+}
+@end

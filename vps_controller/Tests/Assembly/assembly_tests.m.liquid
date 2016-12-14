@@ -1,0 +1,88 @@
+{% include 'header' %}
+
+#import <XCTest/XCTest.h>
+#import <OCMock/OCMock.h>
+
+#import "{{ prefix }}{{ module_info.name }}Assembly.h"
+#import "{{ prefix }}{{ module_info.name }}Assembly_Testable.h"
+
+#import "{{ prefix }}{{ module_info.name }}ViewController.h"
+#import "{{ prefix }}{{ module_info.name }}Presenter.h"
+#import "{{ prefix }}{{ module_info.name }}Router.h"
+
+@interface {{ prefix }}{{ module_info.name }}AssemblyTests : XCTestCase
+
+@property (nonatomic, strong) {{ prefix }}{{ module_info.name }}Assembly *assembly;
+
+@end
+
+@implementation {{ prefix }}{{ module_info.name }}AssemblyTests
+
+#pragma mark - Настройка окружения для тестирования
+
+- (void)setUp {
+    [super setUp];
+
+    self.assembly = [[{{ prefix }}{{ module_info.name }}Assembly alloc] init];
+    {{ prefix }}{{ module_info.name }}ViewController *controller = [[{{ prefix }}{{ module_info.name }}ViewController alloc] init];
+    [self.assembly assembly:controller];
+}
+
+- (void)tearDown {
+    self.assembly = nil;
+
+    [super tearDown];
+}
+
+#pragma mark - Тестирование создания элементов модуля
+
+- (void)testThatAssemblyCreatesViewController {
+    // given
+    NSArray *protocols = @[
+                           @protocol({{ prefix }}{{ module_info.name }}ViewInput)
+                           ];
+
+    // when
+    {{ prefix }}{{ module_info.name }}ViewController *result = [self.assembly controller];
+
+    // then
+    for (Protocol *protocol in protocols) {
+        XCTAssertTrue([result conformsToProtocol:protocol]);
+    }
+
+    XCTAssertTrue([result.output conformsToProtocol:@protocol({{ prefix }}{{ module_info.name }}ViewOutput)]);
+}
+
+- (void)testThatAssemblyCreatesPresenter {
+    // given
+    NSArray *protocols = @[
+                           @protocol({{ prefix }}{{ module_info.name }}ModuleInput),
+                           @protocol({{ prefix }}{{ module_info.name }}ViewOutput),
+                           ];
+
+    // when
+    {{ prefix }}{{ module_info.name }}Presenter *result = [self.assembly presenter];
+
+    // then
+    // then
+    for (Protocol *protocol in protocols) {
+        XCTAssertTrue([result conformsToProtocol:protocol]);
+    }
+}
+
+- (void)testThatAssemblyCreatesRouter {
+    // given
+    NSArray *protocols = @[
+                           @protocol({{ prefix }}{{ module_info.name }}RouterInput)
+                           ];
+
+    // when
+    {{ prefix }}{{ module_info.name }}Router *result = [self.assembly router];
+
+    // then
+    for (Protocol *protocol in protocols) {
+        XCTAssertTrue([result conformsToProtocol:protocol]);
+    }
+}
+
+@end

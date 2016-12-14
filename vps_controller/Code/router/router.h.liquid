@@ -1,0 +1,11 @@
+{% include 'header' %}
+
+#import <UIKit/UIKit.h>
+
+#import "{{ prefix }}{{ module_info.name }}RouterInput.h"
+
+@interface {{ prefix }}{{ module_info.name }}Router : NSObject <{{ prefix }}{{ module_info.name }}RouterInput>
+
+- (instancetype)initWithController:(__kindof UIViewController *)controller;
+
+@end

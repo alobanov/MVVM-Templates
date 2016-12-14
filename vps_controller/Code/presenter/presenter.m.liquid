@@ -1,0 +1,47 @@
+{% include 'header' %}
+
+#import "{{ prefix }}{{ module_info.name }}Presenter.h"
+
+// protocol
+#import "{{ prefix }}{{ module_info.name }}ViewInput.h"
+#import "{{ prefix }}{{ module_info.name }}RouterInput.h"
+
+// libs
+
+// categories
+
+// models
+
+// managers & services
+
+// views
+
+@implementation {{ prefix }}{{ module_info.name }}Presenter
+
+- (instancetype)initWithSomeService:(id)workService {
+    self = [super init];
+    if (self) {
+
+    }
+    return self;
+}
+
+- (void)dealloc {
+    NSLog(@"-- {{ prefix }}{{ module_info.name }}Presenter dead!");
+}
+
+#pragma mark - Methods {{ prefix }}{{ module_info.name }}ModuleInput
+
+- (void)configureModule {
+    // Base configuration of current module, not related with view state
+}
+
+#pragma mark - Methods {{ prefix }}{{ module_info.name }}ViewOutput
+
+- (void)didTriggerViewReadyEvent {
+	[self.view setupInitialState];
+}
+
+#pragma mark - Methods {{ prefix }}{{ module_info.name }}InteractorOutput
+
+@end
