@@ -1,0 +1,20 @@
+{% include 'header' %}
+
+#import "{{ prefix }}{{ module_info.name }}Assembly.h"
+
+@class {{ prefix }}{{ module_info.name }}ViewController;
+@class {{ prefix }}{{ module_info.name }}Presenter;
+@class {{ prefix }}{{ module_info.name }}Router;
+
+/**
+ @author {{ developer.name }}
+
+ Extension, который делает приватные методы фабрики открытыми для тестирования.
+ */
+@interface {{ prefix }}{{ module_info.name }}Assembly ()
+
+@property (weak, nonatomic, readonly) {{ prefix }}{{ module_info.name }}ViewController *controller;
+@property (strong, nonatomic, readonly) {{ prefix }}{{ module_info.name }}Router *router;
+@property (strong, nonatomic, readonly) {{ prefix }}{{ module_info.name }}Presenter *presenter;
+
+@end

@@ -1,0 +1,24 @@
+{% include 'header' %}
+
+#import "{{ prefix }}{{ module_info.name }}Router.h"
+
+@interface {{ prefix }}{{ module_info.name }}Router()
+
+@property (weak, nonatomic) UIViewController *from;
+
+@end
+
+@implementation {{ prefix }}{{ module_info.name }}Router
+
+- (instancetype)initWithController:(__kindof UIViewController *)controller
+{
+    self = [super init];
+    if (self) {
+        self.from = controller;
+    }
+    return self;
+}
+
+#pragma mark - Methods {{ prefix }}{{ module_info.name }}RouterInput
+
+@end

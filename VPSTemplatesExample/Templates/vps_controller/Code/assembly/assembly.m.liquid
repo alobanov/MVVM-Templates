@@ -8,7 +8,7 @@
 
 @interface {{ prefix }}{{ module_info.name }}Assembly ()
 
-@property (strong, nonatomic) {{ prefix }}{{ module_info.name }}ViewController *controller;
+@property (weak, nonatomic) {{ prefix }}{{ module_info.name }}ViewController *controller;
 @property (strong, nonatomic) {{ prefix }}{{ module_info.name }}Router *router;
 @property (strong, nonatomic) {{ prefix }}{{ module_info.name }}Presenter *presenter;
 
