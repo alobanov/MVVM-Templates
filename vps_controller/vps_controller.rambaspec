@@ -1,6 +1,6 @@
 # Template information section
-name: "vms_controller"
-summary: "VPS module template with UIViewController."
+name: "vps_controller"
+summary: "VPS module template with UIViewController"
 author: "Lobanov Aleksey"
 version: "0.1.0"
 license: "MIT"
@@ -44,7 +44,4 @@ test_files:
 
 # Template dependencies
 dependencies:
-#- Typhoon
-#- OCMock
-#- RamblerTyphoonUtils
-#- ViperMcFlurry
+- OCMock
