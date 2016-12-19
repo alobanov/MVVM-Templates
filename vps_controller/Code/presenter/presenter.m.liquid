@@ -21,9 +21,13 @@
 - (instancetype)initWithSomeService:(id)workService {
     self = [super init];
     if (self) {
-
+    	// configure
+        [self configurePresenterOnInit];
     }
     return self;
+}
+
+- (void)configurePresenterOnInit {
 }
 
 - (void)dealloc {
@@ -42,6 +46,10 @@
 	[self.view setupInitialState];
 }
 
-#pragma mark - Methods {{ prefix }}{{ module_info.name }}InteractorOutput
+#pragma mark - Methods {{ prefix }}{{ module_info.name }}ViewInput
+
+#pragma maek - Additional methods
+
+#pragma maek - Networking
 
 @end
