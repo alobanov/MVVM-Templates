@@ -17,6 +17,7 @@ class ___FILEBASENAMEASIDENTIFIER___ViewController: UIViewController, ___FILEBAS
   var viewModel: ___FILEBASENAMEASIDENTIFIER___Output?
   
   // Private
+  var disposeBag: DisposeBag = DisposeBag()
   
   // MARK: Life Cycle
   
@@ -55,7 +56,7 @@ class ___FILEBASENAMEASIDENTIFIER___ViewController: UIViewController, ___FILEBAS
     
     model.title.asObservable()
       .bindTo(self.rx.title)
-      .addDisposableTo(rx_disposeBag)
+      .addDisposableTo(disposeBag)
   }
   
   func configureUI() {
