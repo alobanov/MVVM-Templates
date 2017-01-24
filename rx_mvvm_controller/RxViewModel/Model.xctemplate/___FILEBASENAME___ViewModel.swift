@@ -10,6 +10,10 @@ import Foundation
 import RxSwift
 import RxCocoa
 
+protocol ___FILEBASENAMEASIDENTIFIER___Testable {
+    // put here private methods
+}
+
 protocol ___FILEBASENAMEASIDENTIFIER___ModuleOutput: class {
   
 }
@@ -28,7 +32,7 @@ protocol ___FILEBASENAMEASIDENTIFIER___Input: class {
 //  func show(error: NSError)
 }
 
-class ___FILEBASENAMEASIDENTIFIER___ViewModel: RxViewModel, ___FILEBASENAMEASIDENTIFIER___Output, ___FILEBASENAMEASIDENTIFIER___ModuleInput {
+class ___FILEBASENAMEASIDENTIFIER___ViewModel: RxViewModel, ___FILEBASENAMEASIDENTIFIER___Output, ___FILEBASENAMEASIDENTIFIER___ModuleInput, ___FILEBASENAMEASIDENTIFIER___Testable {
   
   // MARK:- dependencies
   fileprivate weak var view: ___FILEBASENAMEASIDENTIFIER___Input!
