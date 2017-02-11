@@ -34,6 +34,9 @@ protocol ___FILEBASENAMEASIDENTIFIER___Input: class {
 
 class ___FILEBASENAMEASIDENTIFIER___ViewModel: RxViewModel, ___FILEBASENAMEASIDENTIFIER___Output, ___FILEBASENAMEASIDENTIFIER___ModuleInput, ___FILEBASENAMEASIDENTIFIER___Testable {
   
+  // MARK: properties IBOutlets
+  // properties
+  
   // MARK:- dependencies
   fileprivate weak var view: ___FILEBASENAMEASIDENTIFIER___Input!
   var router: ___FILEBASENAMEASIDENTIFIER___RouterInput!
