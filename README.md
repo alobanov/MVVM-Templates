@@ -1,4 +1,4 @@
-# Objective-c templates of modified VIPER architecture calls VPS (view-presenter-services)
+# Objective-c templates of modified VIPER architecture calls VPS (View-PS)
 This is the collection of templates for [`Generamba`](https://github.com/rambler-digital-solutions/Generamba)
 
 TODO: Add services initialization
