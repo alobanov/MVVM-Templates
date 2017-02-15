@@ -1,10 +1,10 @@
-# Objective-c templates of modified VIPER architecture calls VPS (View-PS)
+# Objective-c templates of modified VIPER architecture called VPS (View-PS)
 This is the collection of templates for [`Generamba`](https://github.com/rambler-digital-solutions/Generamba)
 
 TODO: Add services initialization
 
 ## Installation
-1) Setup [`Generamba`](https://github.com/rambler-ios/Generamba) and run `generamba setup` and fill out `Rambafile`
+1) Setup [`Generamba`](https://github.com/rambler-digital-solutions/Generamba) and run `generamba setup` and fill out `Rambafile`
 
 2) Updates templates section in your `Rambafile` as follow:
 ```
@@ -19,7 +19,10 @@ templates:
 
 5) Enjoy
 
-## Setup via xCode Templates
+---
+
+# Swift templates of MVVM+Rx architecture
+### Setup via xCode Templates
 
 This section about native templates used by xCode
 
