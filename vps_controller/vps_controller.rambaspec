@@ -17,10 +17,10 @@ code_files:
 - {name: view/ViewController.h, path: Code/view/viewcontroller.h.liquid}
 - {name: view/ViewController.m, path: Code/view/viewcontroller.m.liquid}
 
-# Presenter layer
-- {name: presenter/ModuleInput.h, path: Code/viewModel/module_input.h.liquid}
-- {name: presenter/ViewModel.h, path: Code/viewModel/viewModel.h.liquid}
-- {name: presenter/ViewModel.m, path: Code/viewModel/viewModel.m.liquid}
+# ViewModel layer
+- {name: viewModel/ModuleInput.h, path: Code/viewModel/module_input.h.liquid}
+- {name: viewModel/ViewModel.h, path: Code/viewModel/viewModel.h.liquid}
+- {name: viewModel/ViewModel.m, path: Code/viewModel/viewModel.m.liquid}
 
 # Router layer
 - {name: router/RouterInput.h, path: Code/router/router_input.h.liquid}
@@ -36,8 +36,8 @@ test_files:
 # View tests
 - {name: view/ViewControllerTests.m, path: Tests/view/view_tests.m.liquid}
 
-# Presenter tests
-- {name: presenter/ViewModelTests.m, path: Tests/viewModel/viewModel_tests.m.liquid}
+# ViewModel tests
+- {name: viewModel/ViewModelTests.m, path: Tests/viewModel/viewModel_tests.m.liquid}
 
 # Router tests
 - {name: router/RouterTests.m, path: Tests/router/router_tests.m.liquid}
