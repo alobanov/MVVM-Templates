@@ -6,7 +6,7 @@
 @protocol {{ prefix }}{{ module_info.name }}ViewInput;
 @protocol {{ prefix }}{{ module_info.name }}RouterInput;
 
-@interface {{ prefix }}{{ module_info.name }}Presenter : NSObject <{{ prefix }}{{ module_info.name }}ModuleInput, {{ prefix }}{{ module_info.name }}ViewOutput>
+@interface {{ prefix }}{{ module_info.name }}ViewModel : NSObject <{{ prefix }}{{ module_info.name }}ModuleInput, {{ prefix }}{{ module_info.name }}ViewOutput>
 
 - (instancetype)initWithSomeService:(id)workService;
 

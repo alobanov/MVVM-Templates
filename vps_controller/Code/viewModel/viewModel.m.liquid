@@ -1,6 +1,6 @@
 {% include 'header' %}
 
-#import "{{ prefix }}{{ module_info.name }}Presenter.h"
+#import "{{ prefix }}{{ module_info.name }}ViewModel.h"
 
 // protocol
 #import "{{ prefix }}{{ module_info.name }}ViewInput.h"
@@ -16,28 +16,28 @@
 
 // views
 
-@interface {{ prefix }}{{ module_info.name }}Presenter()
+@interface {{ prefix }}{{ module_info.name }}ViewModel()
 
 // properties
 
 @end
 
-@implementation {{ prefix }}{{ module_info.name }}Presenter
+@implementation {{ prefix }}{{ module_info.name }}ViewModel
 
 - (instancetype)initWithSomeService:(id)workService {
     self = [super init];
     if (self) {
     	// configure
-        [self configurePresenterOnInit];
+        [self configureViewModelOnInit];
     }
     return self;
 }
 
-- (void)configurePresenterOnInit {
+- (void)configureViewModelOnInit {
 }
 
 - (void)dealloc {
-    NSLog(@"-- {{ prefix }}{{ module_info.name }}Presenter dead!");
+    NSLog(@"-- {{ prefix }}{{ module_info.name }}ViewModel dead!");
 }
 
 #pragma mark - Methods {{ prefix }}{{ module_info.name }}ModuleInput

@@ -1,46 +1,46 @@
 # Template information section
 name: "vps_controller"
-summary: "VPS module template with UIViewController"
+summary: "VMRC module template with UIViewController"
 author: "Lobanov Aleksey"
-version: "0.1.0"
+version: "0.4.0"
 license: "MIT"
 
 # The declarations for code files
 code_files:
 # Assembly layer
-- {name: assembly/Assembly.h, path: Code/Assembly/assembly.h.liquid}
-- {name: assembly/Assembly.m, path: Code/Assembly/assembly.m.liquid}
+- {name: assembly/Assembly.h, path: Code/assembly/assembly.h.liquid}
+- {name: assembly/Assembly.m, path: Code/assembly/assembly.m.liquid}
 
 # View layer
-- {name: view/protocol/ViewInput.h, path: Code/View/view_input.h.liquid}
-- {name: view/protocol/ViewOutput.h, path: Code/View/view_output.h.liquid}
-- {name: view/ViewController.h, path: Code/View/viewcontroller.h.liquid}
-- {name: view/ViewController.m, path: Code/View/viewcontroller.m.liquid}
+- {name: view/protocol/ViewInput.h, path: Code/view/view_input.h.liquid}
+- {name: view/protocol/ViewOutput.h, path: Code/view/view_output.h.liquid}
+- {name: view/ViewController.h, path: Code/view/viewcontroller.h.liquid}
+- {name: view/ViewController.m, path: Code/view/viewcontroller.m.liquid}
 
 # Presenter layer
-- {name: presenter/ModuleInput.h, path: Code/Presenter/module_input.h.liquid}
-- {name: presenter/Presenter.h, path: Code/Presenter/presenter.h.liquid}
-- {name: presenter/Presenter.m, path: Code/Presenter/presenter.m.liquid}
+- {name: presenter/ModuleInput.h, path: Code/viewModel/module_input.h.liquid}
+- {name: presenter/Presenter.h, path: Code/viewModel/viewModel.h.liquid}
+- {name: presenter/Presenter.m, path: Code/viewModel/viewModel.m.liquid}
 
 # Router layer
-- {name: router/RouterInput.h, path: Code/Router/router_input.h.liquid}
-- {name: router/Router.h, path: Code/Router/router.h.liquid}
-- {name: router/Router.m, path: Code/Router/router.m.liquid}
+- {name: router/RouterInput.h, path: Code/router/router_input.h.liquid}
+- {name: router/Router.h, path: Code/router/router.h.liquid}
+- {name: router/Router.m, path: Code/router/router.m.liquid}
 
 # The declarations for test files
 test_files:
 # Assembly tests
-- {name: assembly/AssemblyTests.m, path: Tests/Assembly/assembly_tests.m.liquid}
-- {name: assembly/Assembly_Testable.h, path: Tests/Assembly/assembly_testable.h.liquid}
+- {name: assembly/AssemblyTests.m, path: Tests/assembly/assembly_tests.m.liquid}
+- {name: assembly/Assembly_Testable.h, path: Tests/assembly/assembly_testable.h.liquid}
 
 # View tests
-- {name: view/ViewControllerTests.m, path: Tests/View/view_tests.m.liquid}
+- {name: view/ViewControllerTests.m, path: Tests/view/view_tests.m.liquid}
 
 # Presenter tests
-- {name: presenter/PresenterTests.m, path: Tests/Presenter/presenter_tests.m.liquid}
+- {name: presenter/PresenterTests.m, path: Tests/viewModel/viewModel_tests.m.liquid}
 
 # Router tests
-- {name: router/RouterTests.m, path: Tests/Router/router_tests.m.liquid}
+- {name: router/RouterTests.m, path: Tests/router/router_tests.m.liquid}
 
 # Template dependencies
 dependencies:
