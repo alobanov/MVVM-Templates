@@ -3,14 +3,14 @@
 #import "{{ prefix }}{{ module_info.name }}Assembly.h"
 
 #import "{{ prefix }}{{ module_info.name }}ViewController.h"
-#import "{{ prefix }}{{ module_info.name }}Presenter.h"
+#import "{{ prefix }}{{ module_info.name }}ViewModel.h"
 #import "{{ prefix }}{{ module_info.name }}Router.h"
 
 @interface {{ prefix }}{{ module_info.name }}Assembly ()
 
 @property (strong, nonatomic) {{ prefix }}{{ module_info.name }}ViewController *controller;
 @property (strong, nonatomic) {{ prefix }}{{ module_info.name }}Router *router;
-@property (strong, nonatomic) {{ prefix }}{{ module_info.name }}Presenter *presenter;
+@property (strong, nonatomic) {{ prefix }}{{ module_info.name }}ViewModel *viewModel;
 
 @end
 
@@ -18,12 +18,12 @@
 
 - (void)assembly:({{ prefix }}{{ module_info.name }}ViewController *)vc {
     self.controller = vc;
-    self.presenter = [[{{ prefix }}{{ module_info.name }}Presenter alloc] init];
+    self.viewModel = [[{{ prefix }}{{ module_info.name }}ViewModel alloc] init];
     self.router = [{{ prefix }}{{ module_info.name }}Router new];
 
     // Dependencies
-    self.controller.output = self.presenter;
-    self.presenter.view = self.controller;
-    self.presenter.router = self.router;
+    self.controller.output = self.viewModel;
+    self.viewModel.view = self.controller;
+    self.viewModel.router = self.router;
 }
 @end

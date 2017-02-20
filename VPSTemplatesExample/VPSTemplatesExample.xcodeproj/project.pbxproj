@@ -7,29 +7,80 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0A0FB03BACF470689B54E80C /* Pods_VPSTemplatesExample.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C269B39184E28C4ACD72E0D5 /* Pods_VPSTemplatesExample.framework */; };
-		31C28EC6F8500C6876DD1A89 /* ProfileModuleRouterTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F2F1B787DC8A6D6C929C0EF6 /* ProfileModuleRouterTests.m */; };
-		6961F095352B908050108AC9 /* ProfileModuleRouter.m in Sources */ = {isa = PBXBuildFile; fileRef = FA828B72FBD8267DCA2D1D67 /* ProfileModuleRouter.m */; };
-		93032917150E5009619E8639 /* Pods_VPSTemplatesExampleTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BF125F2A59C63DFB846327A /* Pods_VPSTemplatesExampleTests.framework */; };
-		950A95EC55CCEB0EB4CB0680 /* ProfileModuleViewControllerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DA9ED8C47C0E452F0F8FA6F /* ProfileModuleViewControllerTests.m */; };
-		A67AC5A4BFB05183EB885C8A /* ProfileModuleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E8133340C7948D6A1FEEB620 /* ProfileModuleViewController.m */; };
-		A7739FF6CF370AF79108726E /* ProfileModulePresenterTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C32F2BB11C409C5E5EB0E661 /* ProfileModulePresenterTests.m */; };
-		D3C08A2CD49E2C44ACF6E283 /* ProfileModuleAssembly.m in Sources */ = {isa = PBXBuildFile; fileRef = B42C10D3A10E72748DFABF66 /* ProfileModuleAssembly.m */; };
-		D9666B21ED92A1EFA4E9ECFC /* ProfileModulePresenter.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C43295DCB90ED1D8E70852E /* ProfileModulePresenter.m */; };
-		E8B681961E01685300C0175B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E8B681951E01685300C0175B /* main.m */; };
-		E8B681991E01685300C0175B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E8B681981E01685300C0175B /* AppDelegate.m */; };
-		E8B6819C1E01685300C0175B /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E8B6819B1E01685300C0175B /* ViewController.m */; };
-		E8B6819F1E01685300C0175B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E8B6819D1E01685300C0175B /* Main.storyboard */; };
-		E8B681A11E01685300C0175B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E8B681A01E01685300C0175B /* Assets.xcassets */; };
-		E8B681A41E01685300C0175B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E8B681A21E01685300C0175B /* LaunchScreen.storyboard */; };
-		E8B681AF1E01685300C0175B /* VPSTemplatesExampleTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E8B681AE1E01685300C0175B /* VPSTemplatesExampleTests.m */; };
-		EC38F4A663F5C98C6688B9B8 /* ProfileModuleAssemblyTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0657B2712EC53945CB2DF426 /* ProfileModuleAssemblyTests.m */; };
+		0A0FB03BACF470689B54E80C = {
+			isa = PBXBuildFile;
+			fileRef = C269B39184E28C4ACD72E0D5;
+		};
+		0C6ACD73E3A79770E52FB827 = {
+			isa = PBXBuildFile;
+			fileRef = AD4D63F164265A36C22491CF;
+		};
+		11FE680969B345D8F9468BAA = {
+			isa = PBXBuildFile;
+			fileRef = 368ACD1083BD4393AD4375C4;
+		};
+		19AAEC3BCEDD409E189C3B98 = {
+			isa = PBXBuildFile;
+			fileRef = F655A6DE87C4541F26C46736;
+		};
+		3D63887B5E6843B63AF3DED6 = {
+			isa = PBXBuildFile;
+			fileRef = 5A1B80ECC507EA82D4712A90;
+		};
+		64F605C5AC716BF19D03E792 = {
+			isa = PBXBuildFile;
+			fileRef = 3CA377ECA93032D2AD92BE82;
+		};
+		93032917150E5009619E8639 = {
+			isa = PBXBuildFile;
+			fileRef = 6BF125F2A59C63DFB846327A;
+		};
+		D567D15D57DF73C23DBA1921 = {
+			isa = PBXBuildFile;
+			fileRef = 69D18409F847EF28A29CA4F9;
+		};
+		E335189858D08BCA7875F2C0 = {
+			isa = PBXBuildFile;
+			fileRef = 6099D53E449C48085E83FB2C;
+		};
+		E8B681961E01685300C0175B = {
+			isa = PBXBuildFile;
+			fileRef = E8B681951E01685300C0175B;
+		};
+		E8B681991E01685300C0175B = {
+			isa = PBXBuildFile;
+			fileRef = E8B681981E01685300C0175B;
+		};
+		E8B6819C1E01685300C0175B = {
+			isa = PBXBuildFile;
+			fileRef = E8B6819B1E01685300C0175B;
+		};
+		E8B6819F1E01685300C0175B = {
+			isa = PBXBuildFile;
+			fileRef = E8B6819D1E01685300C0175B;
+		};
+		E8B681A11E01685300C0175B = {
+			isa = PBXBuildFile;
+			fileRef = E8B681A01E01685300C0175B;
+		};
+		E8B681A41E01685300C0175B = {
+			isa = PBXBuildFile;
+			fileRef = E8B681A21E01685300C0175B;
+		};
+		E8B681AF1E01685300C0175B = {
+			isa = PBXBuildFile;
+			fileRef = E8B681AE1E01685300C0175B;
+		};
+		E9E3635D493FE0C1D2F1F6D5 = {
+			isa = PBXBuildFile;
+			fileRef = A9DFA593A0692EE219AC0C03;
+		};
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		E8B681AB1E01685300C0175B /* PBXContainerItemProxy */ = {
+		E8B681AB1E01685300C0175B = {
 			isa = PBXContainerItemProxy;
-			containerPortal = E8B681891E01685300C0175B /* Project object */;
+			containerPortal = E8B681891E01685300C0175B;
 			proxyType = 1;
 			remoteGlobalIDString = E8B681901E01685300C0175B;
 			remoteInfo = VPSTemplatesExample;
@@ -37,271 +88,493 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		00DD6C14ED4F1BAAEF3503C3 /* ProfileModuleAssembly.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = ProfileModuleAssembly.h; sourceTree = "<group>"; };
-		03E45EA89211E38B9517EB39 /* Pods-VPSTemplatesExampleTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VPSTemplatesExampleTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-VPSTemplatesExampleTests/Pods-VPSTemplatesExampleTests.release.xcconfig"; sourceTree = "<group>"; };
-		0657B2712EC53945CB2DF426 /* ProfileModuleAssemblyTests.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = ProfileModuleAssemblyTests.m; sourceTree = "<group>"; };
-		0AB66B82C2A9FFB83697C80F /* ProfileModuleViewOutput.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = ProfileModuleViewOutput.h; sourceTree = "<group>"; };
-		0C43295DCB90ED1D8E70852E /* ProfileModulePresenter.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = ProfileModulePresenter.m; sourceTree = "<group>"; };
-		294079870DBBD6C81358F322 /* ProfileModuleViewController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = ProfileModuleViewController.h; sourceTree = "<group>"; };
-		469DEB453287D38982179759 /* ProfileModulePresenter.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = ProfileModulePresenter.h; sourceTree = "<group>"; };
-		6AFDCE3564AA263DCE1484FA /* ProfileModuleRouter.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = ProfileModuleRouter.h; sourceTree = "<group>"; };
-		6BF125F2A59C63DFB846327A /* Pods_VPSTemplatesExampleTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VPSTemplatesExampleTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		6DA9ED8C47C0E452F0F8FA6F /* ProfileModuleViewControllerTests.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = ProfileModuleViewControllerTests.m; sourceTree = "<group>"; };
-		706591F45AEF4036AA25D97D /* ProfileModuleModuleInput.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = ProfileModuleModuleInput.h; sourceTree = "<group>"; };
-		713504C60A45DFC9163ACFD1 /* Pods-VPSTemplatesExample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VPSTemplatesExample.debug.xcconfig"; path = "Pods/Target Support Files/Pods-VPSTemplatesExample/Pods-VPSTemplatesExample.debug.xcconfig"; sourceTree = "<group>"; };
-		71EB4299BDA6D8A70BC36EE1 /* ProfileModuleRouterInput.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = ProfileModuleRouterInput.h; sourceTree = "<group>"; };
-		A29DCB37DE3AD87C4AB3342C /* ProfileModuleAssembly_Testable.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = ProfileModuleAssembly_Testable.h; sourceTree = "<group>"; };
-		B42C10D3A10E72748DFABF66 /* ProfileModuleAssembly.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = ProfileModuleAssembly.m; sourceTree = "<group>"; };
-		BC35B479C777A700941B9171 /* Pods-VPSTemplatesExampleTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VPSTemplatesExampleTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-VPSTemplatesExampleTests/Pods-VPSTemplatesExampleTests.debug.xcconfig"; sourceTree = "<group>"; };
-		C269B39184E28C4ACD72E0D5 /* Pods_VPSTemplatesExample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VPSTemplatesExample.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		C32F2BB11C409C5E5EB0E661 /* ProfileModulePresenterTests.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = ProfileModulePresenterTests.m; sourceTree = "<group>"; };
-		E0B2F621D1C5C0D9C11769D5 /* Pods-VPSTemplatesExample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VPSTemplatesExample.release.xcconfig"; path = "Pods/Target Support Files/Pods-VPSTemplatesExample/Pods-VPSTemplatesExample.release.xcconfig"; sourceTree = "<group>"; };
-		E8133340C7948D6A1FEEB620 /* ProfileModuleViewController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = ProfileModuleViewController.m; sourceTree = "<group>"; };
-		E8B681911E01685300C0175B /* VPSTemplatesExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VPSTemplatesExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		E8B681951E01685300C0175B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		E8B681971E01685300C0175B /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		E8B681981E01685300C0175B /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		E8B6819A1E01685300C0175B /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		E8B6819B1E01685300C0175B /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		E8B6819E1E01685300C0175B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		E8B681A01E01685300C0175B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		E8B681A31E01685300C0175B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		E8B681A51E01685300C0175B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		E8B681AA1E01685300C0175B /* VPSTemplatesExampleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VPSTemplatesExampleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		E8B681AE1E01685300C0175B /* VPSTemplatesExampleTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VPSTemplatesExampleTests.m; sourceTree = "<group>"; };
-		E8B681B01E01685300C0175B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		ED34F998C7A4FA3D3D2C5EA7 /* ProfileModuleViewInput.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = ProfileModuleViewInput.h; sourceTree = "<group>"; };
-		F2F1B787DC8A6D6C929C0EF6 /* ProfileModuleRouterTests.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = ProfileModuleRouterTests.m; sourceTree = "<group>"; };
-		FA828B72FBD8267DCA2D1D67 /* ProfileModuleRouter.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = ProfileModuleRouter.m; sourceTree = "<group>"; };
+		03E45EA89211E38B9517EB39 = {
+			isa = PBXFileReference;
+			includeInIndex = 1;
+			lastKnownFileType = text.xcconfig;
+			name = "Pods-VPSTemplatesExampleTests.release.xcconfig";
+			path = "Pods/Target Support Files/Pods-VPSTemplatesExampleTests/Pods-VPSTemplatesExampleTests.release.xcconfig";
+			sourceTree = "<group>";
+		};
+		18751B9F10C8D47FE49BE888 = {
+			isa = PBXFileReference;
+			includeInIndex = 1;
+			lastKnownFileType = sourcecode.c.h;
+			path = ModuleRouterInput.h;
+			sourceTree = "<group>";
+		};
+		368ACD1083BD4393AD4375C4 = {
+			isa = PBXFileReference;
+			includeInIndex = 1;
+			lastKnownFileType = sourcecode.c.objc;
+			path = ModuleViewModelTests.m;
+			sourceTree = "<group>";
+		};
+		3959C58DC235F1F4100D70AA = {
+			isa = PBXFileReference;
+			includeInIndex = 1;
+			lastKnownFileType = sourcecode.c.h;
+			path = ModuleAssembly.h;
+			sourceTree = "<group>";
+		};
+		3CA377ECA93032D2AD92BE82 = {
+			isa = PBXFileReference;
+			includeInIndex = 1;
+			lastKnownFileType = sourcecode.c.objc;
+			path = ModuleAssemblyTests.m;
+			sourceTree = "<group>";
+		};
+		5734FAE22BB3EBCF94350A93 = {
+			isa = PBXFileReference;
+			includeInIndex = 1;
+			lastKnownFileType = sourcecode.c.h;
+			path = ModuleViewModel.h;
+			sourceTree = "<group>";
+		};
+		5A1B80ECC507EA82D4712A90 = {
+			isa = PBXFileReference;
+			includeInIndex = 1;
+			lastKnownFileType = sourcecode.c.objc;
+			path = ModuleViewControllerTests.m;
+			sourceTree = "<group>";
+		};
+		5D4F9F5BE8A560BC1D0B27C6 = {
+			isa = PBXFileReference;
+			includeInIndex = 1;
+			lastKnownFileType = sourcecode.c.h;
+			path = ModuleAssembly_Testable.h;
+			sourceTree = "<group>";
+		};
+		6099D53E449C48085E83FB2C = {
+			isa = PBXFileReference;
+			includeInIndex = 1;
+			lastKnownFileType = sourcecode.c.objc;
+			path = ModuleRouterTests.m;
+			sourceTree = "<group>";
+		};
+		69D18409F847EF28A29CA4F9 = {
+			isa = PBXFileReference;
+			includeInIndex = 1;
+			lastKnownFileType = sourcecode.c.objc;
+			path = ModuleViewModel.m;
+			sourceTree = "<group>";
+		};
+		6BF125F2A59C63DFB846327A = {
+			isa = PBXFileReference;
+			explicitFileType = wrapper.framework;
+			includeInIndex = 0;
+			path = Pods_VPSTemplatesExampleTests.framework;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		713504C60A45DFC9163ACFD1 = {
+			isa = PBXFileReference;
+			includeInIndex = 1;
+			lastKnownFileType = text.xcconfig;
+			name = "Pods-VPSTemplatesExample.debug.xcconfig";
+			path = "Pods/Target Support Files/Pods-VPSTemplatesExample/Pods-VPSTemplatesExample.debug.xcconfig";
+			sourceTree = "<group>";
+		};
+		98DE0124C13524C988DCA4AF = {
+			isa = PBXFileReference;
+			includeInIndex = 1;
+			lastKnownFileType = sourcecode.c.h;
+			path = ModuleViewController.h;
+			sourceTree = "<group>";
+		};
+		98FD6EB95CD81A7D7305D357 = {
+			isa = PBXFileReference;
+			includeInIndex = 1;
+			lastKnownFileType = sourcecode.c.h;
+			path = ModuleViewInput.h;
+			sourceTree = "<group>";
+		};
+		9FF7553294606E07CE06C587 = {
+			isa = PBXFileReference;
+			includeInIndex = 1;
+			lastKnownFileType = sourcecode.c.h;
+			path = ModuleModuleInput.h;
+			sourceTree = "<group>";
+		};
+		A9DFA593A0692EE219AC0C03 = {
+			isa = PBXFileReference;
+			includeInIndex = 1;
+			lastKnownFileType = sourcecode.c.objc;
+			path = ModuleAssembly.m;
+			sourceTree = "<group>";
+		};
+		AD4D63F164265A36C22491CF = {
+			isa = PBXFileReference;
+			includeInIndex = 1;
+			lastKnownFileType = sourcecode.c.objc;
+			path = ModuleViewController.m;
+			sourceTree = "<group>";
+		};
+		BC35B479C777A700941B9171 = {
+			isa = PBXFileReference;
+			includeInIndex = 1;
+			lastKnownFileType = text.xcconfig;
+			name = "Pods-VPSTemplatesExampleTests.debug.xcconfig";
+			path = "Pods/Target Support Files/Pods-VPSTemplatesExampleTests/Pods-VPSTemplatesExampleTests.debug.xcconfig";
+			sourceTree = "<group>";
+		};
+		C269B39184E28C4ACD72E0D5 = {
+			isa = PBXFileReference;
+			explicitFileType = wrapper.framework;
+			includeInIndex = 0;
+			path = Pods_VPSTemplatesExample.framework;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		CAD537B9E0FA08193B32A35A = {
+			isa = PBXFileReference;
+			includeInIndex = 1;
+			lastKnownFileType = sourcecode.c.h;
+			path = ModuleRouter.h;
+			sourceTree = "<group>";
+		};
+		DCC5CB2F07A860FEB28F7CB9 = {
+			isa = PBXFileReference;
+			includeInIndex = 1;
+			lastKnownFileType = sourcecode.c.h;
+			path = ModuleViewOutput.h;
+			sourceTree = "<group>";
+		};
+		E0B2F621D1C5C0D9C11769D5 = {
+			isa = PBXFileReference;
+			includeInIndex = 1;
+			lastKnownFileType = text.xcconfig;
+			name = "Pods-VPSTemplatesExample.release.xcconfig";
+			path = "Pods/Target Support Files/Pods-VPSTemplatesExample/Pods-VPSTemplatesExample.release.xcconfig";
+			sourceTree = "<group>";
+		};
+		E8B681911E01685300C0175B = {
+			isa = PBXFileReference;
+			explicitFileType = wrapper.application;
+			includeInIndex = 0;
+			path = VPSTemplatesExample.app;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		E8B681951E01685300C0175B = {
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.c.objc;
+			path = main.m;
+			sourceTree = "<group>";
+		};
+		E8B681971E01685300C0175B = {
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.c.h;
+			path = AppDelegate.h;
+			sourceTree = "<group>";
+		};
+		E8B681981E01685300C0175B = {
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.c.objc;
+			path = AppDelegate.m;
+			sourceTree = "<group>";
+		};
+		E8B6819A1E01685300C0175B = {
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.c.h;
+			path = ViewController.h;
+			sourceTree = "<group>";
+		};
+		E8B6819B1E01685300C0175B = {
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.c.objc;
+			path = ViewController.m;
+			sourceTree = "<group>";
+		};
+		E8B6819E1E01685300C0175B = {
+			isa = PBXFileReference;
+			lastKnownFileType = file.storyboard;
+			name = Base;
+			path = Base.lproj/Main.storyboard;
+			sourceTree = "<group>";
+		};
+		E8B681A01E01685300C0175B = {
+			isa = PBXFileReference;
+			lastKnownFileType = folder.assetcatalog;
+			path = Assets.xcassets;
+			sourceTree = "<group>";
+		};
+		E8B681A31E01685300C0175B = {
+			isa = PBXFileReference;
+			lastKnownFileType = file.storyboard;
+			name = Base;
+			path = Base.lproj/LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		E8B681A51E01685300C0175B = {
+			isa = PBXFileReference;
+			lastKnownFileType = text.plist.xml;
+			path = Info.plist;
+			sourceTree = "<group>";
+		};
+		E8B681AA1E01685300C0175B = {
+			isa = PBXFileReference;
+			explicitFileType = wrapper.cfbundle;
+			includeInIndex = 0;
+			path = VPSTemplatesExampleTests.xctest;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		E8B681AE1E01685300C0175B = {
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.c.objc;
+			path = VPSTemplatesExampleTests.m;
+			sourceTree = "<group>";
+		};
+		E8B681B01E01685300C0175B = {
+			isa = PBXFileReference;
+			lastKnownFileType = text.plist.xml;
+			path = Info.plist;
+			sourceTree = "<group>";
+		};
+		F655A6DE87C4541F26C46736 = {
+			isa = PBXFileReference;
+			includeInIndex = 1;
+			lastKnownFileType = sourcecode.c.objc;
+			path = ModuleRouter.m;
+			sourceTree = "<group>";
+		};
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		E8B6818E1E01685300C0175B /* Frameworks */ = {
+		E8B6818E1E01685300C0175B = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0A0FB03BACF470689B54E80C /* Pods_VPSTemplatesExample.framework in Frameworks */,
+				0A0FB03BACF470689B54E80C,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		E8B681A71E01685300C0175B /* Frameworks */ = {
+		E8B681A71E01685300C0175B = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				93032917150E5009619E8639 /* Pods_VPSTemplatesExampleTests.framework in Frameworks */,
+				93032917150E5009619E8639,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		16A9F8D76D5123FD48921D74 /* Frameworks */ = {
+		05524D52DAF5A4451901C9FF = {
 			isa = PBXGroup;
 			children = (
-				C269B39184E28C4ACD72E0D5 /* Pods_VPSTemplatesExample.framework */,
-				6BF125F2A59C63DFB846327A /* Pods_VPSTemplatesExampleTests.framework */,
+				9FF7553294606E07CE06C587,
+				5734FAE22BB3EBCF94350A93,
+				69D18409F847EF28A29CA4F9,
+			);
+			name = viewModel;
+			path = viewModel;
+			sourceTree = "<group>";
+		};
+		16A9F8D76D5123FD48921D74 = {
+			isa = PBXGroup;
+			children = (
+				C269B39184E28C4ACD72E0D5,
+				6BF125F2A59C63DFB846327A,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		185E00D208CC5B06E841ACC9 /* protocol */ = {
+		494F62AA2142BD8F96770288 = {
 			isa = PBXGroup;
 			children = (
-				ED34F998C7A4FA3D3D2C5EA7 /* ProfileModuleViewInput.h */,
-				0AB66B82C2A9FFB83697C80F /* ProfileModuleViewOutput.h */,
+				98FD6EB95CD81A7D7305D357,
+				DCC5CB2F07A860FEB28F7CB9,
 			);
+			name = protocol;
 			path = protocol;
 			sourceTree = "<group>";
 		};
-		2625A8CF0E24C2CDB43DB738 /* assembly */ = {
+		85E75EC0D4F3DA62B5A9AE9D = {
 			isa = PBXGroup;
 			children = (
-				00DD6C14ED4F1BAAEF3503C3 /* ProfileModuleAssembly.h */,
-				B42C10D3A10E72748DFABF66 /* ProfileModuleAssembly.m */,
+				3CA377ECA93032D2AD92BE82,
+				5D4F9F5BE8A560BC1D0B27C6,
 			);
+			name = assembly;
 			path = assembly;
 			sourceTree = "<group>";
 		};
-		392E39E4D5970749E16D88BB /* presenter */ = {
+		9BE59511155424A0A42FB478 = {
 			isa = PBXGroup;
 			children = (
-				C32F2BB11C409C5E5EB0E661 /* ProfileModulePresenterTests.m */,
-			);
-			path = presenter;
-			sourceTree = "<group>";
-		};
-		3A4B9DEB048936C39700577B /* ProfileModule */ = {
-			isa = PBXGroup;
-			children = (
-				F51E28BB86D1A4B01BBC5B76 /* assembly */,
-				BCBB19BE0D35A80C034CFE89 /* view */,
-				392E39E4D5970749E16D88BB /* presenter */,
-				B0AFE318A3855268418F8F59 /* router */,
-			);
-			path = ProfileModule;
-			sourceTree = "<group>";
-		};
-		6CBC5DB64E2223D2815BCAD5 /* ProfileModule */ = {
-			isa = PBXGroup;
-			children = (
-				2625A8CF0E24C2CDB43DB738 /* assembly */,
-				D2A527311F5E26D334606CD4 /* view */,
-				EC872B0EB6973D0D5AA1DCE0 /* presenter */,
-				CE7BDA1DEC3A58351567AFD7 /* router */,
-			);
-			path = ProfileModule;
-			sourceTree = "<group>";
-		};
-		9BE59511155424A0A42FB478 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				713504C60A45DFC9163ACFD1 /* Pods-VPSTemplatesExample.debug.xcconfig */,
-				E0B2F621D1C5C0D9C11769D5 /* Pods-VPSTemplatesExample.release.xcconfig */,
-				BC35B479C777A700941B9171 /* Pods-VPSTemplatesExampleTests.debug.xcconfig */,
-				03E45EA89211E38B9517EB39 /* Pods-VPSTemplatesExampleTests.release.xcconfig */,
+				713504C60A45DFC9163ACFD1,
+				E0B2F621D1C5C0D9C11769D5,
+				BC35B479C777A700941B9171,
+				03E45EA89211E38B9517EB39,
 			);
 			name = Pods;
 			sourceTree = "<group>";
 		};
-		A153F8761B847D7BC66FC916 /* controllers */ = {
+		A153F8761B847D7BC66FC916 = {
 			isa = PBXGroup;
 			children = (
-				6CBC5DB64E2223D2815BCAD5 /* ProfileModule */,
+				FC9486D0C04EE6DECF115049,
 			);
 			path = controllers;
 			sourceTree = "<group>";
 		};
-		B0AFE318A3855268418F8F59 /* router */ = {
+		A5F0384E51A687EE4AC4512F = {
 			isa = PBXGroup;
 			children = (
-				F2F1B787DC8A6D6C929C0EF6 /* ProfileModuleRouterTests.m */,
+				5A1B80ECC507EA82D4712A90,
 			);
-			path = router;
+			name = view;
+			path = view;
 			sourceTree = "<group>";
 		};
-		B8FBBD468532070FE974147D /* controllers */ = {
+		B47B2177462D20AF66A6709F = {
 			isa = PBXGroup;
 			children = (
-				3A4B9DEB048936C39700577B /* ProfileModule */,
+				368ACD1083BD4393AD4375C4,
+			);
+			name = viewModel;
+			path = viewModel;
+			sourceTree = "<group>";
+		};
+		B8FBBD468532070FE974147D = {
+			isa = PBXGroup;
+			children = (
+				F825FC95C3B94EB069630EA4,
 			);
 			path = controllers;
 			sourceTree = "<group>";
 		};
-		BCBB19BE0D35A80C034CFE89 /* view */ = {
+		CA53E3D9EDCB92B59ED359CF = {
 			isa = PBXGroup;
 			children = (
-				6DA9ED8C47C0E452F0F8FA6F /* ProfileModuleViewControllerTests.m */,
+				6099D53E449C48085E83FB2C,
 			);
-			path = view;
-			sourceTree = "<group>";
-		};
-		CE7BDA1DEC3A58351567AFD7 /* router */ = {
-			isa = PBXGroup;
-			children = (
-				71EB4299BDA6D8A70BC36EE1 /* ProfileModuleRouterInput.h */,
-				6AFDCE3564AA263DCE1484FA /* ProfileModuleRouter.h */,
-				FA828B72FBD8267DCA2D1D67 /* ProfileModuleRouter.m */,
-			);
+			name = router;
 			path = router;
 			sourceTree = "<group>";
 		};
-		D2A527311F5E26D334606CD4 /* view */ = {
+		CB24638597E7B3E29B2D9503 = {
 			isa = PBXGroup;
 			children = (
-				185E00D208CC5B06E841ACC9 /* protocol */,
-				294079870DBBD6C81358F322 /* ProfileModuleViewController.h */,
-				E8133340C7948D6A1FEEB620 /* ProfileModuleViewController.m */,
+				3959C58DC235F1F4100D70AA,
+				A9DFA593A0692EE219AC0C03,
 			);
-			path = view;
+			name = assembly;
+			path = assembly;
 			sourceTree = "<group>";
 		};
 		E8B681881E01685300C0175B = {
 			isa = PBXGroup;
 			children = (
-				E8B681931E01685300C0175B /* VPSTemplatesExample */,
-				E8B681AD1E01685300C0175B /* VPSTemplatesExampleTests */,
-				E8B681921E01685300C0175B /* Products */,
-				9BE59511155424A0A42FB478 /* Pods */,
-				16A9F8D76D5123FD48921D74 /* Frameworks */,
+				E8B681931E01685300C0175B,
+				E8B681AD1E01685300C0175B,
+				E8B681921E01685300C0175B,
+				9BE59511155424A0A42FB478,
+				16A9F8D76D5123FD48921D74,
 			);
 			sourceTree = "<group>";
 		};
-		E8B681921E01685300C0175B /* Products */ = {
+		E8B681921E01685300C0175B = {
 			isa = PBXGroup;
 			children = (
-				E8B681911E01685300C0175B /* VPSTemplatesExample.app */,
-				E8B681AA1E01685300C0175B /* VPSTemplatesExampleTests.xctest */,
+				E8B681911E01685300C0175B,
+				E8B681AA1E01685300C0175B,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		E8B681931E01685300C0175B /* VPSTemplatesExample */ = {
+		E8B681931E01685300C0175B = {
 			isa = PBXGroup;
 			children = (
-				E8B681971E01685300C0175B /* AppDelegate.h */,
-				E8B681981E01685300C0175B /* AppDelegate.m */,
-				E8B6819A1E01685300C0175B /* ViewController.h */,
-				E8B6819B1E01685300C0175B /* ViewController.m */,
-				E8B6819D1E01685300C0175B /* Main.storyboard */,
-				E8B681A01E01685300C0175B /* Assets.xcassets */,
-				E8B681A21E01685300C0175B /* LaunchScreen.storyboard */,
-				E8B681A51E01685300C0175B /* Info.plist */,
-				E8B681941E01685300C0175B /* Supporting Files */,
-				A153F8761B847D7BC66FC916 /* controllers */,
+				E8B681971E01685300C0175B,
+				E8B681981E01685300C0175B,
+				E8B6819A1E01685300C0175B,
+				E8B6819B1E01685300C0175B,
+				E8B6819D1E01685300C0175B,
+				E8B681A01E01685300C0175B,
+				E8B681A21E01685300C0175B,
+				E8B681A51E01685300C0175B,
+				E8B681941E01685300C0175B,
+				A153F8761B847D7BC66FC916,
 			);
 			path = VPSTemplatesExample;
 			sourceTree = "<group>";
 		};
-		E8B681941E01685300C0175B /* Supporting Files */ = {
+		E8B681941E01685300C0175B = {
 			isa = PBXGroup;
 			children = (
-				E8B681951E01685300C0175B /* main.m */,
+				E8B681951E01685300C0175B,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		E8B681AD1E01685300C0175B /* VPSTemplatesExampleTests */ = {
+		E8B681AD1E01685300C0175B = {
 			isa = PBXGroup;
 			children = (
-				E8B681AE1E01685300C0175B /* VPSTemplatesExampleTests.m */,
-				E8B681B01E01685300C0175B /* Info.plist */,
-				B8FBBD468532070FE974147D /* controllers */,
+				E8B681AE1E01685300C0175B,
+				E8B681B01E01685300C0175B,
+				B8FBBD468532070FE974147D,
 			);
 			path = VPSTemplatesExampleTests;
 			sourceTree = "<group>";
 		};
-		EC872B0EB6973D0D5AA1DCE0 /* presenter */ = {
+		EFC6DD3CC93E8C67668F61C3 = {
 			isa = PBXGroup;
 			children = (
-				706591F45AEF4036AA25D97D /* ProfileModuleModuleInput.h */,
-				469DEB453287D38982179759 /* ProfileModulePresenter.h */,
-				0C43295DCB90ED1D8E70852E /* ProfileModulePresenter.m */,
+				18751B9F10C8D47FE49BE888,
+				CAD537B9E0FA08193B32A35A,
+				F655A6DE87C4541F26C46736,
 			);
-			path = presenter;
+			name = router;
+			path = router;
 			sourceTree = "<group>";
 		};
-		F51E28BB86D1A4B01BBC5B76 /* assembly */ = {
+		F825FC95C3B94EB069630EA4 = {
 			isa = PBXGroup;
 			children = (
-				0657B2712EC53945CB2DF426 /* ProfileModuleAssemblyTests.m */,
-				A29DCB37DE3AD87C4AB3342C /* ProfileModuleAssembly_Testable.h */,
+				85E75EC0D4F3DA62B5A9AE9D,
+				A5F0384E51A687EE4AC4512F,
+				B47B2177462D20AF66A6709F,
+				CA53E3D9EDCB92B59ED359CF,
 			);
-			path = assembly;
+			name = Module;
+			path = Module;
+			sourceTree = "<group>";
+		};
+		FC9486D0C04EE6DECF115049 = {
+			isa = PBXGroup;
+			children = (
+				CB24638597E7B3E29B2D9503,
+				FE5E991B267FBB85F774AC03,
+				05524D52DAF5A4451901C9FF,
+				EFC6DD3CC93E8C67668F61C3,
+			);
+			name = Module;
+			path = Module;
+			sourceTree = "<group>";
+		};
+		FE5E991B267FBB85F774AC03 = {
+			isa = PBXGroup;
+			children = (
+				494F62AA2142BD8F96770288,
+				98DE0124C13524C988DCA4AF,
+				AD4D63F164265A36C22491CF,
+			);
+			name = view;
+			path = view;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		E8B681901E01685300C0175B /* VPSTemplatesExample */ = {
+		E8B681901E01685300C0175B = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = E8B681B31E01685300C0175B /* Build configuration list for PBXNativeTarget "VPSTemplatesExample" */;
+			buildConfigurationList = E8B681B31E01685300C0175B;
 			buildPhases = (
-				03EE43B08299B7B783B8CA9E /* [CP] Check Pods Manifest.lock */,
-				E8B6818D1E01685300C0175B /* Sources */,
-				E8B6818E1E01685300C0175B /* Frameworks */,
-				E8B6818F1E01685300C0175B /* Resources */,
-				C41839384831F484330AD571 /* [CP] Embed Pods Frameworks */,
-				720BE28E3947E504075B8B8F /* [CP] Copy Pods Resources */,
+				03EE43B08299B7B783B8CA9E,
+				E8B6818D1E01685300C0175B,
+				E8B6818E1E01685300C0175B,
+				E8B6818F1E01685300C0175B,
+				C41839384831F484330AD571,
+				720BE28E3947E504075B8B8F,
 			);
 			buildRules = (
 			);
@@ -309,34 +582,34 @@
 			);
 			name = VPSTemplatesExample;
 			productName = VPSTemplatesExample;
-			productReference = E8B681911E01685300C0175B /* VPSTemplatesExample.app */;
+			productReference = E8B681911E01685300C0175B;
 			productType = "com.apple.product-type.application";
 		};
-		E8B681A91E01685300C0175B /* VPSTemplatesExampleTests */ = {
+		E8B681A91E01685300C0175B = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = E8B681B61E01685300C0175B /* Build configuration list for PBXNativeTarget "VPSTemplatesExampleTests" */;
+			buildConfigurationList = E8B681B61E01685300C0175B;
 			buildPhases = (
-				A05ABE3A5EA3CF5DA76F4437 /* [CP] Check Pods Manifest.lock */,
-				E8B681A61E01685300C0175B /* Sources */,
-				E8B681A71E01685300C0175B /* Frameworks */,
-				E8B681A81E01685300C0175B /* Resources */,
-				E0F7BEB0BCFA402DA225C7F2 /* [CP] Embed Pods Frameworks */,
-				B01CE9E6BB57F639D472413B /* [CP] Copy Pods Resources */,
+				A05ABE3A5EA3CF5DA76F4437,
+				E8B681A61E01685300C0175B,
+				E8B681A71E01685300C0175B,
+				E8B681A81E01685300C0175B,
+				E0F7BEB0BCFA402DA225C7F2,
+				B01CE9E6BB57F639D472413B,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				E8B681AC1E01685300C0175B /* PBXTargetDependency */,
+				E8B681AC1E01685300C0175B,
 			);
 			name = VPSTemplatesExampleTests;
 			productName = VPSTemplatesExampleTests;
-			productReference = E8B681AA1E01685300C0175B /* VPSTemplatesExampleTests.xctest */;
+			productReference = E8B681AA1E01685300C0175B;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		E8B681891E01685300C0175B /* Project object */ = {
+		E8B681891E01685300C0175B = {
 			isa = PBXProject;
 			attributes = {
 				LastUpgradeCheck = 0810;
@@ -353,7 +626,7 @@
 					};
 				};
 			};
-			buildConfigurationList = E8B6818C1E01685300C0175B /* Build configuration list for PBXProject "VPSTemplatesExample" */;
+			buildConfigurationList = E8B6818C1E01685300C0175B;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -362,28 +635,30 @@
 				Base,
 			);
 			mainGroup = E8B681881E01685300C0175B;
-			productRefGroup = E8B681921E01685300C0175B /* Products */;
+			productRefGroup = E8B681921E01685300C0175B;
 			projectDirPath = "";
+			projectReferences = (
+			);
 			projectRoot = "";
 			targets = (
-				E8B681901E01685300C0175B /* VPSTemplatesExample */,
-				E8B681A91E01685300C0175B /* VPSTemplatesExampleTests */,
+				E8B681901E01685300C0175B,
+				E8B681A91E01685300C0175B,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		E8B6818F1E01685300C0175B /* Resources */ = {
+		E8B6818F1E01685300C0175B = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E8B681A41E01685300C0175B /* LaunchScreen.storyboard in Resources */,
-				E8B681A11E01685300C0175B /* Assets.xcassets in Resources */,
-				E8B6819F1E01685300C0175B /* Main.storyboard in Resources */,
+				E8B681A41E01685300C0175B,
+				E8B681A11E01685300C0175B,
+				E8B6819F1E01685300C0175B,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		E8B681A81E01685300C0175B /* Resources */ = {
+		E8B681A81E01685300C0175B = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -393,7 +668,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		03EE43B08299B7B783B8CA9E /* [CP] Check Pods Manifest.lock */ = {
+		03EE43B08299B7B783B8CA9E = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -408,7 +683,7 @@
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
-		720BE28E3947E504075B8B8F /* [CP] Copy Pods Resources */ = {
+		720BE28E3947E504075B8B8F = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -423,7 +698,7 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-VPSTemplatesExample/Pods-VPSTemplatesExample-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		A05ABE3A5EA3CF5DA76F4437 /* [CP] Check Pods Manifest.lock */ = {
+		A05ABE3A5EA3CF5DA76F4437 = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -438,7 +713,7 @@
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
-		B01CE9E6BB57F639D472413B /* [CP] Copy Pods Resources */ = {
+		B01CE9E6BB57F639D472413B = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -453,7 +728,7 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-VPSTemplatesExampleTests/Pods-VPSTemplatesExampleTests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		C41839384831F484330AD571 /* [CP] Embed Pods Frameworks */ = {
+		C41839384831F484330AD571 = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -468,7 +743,7 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-VPSTemplatesExample/Pods-VPSTemplatesExample-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		E0F7BEB0BCFA402DA225C7F2 /* [CP] Embed Pods Frameworks */ = {
+		E0F7BEB0BCFA402DA225C7F2 = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -486,55 +761,55 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		E8B6818D1E01685300C0175B /* Sources */ = {
+		E8B6818D1E01685300C0175B = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E8B6819C1E01685300C0175B /* ViewController.m in Sources */,
-				E8B681991E01685300C0175B /* AppDelegate.m in Sources */,
-				E8B681961E01685300C0175B /* main.m in Sources */,
-				D3C08A2CD49E2C44ACF6E283 /* ProfileModuleAssembly.m in Sources */,
-				A67AC5A4BFB05183EB885C8A /* ProfileModuleViewController.m in Sources */,
-				D9666B21ED92A1EFA4E9ECFC /* ProfileModulePresenter.m in Sources */,
-				6961F095352B908050108AC9 /* ProfileModuleRouter.m in Sources */,
+				E8B6819C1E01685300C0175B,
+				E8B681991E01685300C0175B,
+				E8B681961E01685300C0175B,
+				E9E3635D493FE0C1D2F1F6D5,
+				0C6ACD73E3A79770E52FB827,
+				D567D15D57DF73C23DBA1921,
+				19AAEC3BCEDD409E189C3B98,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		E8B681A61E01685300C0175B /* Sources */ = {
+		E8B681A61E01685300C0175B = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E8B681AF1E01685300C0175B /* VPSTemplatesExampleTests.m in Sources */,
-				EC38F4A663F5C98C6688B9B8 /* ProfileModuleAssemblyTests.m in Sources */,
-				950A95EC55CCEB0EB4CB0680 /* ProfileModuleViewControllerTests.m in Sources */,
-				A7739FF6CF370AF79108726E /* ProfileModulePresenterTests.m in Sources */,
-				31C28EC6F8500C6876DD1A89 /* ProfileModuleRouterTests.m in Sources */,
+				E8B681AF1E01685300C0175B,
+				64F605C5AC716BF19D03E792,
+				3D63887B5E6843B63AF3DED6,
+				11FE680969B345D8F9468BAA,
+				E335189858D08BCA7875F2C0,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		E8B681AC1E01685300C0175B /* PBXTargetDependency */ = {
+		E8B681AC1E01685300C0175B = {
 			isa = PBXTargetDependency;
-			target = E8B681901E01685300C0175B /* VPSTemplatesExample */;
-			targetProxy = E8B681AB1E01685300C0175B /* PBXContainerItemProxy */;
+			target = E8B681901E01685300C0175B;
+			targetProxy = E8B681AB1E01685300C0175B;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		E8B6819D1E01685300C0175B /* Main.storyboard */ = {
+		E8B6819D1E01685300C0175B = {
 			isa = PBXVariantGroup;
 			children = (
-				E8B6819E1E01685300C0175B /* Base */,
+				E8B6819E1E01685300C0175B,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
-		E8B681A21E01685300C0175B /* LaunchScreen.storyboard */ = {
+		E8B681A21E01685300C0175B = {
 			isa = PBXVariantGroup;
 			children = (
-				E8B681A31E01685300C0175B /* Base */,
+				E8B681A31E01685300C0175B,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -542,7 +817,7 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		E8B681B11E01685300C0175B /* Debug */ = {
+		E8B681B11E01685300C0175B = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -589,7 +864,7 @@
 			};
 			name = Debug;
 		};
-		E8B681B21E01685300C0175B /* Release */ = {
+		E8B681B21E01685300C0175B = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -630,9 +905,9 @@
 			};
 			name = Release;
 		};
-		E8B681B41E01685300C0175B /* Debug */ = {
+		E8B681B41E01685300C0175B = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 713504C60A45DFC9163ACFD1 /* Pods-VPSTemplatesExample.debug.xcconfig */;
+			baseConfigurationReference = 713504C60A45DFC9163ACFD1;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = VPSTemplatesExample/Info.plist;
@@ -642,9 +917,9 @@
 			};
 			name = Debug;
 		};
-		E8B681B51E01685300C0175B /* Release */ = {
+		E8B681B51E01685300C0175B = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = E0B2F621D1C5C0D9C11769D5 /* Pods-VPSTemplatesExample.release.xcconfig */;
+			baseConfigurationReference = E0B2F621D1C5C0D9C11769D5;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = VPSTemplatesExample/Info.plist;
@@ -654,9 +929,9 @@
 			};
 			name = Release;
 		};
-		E8B681B71E01685300C0175B /* Debug */ = {
+		E8B681B71E01685300C0175B = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = BC35B479C777A700941B9171 /* Pods-VPSTemplatesExampleTests.debug.xcconfig */;
+			baseConfigurationReference = BC35B479C777A700941B9171;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = VPSTemplatesExampleTests/Info.plist;
@@ -667,9 +942,9 @@
 			};
 			name = Debug;
 		};
-		E8B681B81E01685300C0175B /* Release */ = {
+		E8B681B81E01685300C0175B = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 03E45EA89211E38B9517EB39 /* Pods-VPSTemplatesExampleTests.release.xcconfig */;
+			baseConfigurationReference = 03E45EA89211E38B9517EB39;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = VPSTemplatesExampleTests/Info.plist;
@@ -683,34 +958,34 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		E8B6818C1E01685300C0175B /* Build configuration list for PBXProject "VPSTemplatesExample" */ = {
+		E8B6818C1E01685300C0175B = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				E8B681B11E01685300C0175B /* Debug */,
-				E8B681B21E01685300C0175B /* Release */,
+				E8B681B11E01685300C0175B,
+				E8B681B21E01685300C0175B,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		E8B681B31E01685300C0175B /* Build configuration list for PBXNativeTarget "VPSTemplatesExample" */ = {
+		E8B681B31E01685300C0175B = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				E8B681B41E01685300C0175B /* Debug */,
-				E8B681B51E01685300C0175B /* Release */,
+				E8B681B41E01685300C0175B,
+				E8B681B51E01685300C0175B,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		E8B681B61E01685300C0175B /* Build configuration list for PBXNativeTarget "VPSTemplatesExampleTests" */ = {
+		E8B681B61E01685300C0175B = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				E8B681B71E01685300C0175B /* Debug */,
-				E8B681B81E01685300C0175B /* Release */,
+				E8B681B71E01685300C0175B,
+				E8B681B81E01685300C0175B,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = E8B681891E01685300C0175B /* Project object */;
+	rootObject = E8B681891E01685300C0175B;
 }
