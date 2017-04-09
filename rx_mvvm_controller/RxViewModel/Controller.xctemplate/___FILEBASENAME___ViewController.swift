@@ -10,14 +10,14 @@ import UIKit
 import RxSwift
 import RxCocoa
 
-class ___FILEBASENAMEASIDENTIFIER___ViewController: UIViewController, ___FILEBASENAMEASIDENTIFIER___Input {
+class ___FILEBASENAMEASIDENTIFIER___ViewController: UIViewController {
   
   // MARK: - Properties
   // dependencies
   var viewModel: ___FILEBASENAMEASIDENTIFIER___Output?
   
   // Private
-  var disposeBag: DisposeBag = DisposeBag()
+  var bag = DisposeBag()
   
   // MARK: Life Cycle
   
@@ -52,23 +52,16 @@ class ___FILEBASENAMEASIDENTIFIER___ViewController: UIViewController, ___FILEBAS
   
   func configureRx() {
     guard let model = viewModel else { return }
-    model.confRx()
+    model.configureRx()
     
-    model.title.asObservable()
+    model.title
       .bindTo(self.rx.title)
-      .addDisposableTo(disposeBag)
+      .addDisposableTo(bag)
   }
   
   func configureUI() {
     self.title = "RxController"
   }
-  
-  // MARK: - Action
-  
-  // MARK: - ___FILEBASENAMEASIDENTIFIER___Input
-//  func show(error: NSError) {
-//    
-//  }
   
   // MARK: - Additional
   

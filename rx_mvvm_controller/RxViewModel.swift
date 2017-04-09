@@ -44,6 +44,10 @@ protocol RxModelOutput {
   var displayError: Observable<NSError> {get}
 }
 
+protocol ViewModelType {
+  associatedtype InputDependencies
+}
+
 class RxViewModel {
   let bag = DisposeBag()
   
@@ -58,25 +62,11 @@ class RxViewModel {
   internal var _loadingState = Variable<LoadingState>(.unknown)
   internal var _displayError = Variable<NSError>(NSError(domain: "", code: 0, userInfo: nil))
   
-  init() {
-    
-  }
-  
   func isRequestInProcess() -> Bool {
     guard _loadingState.value != .loading else { return true }
     _loadingState.value = .loading
     
     return false
   }
-  
-  func handleResponse<E>(_ response: Observable<E>) -> Observable<E> {
-    return response.map { (event) -> E in
-      self._loadingState.value = .normal
-      return event
-      }.do(onError: { (err) in
-        let e = err as NSError
-        self._displayError.value = e
-        self._loadingState.value = .error
-      })
-  }
 }
+

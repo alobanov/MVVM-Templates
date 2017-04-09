@@ -10,63 +10,67 @@ import Foundation
 import RxSwift
 import RxCocoa
 
-protocol ___FILEBASENAMEASIDENTIFIER___Testable {
-    // put here private methods
-}
-
 protocol ___FILEBASENAMEASIDENTIFIER___ModuleOutput: class {
   
 }
 
+struct FormLoanModuleInputParameters {}
+
 protocol ___FILEBASENAMEASIDENTIFIER___ModuleInput {
-  
+  func configureWithRootModule(parameters: FormLoanModuleInputParameters)
+}
+
+protocol ___FILEBASENAMEASIDENTIFIER___Testable {
+    // put here private methods for testing
 }
 
 protocol ___FILEBASENAMEASIDENTIFIER___Output: RxModelOutput {
   var router: ___FILEBASENAMEASIDENTIFIER___RouterInput! {get}
-  var title: Variable<String> {get}
-  func confRx()
-}
-
-protocol ___FILEBASENAMEASIDENTIFIER___Input: class {
-//  func show(error: NSError)
+  var title: Observable<String> {get}
+  func configureRx(/* put hear some drivers ;) */)
 }
 
 class ___FILEBASENAMEASIDENTIFIER___ViewModel: RxViewModel, ___FILEBASENAMEASIDENTIFIER___Output, ___FILEBASENAMEASIDENTIFIER___ModuleInput, ___FILEBASENAMEASIDENTIFIER___Testable {
   
-  // MARK: properties IBOutlets
-  // properties
+  // MARK: Properties
   
-  // MARK:- dependencies
-  fileprivate weak var view: ___FILEBASENAMEASIDENTIFIER___Input!
+  // Dependencies
   var router: ___FILEBASENAMEASIDENTIFIER___RouterInput!
   
-  // MARK:- properties
-  // ___FILEBASENAMEASIDENTIFIER___Output
-  var title = Variable<String>("Title")
+  // Properties of ___FILEBASENAMEASIDENTIFIER___Output
+  var title: Observable<String> {
+    return .just("Title")
+  }
   
   // Private
   
-  // MARK:- init
-  init(dependencies:(
-    view: ___FILEBASENAMEASIDENTIFIER___Input,
-    router: ___FILEBASENAMEASIDENTIFIER___RouterInput
-    )) {
-    self.view = dependencies.view
+  // MARK:- initializer
+  init(dependencies: InputDependencies) {
     self.router = dependencies.router
     
     super.init()
   }
   
-  // Output
-  func confRx() {
+  // Methods of ___FILEBASENAMEASIDENTIFIER___Output
+  func configureRx() {
     
+  }
+  
+  // ___FILEBASENAMEASIDENTIFIER___ModuleInput
+  func configureWithRootModule(parameters: FormLoanModuleInputParameters) {
+    // configure root module input
   }
   
   // MARK: - Additional
   
   deinit {
     print("-- ___FILEBASENAMEASIDENTIFIER___ViewModel dead")
+  }
+}
+
+extension ___FILEBASENAMEASIDENTIFIER___ViewModel: ViewModelType {
+  struct InputDependencies {
+    let router: ___FILEBASENAMEASIDENTIFIER___RouterInput
   }
 }
 
