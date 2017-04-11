@@ -11,7 +11,7 @@ import RxSwift
 import RxCocoa
 
 protocol ___FILEBASENAMEASIDENTIFIER___Output {
-  var router: ___FILEBASENAMEASIDENTIFIER___RouterInput! {get}
+  var router: ___FILEBASENAMEASIDENTIFIER___RouterInput {get}
   func configure(input: ___FILEBASENAMEASIDENTIFIER___ViewModel.Input) -> ___FILEBASENAMEASIDENTIFIER___ViewModel.Output
   // func configureModule(input: ___FILEBASENAMEASIDENTIFIER___ViewModel.ModuleInput) -> ___FILEBASENAMEASIDENTIFIER___ViewModel.ModuleOutput
 }

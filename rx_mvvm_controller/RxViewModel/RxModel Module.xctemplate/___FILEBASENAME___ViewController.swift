@@ -54,7 +54,7 @@ class ___FILEBASENAMEASIDENTIFIER___ViewController: UIViewController {
   
   // MARK: Configuration
   
-  func configureRx() {
+  func configureRx() throws {
     guard let model = viewModel else {
       fatalError("Need set view model")
     }
