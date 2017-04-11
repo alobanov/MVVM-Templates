@@ -10,39 +10,38 @@ import Foundation
 import RxSwift
 import RxCocoa
 
-protocol ___FILEBASENAMEASIDENTIFIER___ModuleOutput: class {
-  
-}
-
-struct FormLoanModuleInputParameters {}
-
-protocol ___FILEBASENAMEASIDENTIFIER___ModuleInput {
-  func configureWithRootModule(parameters: FormLoanModuleInputParameters)
-}
-
-protocol ___FILEBASENAMEASIDENTIFIER___Testable {
-    // put here private methods for testing
-}
-
-protocol ___FILEBASENAMEASIDENTIFIER___Output: RxModelOutput {
+protocol ___FILEBASENAMEASIDENTIFIER___Output {
   var router: ___FILEBASENAMEASIDENTIFIER___RouterInput! {get}
-  var title: Observable<String> {get}
-  func configureRx(/* put hear some drivers ;) */)
+  func configure(input: ___FILEBASENAMEASIDENTIFIER___ViewModel.Input) -> ___FILEBASENAMEASIDENTIFIER___ViewModel.Output
+  // func configureModule(input: ___FILEBASENAMEASIDENTIFIER___ViewModel.ModuleInput) -> ___FILEBASENAMEASIDENTIFIER___ViewModel.ModuleOutput
 }
 
-class ___FILEBASENAMEASIDENTIFIER___ViewModel: RxViewModel, ___FILEBASENAMEASIDENTIFIER___Output, ___FILEBASENAMEASIDENTIFIER___ModuleInput, ___FILEBASENAMEASIDENTIFIER___Testable {
+class ___FILEBASENAMEASIDENTIFIER___ViewModel: RxViewModel, ___FILEBASENAMEASIDENTIFIER___Output, RxViewModelType { //, RxViewModelModuleType {
   
-  // MARK: Properties
+  // MARK: In/Out module parameters
+//   struct ModuleInput {}
+//   struct ModuleOutput {}
   
-  // Dependencies
-  var router: ___FILEBASENAMEASIDENTIFIER___RouterInput!
-  
-  // Properties of ___FILEBASENAMEASIDENTIFIER___Output
-  var title: Observable<String> {
-    return .just("Title")
+  // MARK: In/Out parameters
+  struct InputDependencies {
+    let router: ___FILEBASENAMEASIDENTIFIER___RouterInput
   }
   
-  // Private
+  struct Input {
+    
+  }
+  
+  struct Output {
+    let title: Observable<String>
+  }
+  
+  // Mark:- Dependencies
+  var router: ___FILEBASENAMEASIDENTIFIER___RouterInput
+  
+  // Mark:- Properties
+  private var title: Observable<String> {
+    return .just("Title")
+  }
   
   // MARK:- initializer
   init(dependencies: InputDependencies) {
@@ -51,15 +50,14 @@ class ___FILEBASENAMEASIDENTIFIER___ViewModel: RxViewModel, ___FILEBASENAMEASIDE
     super.init()
   }
   
-  // Methods of ___FILEBASENAMEASIDENTIFIER___Output
-  func configureRx() {
-    
+  // MARK:- ___FILEBASENAMEASIDENTIFIER___Output
+  func configure(input: Input) -> Output {
+    return Output(title: self.title)
   }
   
-  // ___FILEBASENAMEASIDENTIFIER___ModuleInput
-  func configureWithRootModule(parameters: FormLoanModuleInputParameters) {
-    // configure root module input
-  }
+//  func configureModule(input: ModuleInput) -> ModuleOutput {
+//    return ModuleOutput()
+//  }
   
   // MARK: - Additional
   
@@ -67,20 +65,3 @@ class ___FILEBASENAMEASIDENTIFIER___ViewModel: RxViewModel, ___FILEBASENAMEASIDE
     print("-- ___FILEBASENAMEASIDENTIFIER___ViewModel dead")
   }
 }
-
-extension ___FILEBASENAMEASIDENTIFIER___ViewModel: ViewModelType {
-  struct InputDependencies {
-    let router: ___FILEBASENAMEASIDENTIFIER___RouterInput
-  }
-}
-
-// MARK: - Additional helpers
-extension ___FILEBASENAMEASIDENTIFIER___ViewModel {
-  
-}
-
-// MARK: - Network
-extension ___FILEBASENAMEASIDENTIFIER___ViewModel {
-  
-}
-

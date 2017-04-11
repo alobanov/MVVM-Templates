@@ -13,27 +13,31 @@ import RxCocoa
 class ___FILEBASENAMEASIDENTIFIER___ViewController: UIViewController {
   
   // MARK: - Properties
-  // dependencies
+  
+  // Dependencies
   var viewModel: ___FILEBASENAMEASIDENTIFIER___Output?
   
-  // Private
+  // Public
   var bag = DisposeBag()
   
-  // MARK: Life Cycle
+  // Private
+  
+  // IBOutlet & UI
+  // @IBOutlet weak var tableView: UITableView!
+  
+  // MARK: - View Live Circle
   
   override func awakeFromNib() {
     super.awakeFromNib()
 //    ___FILEBASENAMEASIDENTIFIER___Configurator.configure(self)
   }
   
-  // MARK: - View Live Circle
-  
   override func viewDidLoad() {
     super.viewDidLoad()
     
     // Do any additional setup after loading the view.
     self.configureUI()
-    self.configureRx()
+    try! self.configureRx()
   }
   
   override func didReceiveMemoryWarning() {
@@ -51,12 +55,14 @@ class ___FILEBASENAMEASIDENTIFIER___ViewController: UIViewController {
   // MARK: Configuration
   
   func configureRx() {
-    guard let model = viewModel else { return }
-    model.configureRx()
+    guard let model = viewModel else {
+      fatalError("Need set view model")
+    }
     
-    model.title
-      .bindTo(self.rx.title)
-      .addDisposableTo(bag)
+    let output = model.configure(input: ___FILEBASENAMEASIDENTIFIER___ViewModel.Input())
+    
+    //
+    output.title.bindTo(self.rx.title).addDisposableTo(bag)
   }
   
   func configureUI() {

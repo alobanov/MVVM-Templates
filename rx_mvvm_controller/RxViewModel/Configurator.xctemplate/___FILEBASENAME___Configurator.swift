@@ -12,7 +12,7 @@ class ___FILEBASENAMEASIDENTIFIER___Configurator
 {
   // MARK: Configuration
   
-  class func configure(viewController: ___FILEBASENAMEASIDENTIFIER___ViewController) // , moduleInput: ___FILEBASENAMEASIDENTIFIER___ModuleInputParameters) -> ___FILEBASENAMEASIDENTIFIER___ModuleOutput
+  class func configure(viewController: ___FILEBASENAMEASIDENTIFIER___ViewController) // , moduleInput: ___FILEBASENAMEASIDENTIFIER___ViewModel.ModuleInput) -> ___FILEBASENAMEASIDENTIFIER___ViewModel.ModuleOutput
   {
     // router
     let router = ___FILEBASENAMEASIDENTIFIER___Router()
@@ -23,11 +23,11 @@ class ___FILEBASENAMEASIDENTIFIER___Configurator
     
     // view model
     let viewModel = ___FILEBASENAMEASIDENTIFIER___ViewModel(dependencies: dependencies)
-    // viewModel.configureWithRootModule(parameters: moduleInput)
+    // let moduleOutput = viewModel.configureModule(input: moduleInput)
     
     // controller
     viewController.viewModel = viewModel
     
-    // return viewModel
+    // return moduleOutput
   }
 }
