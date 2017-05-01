@@ -1,16 +1,16 @@
 //
 //  RxViewModel.swift
-//  Dribbble
+//  Creditclub
 //
 //  Created by Lobanov Aleksey on 08.09.16.
-//  Copyright © 2016 Lobanov Aleksey. All rights reserved.
+//  Copyright © 2016 Soft Media Lab. All rights reserved.
 //
 
 import Foundation
 import RxSwift
 
 // MARK: - Enum Values
-enum LoadingState: Equatable {
+public enum LoadingState: Equatable {
   /// Content is available and not loading any content
   case normal
   /// No Content is available
@@ -21,10 +21,26 @@ enum LoadingState: Equatable {
   case loading
   // Prepearing state
   case unknown
+  
+  // MARK: Properties
+  var description: String {
+    switch self {
+    case .normal: return "Loading success"
+    /// No Content is available
+    case .empty: return "Empty results"
+    /// Got an error loading content
+    case .error: return "Loading failure"
+    /// Is loading content
+    case .loading: return "Loading in process..."
+    // Prepearing state
+    case .unknown: return "Not defined loading state"
+    }
+  }
+		
 }
 
 // MARK: - Equatable
-func == (lhs: LoadingState, rhs: LoadingState) -> Bool {
+public func == (lhs: LoadingState, rhs: LoadingState) -> Bool {
   switch (lhs, rhs) {
   case (.normal, .normal):
     return true
@@ -37,6 +53,21 @@ func == (lhs: LoadingState, rhs: LoadingState) -> Bool {
   default:
     return false
   }
+}
+
+protocol RxViewModelType {
+  associatedtype InputDependencies
+  associatedtype Input
+  associatedtype Output
+  
+  func configure(input: Input) -> Output
+}
+
+protocol RxViewModelModuleType {
+  associatedtype ModuleInput
+  associatedtype ModuleOutput
+  
+  func configureModule(input: ModuleInput) -> ModuleOutput
 }
 
 protocol RxModelOutput {
@@ -62,6 +93,10 @@ class RxViewModel {
   internal var _loadingState = Variable<LoadingState>(.unknown)
   internal var _displayError = Variable<NSError>(NSError(domain: "", code: 0, userInfo: nil))
   
+  init() {
+    
+  }
+  
   func isRequestInProcess() -> Bool {
     guard _loadingState.value != .loading else { return true }
     _loadingState.value = .loading
@@ -69,4 +104,3 @@ class RxViewModel {
     return false
   }
 }
-

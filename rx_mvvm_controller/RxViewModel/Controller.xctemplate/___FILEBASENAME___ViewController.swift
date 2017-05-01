@@ -54,7 +54,7 @@ class ___FILEBASENAMEASIDENTIFIER___ViewController: UIViewController {
   
   // MARK: Configuration
   
-  func configureRx() {
+  func configureRx() throws {
     guard let model = viewModel else {
       fatalError("Need set view model")
     }
@@ -62,7 +62,7 @@ class ___FILEBASENAMEASIDENTIFIER___ViewController: UIViewController {
     let output = model.configure(input: ___FILEBASENAMEASIDENTIFIER___ViewModel.Input())
     
     //
-    output.title.bindTo(self.rx.title).addDisposableTo(bag)
+    output.title.bind(to: self.rx.title).addDisposableTo(bag)
   }
   
   func configureUI() {
