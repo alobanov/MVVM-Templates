@@ -1,34 +1,11 @@
-# Objective-c templates of modified VIPER architecture called VPS (View-PS)
-This is the collection of templates for [`Generamba`](https://github.com/rambler-digital-solutions/Generamba)
-
-TODO: Add services initialization
-
-## Installation
-1) Setup [`Generamba`](https://github.com/rambler-digital-solutions/Generamba) and run `generamba setup` and fill out `Rambafile`
-
-2) Updates templates section in your `Rambafile` as follow:
-```
-### Templates
-catalogs:
-- 'https://github.com/alobanov/vps-template'
-templates:
-- {name: vps_controller}
-```
-
-3) Run `generamba template install`
-
-5) Enjoy
-
----
-
 # Swift templates of MVVM+Rx architecture
 ### Setup via xCode Templates
 
 This section about native templates used by xCode
 
-### What is xCode Templates
+### Example of MVVM+Rx templates in action 
 
-Need description here
+Check this out [Client for Dribbble write with ❤️ and MVVM + Rx + Moya](https://github.com/alobanov/Dribbble)
 
 ### Auto syncing
 
@@ -56,3 +33,26 @@ alias xCode_update_templates="cd ~/Documents/git-repos/alobanov/vps-template; gi
 Do not forget make `source ~/.bash_profile` in you terminal for start using update command.
 
 Now you can type in terminal: `xCode_update_templates`
+
+---
+
+# Objective-c templates of modified VIPER architecture called VPS (View-PS)
+This is the collection of templates for [`Generamba`](https://github.com/rambler-digital-solutions/Generamba)
+
+TODO: Add services initialization
+
+## Installation
+1) Setup [`Generamba`](https://github.com/rambler-digital-solutions/Generamba) and run `generamba setup` and fill out `Rambafile`
+
+2) Updates templates section in your `Rambafile` as follow:
+```
+### Templates
+catalogs:
+- 'https://github.com/alobanov/vps-template'
+templates:
+- {name: vps_controller}
+```
+
+3) Run `generamba template install`
+
+5) Enjoy
