@@ -36,10 +36,8 @@ Now you can type in terminal: `xCode_update_templates`
 
 ---
 
-# Objective-c templates of modified VIPER architecture called VPS (View-PS)
+# Objective-c templates of modified MVVM architecture called based on protocols
 This is the collection of templates for [`Generamba`](https://github.com/rambler-digital-solutions/Generamba)
-
-TODO: Add services initialization
 
 ## Installation
 1) Setup [`Generamba`](https://github.com/rambler-digital-solutions/Generamba) and run `generamba setup` and fill out `Rambafile`
