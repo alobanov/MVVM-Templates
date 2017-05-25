@@ -11,7 +11,6 @@ import RxSwift
 import RxCocoa
 
 protocol ___FILEBASENAMEASIDENTIFIER___Output {
-  var router: ___FILEBASENAMEASIDENTIFIER___RouterInput {get}
   func configure(input: ___FILEBASENAMEASIDENTIFIER___ViewModel.Input) -> ___FILEBASENAMEASIDENTIFIER___ViewModel.Output
   // func configureModule(input: ___FILEBASENAMEASIDENTIFIER___ViewModel.ModuleInput) -> ___FILEBASENAMEASIDENTIFIER___ViewModel.ModuleOutput
 }
@@ -36,7 +35,7 @@ class ___FILEBASENAMEASIDENTIFIER___ViewModel: RxViewModel, ___FILEBASENAMEASIDE
   }
   
   // Mark:- Dependencies
-  var router: ___FILEBASENAMEASIDENTIFIER___RouterInput
+  var dp: InputDependencies
   
   // Mark:- Properties
   private var title: Observable<String> {
@@ -45,9 +44,9 @@ class ___FILEBASENAMEASIDENTIFIER___ViewModel: RxViewModel, ___FILEBASENAMEASIDE
   
   // MARK:- initializer
   init(dependencies: InputDependencies) {
-    self.router = dependencies.router
-    
+    self.dp = dependencies
     super.init()
+    self.handleNetwork()
   }
   
   // MARK:- ___FILEBASENAMEASIDENTIFIER___Output
@@ -60,6 +59,10 @@ class ___FILEBASENAMEASIDENTIFIER___ViewModel: RxViewModel, ___FILEBASENAMEASIDE
 //  }
   
   // MARK: - Additional
+  
+  private func handleNetwork() {
+    
+  }
   
   deinit {
     print("-- ___FILEBASENAMEASIDENTIFIER___ViewModel dead")

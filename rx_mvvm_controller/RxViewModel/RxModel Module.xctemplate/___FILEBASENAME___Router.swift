@@ -10,8 +10,7 @@ import UIKit
 
 protocol ___FILEBASENAMEASIDENTIFIER___RouterInput
 {
-  func passDataToNextScene(segue: UIStoryboardSegue)
-  func navigateTo()
+  func pop()
 }
 
 class ___FILEBASENAMEASIDENTIFIER___Router: ___FILEBASENAMEASIDENTIFIER___RouterInput
@@ -20,21 +19,8 @@ class ___FILEBASENAMEASIDENTIFIER___Router: ___FILEBASENAMEASIDENTIFIER___Router
   
   // MARK: Navigation
   
-  func navigateTo() {
+  func pop() {
     // navigate here
-  }
-  
-  // MARK: Communication
-  
-  func passDataToNextScene(segue: UIStoryboardSegue)
-  {
-//    if segue.identifier == ViewController.segueID {
-//      passDataToController(segue: segue)
-//    }
-  }
-  
-  func passDataToProfile(segue: UIStoryboardSegue) {
-//    let vc = segue.destination as! ViewController
-//    Configurator.configure(viewController: vc)
+    self.viewController.navigationController?.popViewController(animated: true)
   }
 }

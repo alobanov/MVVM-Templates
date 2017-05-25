@@ -36,7 +36,7 @@ public enum LoadingState: Equatable {
     case .unknown: return "Not defined loading state"
     }
   }
-		
+  
 }
 
 // MARK: - Equatable
@@ -102,5 +102,18 @@ class RxViewModel {
     _loadingState.value = .loading
     
     return false
+  }
+  
+  static func bindingViewModelError() -> NSError {
+    let userInfo = [
+      NSLocalizedDescriptionKey: NSLocalizedString("RxViewModel",
+                                                   value: "Please, set ViewModel as dependency for ViewController",
+                                                   comment: "") ,
+      NSLocalizedFailureReasonErrorKey: NSLocalizedString("RxViewModel",
+                                                          value: "RxViewModel not set as dependency for ViewController",
+                                                          comment: "")
+    ]
+    
+    return NSError(domain: "RxViewModel", code: 0, userInfo: userInfo)
   }
 }
