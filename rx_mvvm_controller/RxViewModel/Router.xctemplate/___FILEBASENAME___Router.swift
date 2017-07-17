@@ -8,33 +8,30 @@
 
 import UIKit
 
-protocol ___FILEBASENAMEASIDENTIFIER___RouterInput
-{
-  func passDataToNextScene(segue: UIStoryboardSegue)
-  func navigateTo()
+protocol ___FILEBASENAMEASIDENTIFIER___RouterInput {
+  func push(viewController:UIViewController, animated: Bool)
+  func pop(animated: Bool)
 }
 
-class ___FILEBASENAMEASIDENTIFIER___Router: ___FILEBASENAMEASIDENTIFIER___RouterInput
-{
-  weak var viewController: ___FILEBASENAMEASIDENTIFIER___ViewController!
+class ___FILEBASENAMEASIDENTIFIER___Router: ___FILEBASENAMEASIDENTIFIER___RouterInput {
+  weak var viewController: UIViewController!
+  
+  var navigationController: UINavigationController? {
+    get { return self.viewController.navigationController}
+  }
+  
+  init(viewController: UIViewController) {
+    self.viewController = viewController
+  }
   
   // MARK: Navigation
   
-  func navigateTo() {
+  func push(viewController:UIViewController, animated: Bool) {
+    self.navigationController?.pushViewController(viewController, animated: animated)
+  }
+  
+  func pop(animated: Bool) {
     // navigate here
-  }
-  
-  // MARK: Communication
-  
-  func passDataToNextScene(segue: UIStoryboardSegue)
-  {
-//    if segue.identifier == ViewController.segueID {
-//      passDataToController(segue: segue)
-//    }
-  }
-  
-  func passDataToProfile(segue: UIStoryboardSegue) {
-//    let vc = segue.destination as! ViewController
-//    Configurator.configure(viewController: vc)
+    self.navigationController?.popViewController(animated: animated)
   }
 }

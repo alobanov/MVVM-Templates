@@ -8,19 +8,30 @@
 
 import UIKit
 
-protocol ___FILEBASENAMEASIDENTIFIER___RouterInput
-{
-  func pop()
+protocol ___FILEBASENAMEASIDENTIFIER___RouterInput {
+  func push(viewController:UIViewController, animated: Bool)
+  func pop(animated: Bool)
 }
 
-class ___FILEBASENAMEASIDENTIFIER___Router: ___FILEBASENAMEASIDENTIFIER___RouterInput
-{
-  weak var viewController: ___FILEBASENAMEASIDENTIFIER___ViewController!
+class ___FILEBASENAMEASIDENTIFIER___Router: ___FILEBASENAMEASIDENTIFIER___RouterInput {
+  weak var viewController: UIViewController!
+  
+  var navigationController: UINavigationController? {
+    get { return self.viewController.navigationController}
+  }
+  
+  init(viewController: UIViewController) {
+    self.viewController = viewController
+  }
   
   // MARK: Navigation
   
-  func pop() {
+  func push(viewController:UIViewController, animated: Bool) {
+    self.navigationController?.pushViewController(viewController, animated: animated)
+  }
+  
+  func pop(animated: Bool) {
     // navigate here
-    self.viewController.navigationController?.popViewController(animated: true)
+    self.navigationController?.popViewController(animated: animated)
   }
 }

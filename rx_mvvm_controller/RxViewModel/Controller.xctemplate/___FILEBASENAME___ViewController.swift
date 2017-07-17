@@ -29,7 +29,6 @@ class ___FILEBASENAMEASIDENTIFIER___ViewController: UIViewController {
   
   override func awakeFromNib() {
     super.awakeFromNib()
-//    ___FILEBASENAMEASIDENTIFIER___Configurator.configure(self)
   }
   
   override func viewDidLoad() {
@@ -37,42 +36,35 @@ class ___FILEBASENAMEASIDENTIFIER___ViewController: UIViewController {
     
     // Do any additional setup after loading the view.
     self.configureUI()
-    try! self.configureRx()
-  }
-  
-  override func didReceiveMemoryWarning() {
-    super.didReceiveMemoryWarning()
-    // Dispose of any resources that can be recreated.
-  }
-  
-  // MARK: - Navigation
-  
-  // In a storyboard-based application, you will often want to do a little preparation before navigation
-  override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-    self.viewModel?.router.passDataToNextScene(segue: segue)
+    
+    do {
+      try self.configureRx()
+    } catch(let err) {
+      print(err)
+    }
   }
   
   // MARK: Configuration
   
   func configureRx() throws {
     guard let model = viewModel else {
-      fatalError("Need set view model")
+      throw RxViewModel.bindingViewModelError()
     }
     
     let output = model.configure(input: ___FILEBASENAMEASIDENTIFIER___ViewModel.Input())
     
-    //
+    //bind title
     output.title.bind(to: self.rx.title).addDisposableTo(bag)
   }
   
   func configureUI() {
-    self.title = "RxController"
+    self.title = "___FILEBASENAMEASIDENTIFIER___"
   }
   
   // MARK: - Additional
   
   deinit {
-    print("___FILEBASENAMEASIDENTIFIER___ViewController dead")
+    print("___FILEBASENAMEASIDENTIFIER___ViewController deinit")
   }
 }
 
