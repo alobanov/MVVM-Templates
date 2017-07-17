@@ -8,26 +8,42 @@
 
 import UIKit
 
-class ___FILEBASENAMEASIDENTIFIER___Configurator
-{
-  // MARK: Configuration
+struct ___FILEBASENAMEASIDENTIFIER___ModuleInputData {
   
-  class func configure(viewController: ___FILEBASENAMEASIDENTIFIER___ViewController) // , moduleInput: ___FILEBASENAMEASIDENTIFIER___ViewModel.ModuleInput) -> ___FILEBASENAMEASIDENTIFIER___ViewModel.ModuleOutput
-  {
-    // router
-    let router = ___FILEBASENAMEASIDENTIFIER___Router()
-    router.viewController = viewController
+}
+
+class ___FILEBASENAMEASIDENTIFIER___Configurator {
+  // MARK: Configuration
+  class func configure(moduleInput: ___FILEBASENAMEASIDENTIFIER___ViewModel.ModuleInput, data:___FILEBASENAMEASIDENTIFIER___ModuleInputData?) -> (viewControler: UIViewController, moduleOutput:___FILEBASENAMEASIDENTIFIER___ViewModel.ModuleOutput) {
+    //view controller
+    let viewController = createViewController()
     
     // dependencies
-    let dependencies = ___FILEBASENAMEASIDENTIFIER___ViewModel.InputDependencies(router: router)
+    let dependencies = createDependencies(viewController: viewController)
     
     // view model
     let viewModel = ___FILEBASENAMEASIDENTIFIER___ViewModel(dependencies: dependencies)
-    // let moduleOutput = viewModel.configureModule(input: moduleInput)
+    let moduleOutput = viewModel.configureModule(input: moduleInput, data: data)
     
     // controller
     viewController.viewModel = viewModel
     
-    // return moduleOutput
+    return (viewController, moduleOutput)
   }
+  
+  private class func createViewController() -> ___FILEBASENAMEASIDENTIFIER___ViewController {
+    //FIXME: create ___FILEBASENAMEASIDENTIFIER___ViewController
+    return ___FILEBASENAMEASIDENTIFIER___ViewController()
+  }
+  
+  private class func createDependencies(viewController: UIViewController) -> ___FILEBASENAMEASIDENTIFIER___ViewModel.InputDependencies {
+    //setup dependencies of outer servicces (API, DB, etc...)
+    
+    // router
+    let router = ___FILEBASENAMEASIDENTIFIER___Router(viewController: viewController)
+    
+    let dp = ___FILEBASENAMEASIDENTIFIER___ViewModel.InputDependencies(router: router)
+    return dp
+  }
+  
 }

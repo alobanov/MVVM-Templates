@@ -29,7 +29,6 @@ class ___FILEBASENAMEASIDENTIFIER___ViewController: UIViewController {
   
   override func awakeFromNib() {
     super.awakeFromNib()
-//    ___FILEBASENAMEASIDENTIFIER___Configurator.configure(self)
   }
   
   override func viewDidLoad() {
@@ -54,18 +53,18 @@ class ___FILEBASENAMEASIDENTIFIER___ViewController: UIViewController {
     
     let output = model.configure(input: ___FILEBASENAMEASIDENTIFIER___ViewModel.Input())
     
-    //
+    //bind title
     output.title.bind(to: self.rx.title).addDisposableTo(bag)
   }
   
   func configureUI() {
-    self.title = "RxController"
+    self.title = "___FILEBASENAMEASIDENTIFIER___"
   }
   
   // MARK: - Additional
   
   deinit {
-    print("___FILEBASENAMEASIDENTIFIER___ViewController dead")
+    print("___FILEBASENAMEASIDENTIFIER___ViewController deinit")
   }
 }
 
