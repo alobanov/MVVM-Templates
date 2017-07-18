@@ -46,7 +46,7 @@ class ___FILEBASENAMEASIDENTIFIER___ViewController: UIViewController {
   
   // MARK: Configuration
   
-  func configureRx() throws {
+  private func configureRx() throws {
     guard let model = viewModel else {
       throw RxViewModel.bindingViewModelError()
     }
@@ -57,7 +57,7 @@ class ___FILEBASENAMEASIDENTIFIER___ViewController: UIViewController {
     output.title.bind(to: self.rx.title).addDisposableTo(bag)
   }
   
-  func configureUI() {
+  private func configureUI() {
     self.title = "___FILEBASENAMEASIDENTIFIER___"
   }
   
@@ -67,5 +67,3 @@ class ___FILEBASENAMEASIDENTIFIER___ViewController: UIViewController {
     print("___FILEBASENAMEASIDENTIFIER___ViewController deinit")
   }
 }
-
-
