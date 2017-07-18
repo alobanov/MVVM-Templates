@@ -14,7 +14,20 @@ struct ___FILEBASENAMEASIDENTIFIER___ModuleInputData {
 
 class ___FILEBASENAMEASIDENTIFIER___Configurator {
   // MARK: Configuration
-  class func configure(moduleInput: ___FILEBASENAMEASIDENTIFIER___ViewModel.ModuleInput, data:___FILEBASENAMEASIDENTIFIER___ModuleInputData?) -> (viewControler: UIViewController, moduleOutput:___FILEBASENAMEASIDENTIFIER___ViewModel.ModuleOutput) {
+  
+  class func configure() -> (viewControler: UIViewController, moduleOutput:___FILEBASENAMEASIDENTIFIER___ViewModel.ModuleOutput) {
+    return ___FILEBASENAMEASIDENTIFIER___Configurator.configure(moduleInput: nil, data: nil)
+  }
+  
+  class func configure(moduleInput: ___FILEBASENAMEASIDENTIFIER___ViewModel.ModuleInput) -> (viewControler: UIViewController, moduleOutput:___FILEBASENAMEASIDENTIFIER___ViewModel.ModuleOutput) {
+    return ___FILEBASENAMEASIDENTIFIER___Configurator.configure(moduleInput: moduleInput, data: nil)
+  }
+  
+  class func configure(data:___FILEBASENAMEASIDENTIFIER___ModuleInputData) -> (viewControler: UIViewController, moduleOutput:___FILEBASENAMEASIDENTIFIER___ViewModel.ModuleOutput) {
+    return ___FILEBASENAMEASIDENTIFIER___Configurator.configure(moduleInput: nil, data: data)
+  }
+  
+  class func configure(moduleInput: ___FILEBASENAMEASIDENTIFIER___ViewModel.ModuleInput?, data:___FILEBASENAMEASIDENTIFIER___ModuleInputData?) -> (viewControler: UIViewController, moduleOutput:___FILEBASENAMEASIDENTIFIER___ViewModel.ModuleOutput) {
     //view controller
     let viewController = createViewController()
     

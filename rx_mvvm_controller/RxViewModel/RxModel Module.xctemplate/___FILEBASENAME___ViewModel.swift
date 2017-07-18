@@ -12,7 +12,7 @@ import RxCocoa
 
 protocol ___FILEBASENAMEASIDENTIFIER___Output {
   func configure(input: ___FILEBASENAMEASIDENTIFIER___ViewModel.Input) -> ___FILEBASENAMEASIDENTIFIER___ViewModel.Output
-  func configureModule(input: ___FILEBASENAMEASIDENTIFIER___ViewModel.ModuleInput, data:___FILEBASENAMEASIDENTIFIER___ModuleInputData?) -> ___FILEBASENAMEASIDENTIFIER___ViewModel.ModuleOutput
+  func configureModule(input: ___FILEBASENAMEASIDENTIFIER___ViewModel.ModuleInput?, data:___FILEBASENAMEASIDENTIFIER___ModuleInputData?) -> ___FILEBASENAMEASIDENTIFIER___ViewModel.ModuleOutput
 }
 
 class ___FILEBASENAMEASIDENTIFIER___ViewModel: RxViewModel, ___FILEBASENAMEASIDENTIFIER___Output, RxViewModelType {
@@ -48,7 +48,6 @@ class ___FILEBASENAMEASIDENTIFIER___ViewModel: RxViewModel, ___FILEBASENAMEASIDE
   init(dependencies: InputDependencies) {
     self.dp = dependencies
     super.init()
-    self.handleNetwork()
   }
   
   // MARK:- ___FILEBASENAMEASIDENTIFIER___Output
@@ -56,18 +55,14 @@ class ___FILEBASENAMEASIDENTIFIER___ViewModel: RxViewModel, ___FILEBASENAMEASIDE
     return Output(title: self.title)
   }
   
-  func configureModule(input: ModuleInput, data:___FILEBASENAMEASIDENTIFIER___ModuleInputData?) -> ModuleOutput {
+  func configureModule(input: ModuleInput?, data:___FILEBASENAMEASIDENTIFIER___ModuleInputData?) -> ModuleOutput {
     self.moduleInputData = data;
     //configure module output
     return ModuleOutput()
   }
   
   // MARK: - Additional
-  
-  private func handleNetwork() {
-    
-  }
-  
+
   deinit {
     print("-- ___FILEBASENAMEASIDENTIFIER___ViewModel dead")
   }
