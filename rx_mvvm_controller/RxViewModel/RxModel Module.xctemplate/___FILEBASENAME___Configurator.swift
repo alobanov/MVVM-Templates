@@ -35,8 +35,8 @@ class ___FILEBASENAMEASIDENTIFIER___Configurator {
     let dependencies = createDependencies(viewController: viewController)
     
     // view model
-    let viewModel = ___FILEBASENAMEASIDENTIFIER___ViewModel(dependencies: dependencies)
-    let moduleOutput = viewModel.configureModule(input: moduleInput, data: data)
+    let viewModel = ___FILEBASENAMEASIDENTIFIER___ViewModel(dependencies: dependencies, data: data)
+    let moduleOutput = viewModel.configureModule(input: moduleInput)
     
     // controller
     viewController.viewModel = viewModel

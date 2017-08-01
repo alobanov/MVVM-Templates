@@ -17,14 +17,14 @@ class ___FILEBASENAMEASIDENTIFIER___Router: ___FILEBASENAMEASIDENTIFIER___Router
   weak var viewController: UIViewController!
   
   var navigationController: UINavigationController? {
-    get { return self.viewController.navigationController}
+    return self.viewController.navigationController
   }
   
   init(viewController: UIViewController) {
     self.viewController = viewController
   }
   
-  // MARK: Navigation
+  // Mark: Navigation
   
   func push(viewController:UIViewController, animated: Bool) {
     self.navigationController?.pushViewController(viewController, animated: animated)

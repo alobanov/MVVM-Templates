@@ -44,7 +44,7 @@ class ___FILEBASENAMEASIDENTIFIER___ViewController: UIViewController {
     }
   }
   
-  // MARK: Configuration
+  // MARK: - Configuration
   
   private func configureRx() throws {
     guard let model = viewModel else {
