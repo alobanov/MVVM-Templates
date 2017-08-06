@@ -15,7 +15,7 @@ class ___FILEBASENAMEASIDENTIFIER___ViewController: UIViewController {
   // MARK: - Properties
   
   // Dependencies
-  var viewModel: ___FILEBASENAMEASIDENTIFIER___Output?
+  var viewModel: ___FILEBASENAMEASIDENTIFIER___ViewOutput?
   
   // Public
   var bag = DisposeBag()
@@ -33,8 +33,6 @@ class ___FILEBASENAMEASIDENTIFIER___ViewController: UIViewController {
   
   override func viewDidLoad() {
     super.viewDidLoad()
-    
-    // Do any additional setup after loading the view.
     self.configureUI()
     
     do {
@@ -44,21 +42,22 @@ class ___FILEBASENAMEASIDENTIFIER___ViewController: UIViewController {
     }
   }
   
-  // MARK: Configuration
+  // MARK: - Configuration
   
   private func configureRx() throws {
     guard let model = viewModel else {
       throw RxViewModel.bindingViewModelError()
     }
     
-    let output = model.configure(input: ___FILEBASENAMEASIDENTIFIER___ViewModel.Input())
+    let input = ___FILEBASENAMEASIDENTIFIER___ViewModel.Input()
+    let output = model.configure(input: input)
     
     //bind title
     output.title.bind(to: self.rx.title).addDisposableTo(bag)
   }
   
   private func configureUI() {
-    self.title = "___FILEBASENAMEASIDENTIFIER___"
+    
   }
   
   // MARK: - Additional

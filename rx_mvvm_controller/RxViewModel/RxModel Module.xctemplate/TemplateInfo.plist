@@ -48,13 +48,13 @@
 		</dict>
 		<dict>
 			<key>Default</key>
-			<string>___VARIABLE_sceneName:identifier___Router</string>
+			<string>___VARIABLE_sceneName:identifier___+Structures</string>
 			<key>Description</key>
-			<string>The router name</string>
+			<string>The structures name</string>
 			<key>Identifier</key>
-			<string>routerName</string>
+			<string>structuresName</string>
 			<key>Name</key>
-			<string>Router Name:</string>
+			<string>Structures Name:</string>
 			<key>Required</key>
 			<true/>
 			<key>Type</key>
