@@ -10,20 +10,15 @@ import Foundation
 import RxSwift
 import RxCocoa
 
-protocol ___FILEBASENAMEASIDENTIFIER___Output {
+protocol ___FILEBASENAMEASIDENTIFIER___ViewOutput {
   func configure(input: ___FILEBASENAMEASIDENTIFIER___ViewModel.Input) -> ___FILEBASENAMEASIDENTIFIER___ViewModel.Output
-  func configureModule(input: ___FILEBASENAMEASIDENTIFIER___ViewModel.ModuleInput?) -> ___FILEBASENAMEASIDENTIFIER___ViewModel.ModuleOutput
 }
 
-class ___FILEBASENAMEASIDENTIFIER___ViewModel: RxViewModel, ___FILEBASENAMEASIDENTIFIER___Output, RxViewModelType {
-  
-  // MARK: In/Out module parameters
-  struct ModuleInput {}
-  struct ModuleOutput {}
+class ___FILEBASENAMEASIDENTIFIER___ViewModel: RxViewModelType, RxViewModelModuleType, ___FILEBASENAMEASIDENTIFIER___ViewOutput {
   
   // MARK: In/Out parameters
   struct InputDependencies {
-    let router: ___FILEBASENAMEASIDENTIFIER___RouterInput
+    
   }
   
   struct Input {
@@ -32,30 +27,34 @@ class ___FILEBASENAMEASIDENTIFIER___ViewModel: RxViewModel, ___FILEBASENAMEASIDE
   
   struct Output {
     let title: Observable<String>
+    let state: Observable<LoadingState>
+    let error: Observable<NSError>
   }
   
-  // MARK: - Dependencies
-  var dp: InputDependencies
+  // Mark: - Dependencies
+  private var dp: InputDependencies
+  private var moduleInputData: ModuleInputData
   
-  // MARK: - Properties
-  private var moduleInputData: ___FILEBASENAMEASIDENTIFIER___ModuleInputData?
+  // Mark: - Properties
+  private var title = Observable.just("Title")
+  private var modelState = ViewModelState()
   
-  private var title: Observable<String> {
-    return .just("Title")
-  }
-  
-  // MARK :- initializer
-  init(dependencies: InputDependencies, data: ___FILEBASENAMEASIDENTIFIER___ModuleInputData?) {
+  // MARK: - initializer
+  init(dependencies: InputDependencies, moduleInputData: ModuleInputData) {
     self.dp = dependencies
-    super.init()
+    self.moduleInputData = moduleInputData
   }
   
-  // MARK :- ___FILEBASENAMEASIDENTIFIER___Output
+  // MARK: - ___FILEBASENAMEASIDENTIFIER___ViewOutput
   func configure(input: Input) -> Output {
-    return Output(title: self.title)
+    return Output(title: title.asObservable(),
+                  state: modelState.state.asObservable(),
+                  error: modelState.error.asObservable())
   }
   
+  // MARK: - Module configuration
   func configureModule(input: ModuleInput?) -> ModuleOutput {
+    
     //configure module output
     return ModuleOutput()
   }
