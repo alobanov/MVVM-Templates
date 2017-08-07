@@ -37,7 +37,7 @@ class ___FILEBASENAMEASIDENTIFIER___ViewModel: RxViewModelType, RxViewModelModul
   
   // Mark: - Properties
   private var title = Observable.just("Title")
-  private var modelState = ViewModelState()
+  private var modelState: RxViewModelStateProtocol = RxViewModelState()
   
   // MARK: - initializer
   init(dependencies: InputDependencies, moduleInputData: ModuleInputData) {
