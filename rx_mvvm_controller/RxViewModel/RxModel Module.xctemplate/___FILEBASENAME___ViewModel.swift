@@ -36,6 +36,7 @@ class ___FILEBASENAMEASIDENTIFIER___ViewModel: RxViewModelType, RxViewModelModul
   private var moduleInputData: ModuleInputData
   
   // Mark: - Properties
+  private var bag = DisposeBag()
   private var title = Observable.just("Title")
   private var modelState: RxViewModelStateProtocol = RxViewModelState()
   
