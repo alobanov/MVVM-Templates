@@ -35,10 +35,12 @@ class ___FILEBASENAMEASIDENTIFIER___ViewModel: RxViewModelType, RxViewModelModul
   private var dp: InputDependencies
   private var moduleInputData: ModuleInputData
   
-  // Mark: - Properties
+  // MARK: - Properties
   private var bag = DisposeBag()
-  private var title = Observable.just("Title")
   private var modelState: RxViewModelStateProtocol = RxViewModelState()
+  
+  // Observables Output
+  private var title = Observable.just("Title")
   
   // MARK: - initializer
   init(dependencies: InputDependencies, moduleInputData: ModuleInputData) {
@@ -55,8 +57,9 @@ class ___FILEBASENAMEASIDENTIFIER___ViewModel: RxViewModelType, RxViewModelModul
   
   // MARK: - Module configuration
   func configureModule(input: ModuleInput?) -> ModuleOutput {
+    // Configure input signals
     
-    //configure module output
+    // Configure module output
     return ModuleOutput()
   }
   
