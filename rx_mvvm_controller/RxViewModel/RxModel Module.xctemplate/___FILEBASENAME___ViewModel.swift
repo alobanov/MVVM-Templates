@@ -31,21 +31,26 @@ class ___FILEBASENAMEASIDENTIFIER___ViewModel: RxViewModelType, RxViewModelModul
     let error: Observable<NSError>
   }
   
-  // Mark: - Dependencies
-  private var dp: InputDependencies
-  private var moduleInputData: ModuleInputData
+  // MARK: Dependencies
+  private let dp: InputDependencies
+  private let moduleInputData: ModuleInputData
   
-  // Mark: - Properties
-  private var title = Observable.just("Title")
-  private var modelState: RxViewModelStateProtocol = RxViewModelState()
+  // MARK: Properties
+  private let bag = DisposeBag()
+  private let modelState: RxViewModelStateProtocol = RxViewModelState()
+  
+  // Observables Output
+  private let title = Observable.just("Title")
   
   // MARK: - initializer
+  
   init(dependencies: InputDependencies, moduleInputData: ModuleInputData) {
     self.dp = dependencies
     self.moduleInputData = moduleInputData
   }
   
   // MARK: - ___FILEBASENAMEASIDENTIFIER___ViewOutput
+  
   func configure(input: Input) -> Output {
     return Output(title: title.asObservable(),
                   state: modelState.state.asObservable(),
@@ -53,9 +58,11 @@ class ___FILEBASENAMEASIDENTIFIER___ViewModel: RxViewModelType, RxViewModelModul
   }
   
   // MARK: - Module configuration
+  
   func configureModule(input: ModuleInput?) -> ModuleOutput {
+    // Configure input signals
     
-    //configure module output
+    // Configure module output
     return ModuleOutput()
   }
   

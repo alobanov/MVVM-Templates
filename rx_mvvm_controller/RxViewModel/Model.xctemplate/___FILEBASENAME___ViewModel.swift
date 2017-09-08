@@ -12,7 +12,7 @@ import RxCocoa
 
 protocol ___FILEBASENAMEASIDENTIFIER___Output {
   func configure(input: ___FILEBASENAMEASIDENTIFIER___ViewModel.Input) -> ___FILEBASENAMEASIDENTIFIER___ViewModel.Output
-  func configureModule(input: ___FILEBASENAMEASIDENTIFIER___ViewModel.ModuleInput?) -> ___FILEBASENAMEASIDENTIFIER___ViewModel.ModuleOutput
+  func configureModule(input: ___FILEBASENAMEASIDENTIFIER___ViewModel.ModuleInput, data:___FILEBASENAMEASIDENTIFIER___ModuleInputData?) -> ___FILEBASENAMEASIDENTIFIER___ViewModel.ModuleOutput
 }
 
 class ___FILEBASENAMEASIDENTIFIER___ViewModel: RxViewModel, ___FILEBASENAMEASIDENTIFIER___Output, RxViewModelType {
@@ -35,33 +35,41 @@ class ___FILEBASENAMEASIDENTIFIER___ViewModel: RxViewModel, ___FILEBASENAMEASIDE
   }
   
   // MARK: - Dependencies
-  var dp: InputDependencies
+  let dp: InputDependencies
   
   // MARK: - Properties
-  private var moduleInputData: ___FILEBASENAMEASIDENTIFIER___ModuleInputData?
+  private let moduleInputData: ___FILEBASENAMEASIDENTIFIER___ModuleInputData?
   
-  private var title: Observable<String> {
-    return .just("Title")
-  }
+  // MARK: - Signals
   
-  // MARK :- initializer
-  init(dependencies: InputDependencies, data: ___FILEBASENAMEASIDENTIFIER___ModuleInputData?) {
+  private let title = Observable.just("Title")
+  
+  // MARK: - initializer
+  
+  init(dependencies: InputDependencies) {
     self.dp = dependencies
     super.init()
+    self.handleNetwork()
   }
   
-  // MARK :- ___FILEBASENAMEASIDENTIFIER___Output
+  // MARK: - ___FILEBASENAMEASIDENTIFIER___Output
+  
   func configure(input: Input) -> Output {
-    return Output(title: self.title)
+    return Output(title: title.asObservable())
   }
   
-  func configureModule(input: ModuleInput?) -> ModuleOutput {
+  func configureModule(input: ModuleInput, data:___FILEBASENAMEASIDENTIFIER___ModuleInputData?) -> ModuleOutput {
+    moduleInputData = data;
     //configure module output
     return ModuleOutput()
   }
   
   // MARK: - Additional
-
+  
+  private func handleNetwork() {
+    
+  }
+  
   deinit {
     print("-- ___FILEBASENAMEASIDENTIFIER___ViewModel dead")
   }
