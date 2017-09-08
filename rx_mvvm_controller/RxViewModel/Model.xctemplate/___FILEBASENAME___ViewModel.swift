@@ -34,30 +34,32 @@ class ___FILEBASENAMEASIDENTIFIER___ViewModel: RxViewModel, ___FILEBASENAMEASIDE
     let title: Observable<String>
   }
   
-  // Mark:- Dependencies
-  var dp: InputDependencies
+  // MARK: - Dependencies
+  let dp: InputDependencies
   
-  // Mark:- Properties
-  private var moduleInputData: ___FILEBASENAMEASIDENTIFIER___ModuleInputData?
+  // MARK: - Properties
+  private let moduleInputData: ___FILEBASENAMEASIDENTIFIER___ModuleInputData?
   
-  private var title: Observable<String> {
-    return .just("Title")
-  }
+  // MARK: - Signals
   
-  // MARK:- initializer
+  private let title = Observable.just("Title")
+  
+  // MARK: - initializer
+  
   init(dependencies: InputDependencies) {
     self.dp = dependencies
     super.init()
     self.handleNetwork()
   }
   
-  // MARK:- ___FILEBASENAMEASIDENTIFIER___Output
+  // MARK: - ___FILEBASENAMEASIDENTIFIER___Output
+  
   func configure(input: Input) -> Output {
-    return Output(title: self.title)
+    return Output(title: title.asObservable())
   }
   
   func configureModule(input: ModuleInput, data:___FILEBASENAMEASIDENTIFIER___ModuleInputData?) -> ModuleOutput {
-    self.moduleInputData = data;
+    moduleInputData = data;
     //configure module output
     return ModuleOutput()
   }
