@@ -9,7 +9,18 @@
 import Foundation
 import RxSwift
 
-class ViewModelState {
+protocol RxViewModelStateProtocol {
+  var state: Observable<LoadingState> { get }
+  var error: Observable<NSError> { get }
+  
+  func isRequestInProcess() -> Bool
+  func change(state: LoadingState)
+  func show(error: NSError?)
+  
+  static func viewModelError() -> NSError
+}
+
+class RxViewModelState: RxViewModelStateProtocol {
   var state: Observable<LoadingState> {
     return _state.asObservable()
   }
@@ -29,11 +40,11 @@ class ViewModelState {
     return false
   }
   
-  func changeLoadingState(state: LoadingState) {
+  func change(state: LoadingState) {
     _state.value = state
   }
   
-  func changeLoadingState(with error: NSError?) {
+  func show(error: NSError?) {
     if let err = error {
       _error.value = err
     }
