@@ -10,12 +10,12 @@ import UIKit
 import RxSwift
 import RxCocoa
 
-class ___FILEBASENAMEASIDENTIFIER___ViewController: UIViewController {
+class ___VARIABLE_sceneName___ViewController: UIViewController {
   
   // MARK: - Properties
   
   // Dependencies
-  var viewModel: ___FILEBASENAMEASIDENTIFIER___ViewOutput?
+  var viewModel: ___VARIABLE_sceneName___ViewOutput?
   
   // Public
   var bag = DisposeBag()
@@ -49,7 +49,7 @@ class ___FILEBASENAMEASIDENTIFIER___ViewController: UIViewController {
       throw RxViewModel.bindingViewModelError()
     }
     
-    let input = ___FILEBASENAMEASIDENTIFIER___ViewModel.Input()
+    let input = ___VARIABLE_sceneName___ViewModel.Input()
     let output = model.configure(input: input)
     
     //bind title
@@ -63,6 +63,6 @@ class ___FILEBASENAMEASIDENTIFIER___ViewController: UIViewController {
   // MARK: - Additional
   
   deinit {
-    print("___FILEBASENAMEASIDENTIFIER___ViewController deinit")
+    print("___VARIABLE_sceneName___ViewController deinit")
   }
 }
