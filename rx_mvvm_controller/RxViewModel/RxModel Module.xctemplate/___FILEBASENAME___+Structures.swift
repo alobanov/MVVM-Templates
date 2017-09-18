@@ -9,7 +9,7 @@
 import Foundation
 import RxSwift
 
-extension ___FILEBASENAMEASIDENTIFIER___ViewModel  {
+extension ___VARIABLE_sceneName___ViewModel {
   // MARK: - initial module data
   struct ModuleInputData {
     

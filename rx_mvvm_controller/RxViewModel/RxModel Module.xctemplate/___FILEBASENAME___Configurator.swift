@@ -8,16 +8,16 @@
 
 import UIKit
 
-class ___FILEBASENAMEASIDENTIFIER___Configurator {
+class ___VARIABLE_sceneName___Configurator {
   // MARK: Configuration
   
-  class func configure(data:___FILEBASENAMEASIDENTIFIER___ViewModel.ModuleInputData) -> (viewControler: UIViewController, moduleOutput:___FILEBASENAMEASIDENTIFIER___ViewModel.ModuleOutput) {
-    return ___FILEBASENAMEASIDENTIFIER___Configurator.configure(moduleInput: nil, data: data)
+  class func configure(data:___VARIABLE_sceneName___ViewModel.ModuleInputData) -> (viewControler: UIViewController, moduleOutput:___VARIABLE_sceneName___ViewModel.ModuleOutput) {
+    return ___VARIABLE_sceneName___Configurator.configure(moduleInput: nil, data: data)
   }
   
-  class func configure(moduleInput: ___FILEBASENAMEASIDENTIFIER___ViewModel.ModuleInput?,
-                       data:___FILEBASENAMEASIDENTIFIER___ViewModel.ModuleInputData)
-    -> (viewControler: UIViewController, moduleOutput:___FILEBASENAMEASIDENTIFIER___ViewModel.ModuleOutput)
+  class func configure(moduleInput: ___VARIABLE_sceneName___ViewModel.ModuleInput?,
+                       data:___VARIABLE_sceneName___ViewModel.ModuleInputData)
+    -> (viewControler: UIViewController, moduleOutput:___VARIABLE_sceneName___ViewModel.ModuleOutput)
   {
     //view controller
     let viewController = createViewController()
@@ -26,7 +26,7 @@ class ___FILEBASENAMEASIDENTIFIER___Configurator {
     let dependencies = createDependencies()
     
     // view model
-    let viewModel = ___FILEBASENAMEASIDENTIFIER___ViewModel(dependencies: dependencies, moduleInputData: data)
+    let viewModel = ___VARIABLE_sceneName___ViewModel(dependencies: dependencies, moduleInputData: data)
     let moduleOutput = viewModel.configureModule(input: moduleInput)
     
     // controller
@@ -35,16 +35,16 @@ class ___FILEBASENAMEASIDENTIFIER___Configurator {
     return (viewController, moduleOutput)
   }
   
-  private class func createViewController() -> ___FILEBASENAMEASIDENTIFIER___ViewController {
-    //FIXME: create ___FILEBASENAMEASIDENTIFIER___ViewController
-    return ___FILEBASENAMEASIDENTIFIER___ViewController()
+  private class func createViewController() -> ___VARIABLE_sceneName___ViewController {
+    //FIXME: create ___VARIABLE_sceneName___ViewController
+    return ___VARIABLE_sceneName___ViewController()
   }
   
-  private class func createDependencies() -> ___FILEBASENAMEASIDENTIFIER___ViewModel.InputDependencies {
+  private class func createDependencies() -> ___VARIABLE_sceneName___ViewModel.InputDependencies {
     //setup dependencies of outer servicces (API, DB, etc...)
     
     let dependencies =
-      ___FILEBASENAMEASIDENTIFIER___ViewModel.InputDependencies()
+      ___VARIABLE_sceneName___ViewModel.InputDependencies()
     return dependencies
   }
   

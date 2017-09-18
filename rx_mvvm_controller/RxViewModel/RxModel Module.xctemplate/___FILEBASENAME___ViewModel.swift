@@ -10,11 +10,11 @@ import Foundation
 import RxSwift
 import RxCocoa
 
-protocol ___FILEBASENAMEASIDENTIFIER___ViewOutput {
-  func configure(input: ___FILEBASENAMEASIDENTIFIER___ViewModel.Input) -> ___FILEBASENAMEASIDENTIFIER___ViewModel.Output
+protocol ___VARIABLE_sceneName___ViewOutput {
+  func configure(input: ___VARIABLE_sceneName___ViewModel.Input) -> ___VARIABLE_sceneName___ViewModel.Output
 }
 
-class ___FILEBASENAMEASIDENTIFIER___ViewModel: RxViewModelType, RxViewModelModuleType, ___FILEBASENAMEASIDENTIFIER___ViewOutput {
+class ___VARIABLE_sceneName___ViewModel: RxViewModelType, RxViewModelModuleType, ___VARIABLE_sceneName___ViewOutput {
   
   // MARK: In/Out parameters
   struct InputDependencies {
@@ -49,7 +49,7 @@ class ___FILEBASENAMEASIDENTIFIER___ViewModel: RxViewModelType, RxViewModelModul
     self.moduleInputData = moduleInputData
   }
   
-  // MARK: - ___FILEBASENAMEASIDENTIFIER___ViewOutput
+  // MARK: - ___VARIABLE_sceneName___ViewOutput
   
   func configure(input: Input) -> Output {
     return Output(title: title.asObservable(),
@@ -69,6 +69,6 @@ class ___FILEBASENAMEASIDENTIFIER___ViewModel: RxViewModelType, RxViewModelModul
   // MARK: - Additional
 
   deinit {
-    print("-- ___FILEBASENAMEASIDENTIFIER___ViewModel dead")
+    print("-- ___VARIABLE_sceneName___ViewModel dead")
   }
 }
