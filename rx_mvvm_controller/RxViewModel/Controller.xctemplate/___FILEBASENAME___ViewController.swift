@@ -10,12 +10,12 @@ import UIKit
 import RxSwift
 import RxCocoa
 
-class ___FILEBASENAMEASIDENTIFIER___ViewController: UIViewController {
+class ___VARIABLE_sceneName___ViewController: UIViewController {
   
   // MARK: - Properties
   
   // Dependencies
-  var viewModel: ___FILEBASENAMEASIDENTIFIER___Output?
+  var viewModel: ___VARIABLE_sceneName___ViewOutput?
   
   // Public
   var bag = DisposeBag()
@@ -33,8 +33,6 @@ class ___FILEBASENAMEASIDENTIFIER___ViewController: UIViewController {
   
   override func viewDidLoad() {
     super.viewDidLoad()
-    
-    // Do any additional setup after loading the view.
     self.configureUI()
     
     do {
@@ -44,28 +42,27 @@ class ___FILEBASENAMEASIDENTIFIER___ViewController: UIViewController {
     }
   }
   
-  // MARK: Configuration
+  // MARK: - Configuration
   
-  func configureRx() throws {
+  private func configureRx() throws {
     guard let model = viewModel else {
-      throw RxViewModel.bindingViewModelError()
+      throw RxViewModelState.viewModelError()
     }
     
-    let output = model.configure(input: ___FILEBASENAMEASIDENTIFIER___ViewModel.Input())
+    let input = ___VARIABLE_sceneName___ViewModel.Input()
+    let output = model.configure(input: input)
     
     //bind title
     output.title.bind(to: self.rx.title).addDisposableTo(bag)
   }
   
-  func configureUI() {
-    self.title = "___FILEBASENAMEASIDENTIFIER___"
+  private func configureUI() {
+    
   }
   
   // MARK: - Additional
   
   deinit {
-    print("___FILEBASENAMEASIDENTIFIER___ViewController deinit")
+    print("___VARIABLE_sceneName___ViewController deinit")
   }
 }
-
-

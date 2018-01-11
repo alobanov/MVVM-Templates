@@ -10,20 +10,15 @@ import Foundation
 import RxSwift
 import RxCocoa
 
-protocol ___FILEBASENAMEASIDENTIFIER___Output {
-  func configure(input: ___FILEBASENAMEASIDENTIFIER___ViewModel.Input) -> ___FILEBASENAMEASIDENTIFIER___ViewModel.Output
-  func configureModule(input: ___FILEBASENAMEASIDENTIFIER___ViewModel.ModuleInput, data:___FILEBASENAMEASIDENTIFIER___ModuleInputData?) -> ___FILEBASENAMEASIDENTIFIER___ViewModel.ModuleOutput
+protocol ___VARIABLE_sceneName___ViewOutput {
+  func configure(input: ___VARIABLE_sceneName___ViewModel.Input) -> ___VARIABLE_sceneName___ViewModel.Output
 }
 
-class ___FILEBASENAMEASIDENTIFIER___ViewModel: RxViewModel, ___FILEBASENAMEASIDENTIFIER___Output, RxViewModelType {
-  
-  // MARK: In/Out module parameters
-  struct ModuleInput {}
-  struct ModuleOutput {}
+class ___VARIABLE_sceneName___ViewModel: RxViewModelType, RxViewModelModuleType, ___VARIABLE_sceneName___ViewOutput {
   
   // MARK: In/Out parameters
   struct InputDependencies {
-    let router: ___FILEBASENAMEASIDENTIFIER___RouterInput
+    
   }
   
   struct Input {
@@ -32,45 +27,48 @@ class ___FILEBASENAMEASIDENTIFIER___ViewModel: RxViewModel, ___FILEBASENAMEASIDE
   
   struct Output {
     let title: Observable<String>
+    let state: Observable<LoadingState>
+    let error: Observable<NSError>
   }
   
-  // MARK: - Dependencies
-  let dp: InputDependencies
+  // MARK: Dependencies
+  private let dp: InputDependencies
+  private let moduleInputData: ModuleInputData
   
-  // MARK: - Properties
-  private let moduleInputData: ___FILEBASENAMEASIDENTIFIER___ModuleInputData?
+  // MARK: Properties
+  private let bag = DisposeBag()
+  private let modelState: RxViewModelStateProtocol = RxViewModelState()
   
-  // MARK: - Signals
-  
+  // Observables Output
   private let title = Observable.just("Title")
   
   // MARK: - initializer
   
-  init(dependencies: InputDependencies) {
+  init(dependencies: InputDependencies, moduleInputData: ModuleInputData) {
     self.dp = dependencies
-    super.init()
-    self.handleNetwork()
+    self.moduleInputData = moduleInputData
   }
   
-  // MARK: - ___FILEBASENAMEASIDENTIFIER___Output
+  // MARK: - ___VARIABLE_sceneName___ViewOutput
   
   func configure(input: Input) -> Output {
-    return Output(title: title.asObservable())
+    return Output(title: title.asObservable(),
+                  state: modelState.state.asObservable(),
+                  error: modelState.error.asObservable())
   }
   
-  func configureModule(input: ModuleInput, data:___FILEBASENAMEASIDENTIFIER___ModuleInputData?) -> ModuleOutput {
-    moduleInputData = data;
-    //configure module output
+  // MARK: - Module configuration
+  
+  func configureModule(input: ModuleInput?) -> ModuleOutput {
+    // Configure input signals
+    
+    // Configure module output
     return ModuleOutput()
   }
   
   // MARK: - Additional
-  
-  private func handleNetwork() {
-    
-  }
-  
+
   deinit {
-    print("-- ___FILEBASENAMEASIDENTIFIER___ViewModel dead")
+    print("-- ___VARIABLE_sceneName___ViewModel dead")
   }
 }

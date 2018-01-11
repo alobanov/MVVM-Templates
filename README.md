@@ -33,24 +33,3 @@ alias xCode_update_templates="cd ~/Documents/git-repos/alobanov/vps-template; gi
 Do not forget make `source ~/.bash_profile` in you terminal for start using update command.
 
 Now you can type in terminal: `xCode_update_templates`
-
----
-
-# Objective-c templates of modified MVVM architecture called based on protocols
-This is the collection of templates for [`Generamba`](https://github.com/rambler-digital-solutions/Generamba)
-
-## Installation
-1) Setup [`Generamba`](https://github.com/rambler-digital-solutions/Generamba) and run `generamba setup` and fill out `Rambafile`
-
-2) Updates templates section in your `Rambafile` as follow:
-```
-### Templates
-catalogs:
-- 'https://github.com/alobanov/vps-template'
-templates:
-- {name: vps_controller}
-```
-
-3) Run `generamba template install`
-
-5) Enjoy

@@ -46,7 +46,7 @@ class ___VARIABLE_sceneName___ViewController: UIViewController {
   
   private func configureRx() throws {
     guard let model = viewModel else {
-      throw RxViewModel.bindingViewModelError()
+      throw RxViewModelState.viewModelError()
     }
     
     let input = ___VARIABLE_sceneName___ViewModel.Input()
