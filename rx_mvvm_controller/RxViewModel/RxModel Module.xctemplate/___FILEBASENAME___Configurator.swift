@@ -11,13 +11,13 @@ import UIKit
 class ___VARIABLE_sceneName___Configurator {
   // MARK: Configuration
   
-  class func configure(data:___VARIABLE_sceneName___ViewModel.ModuleInputData) -> (viewControler: UIViewController, moduleOutput:___VARIABLE_sceneName___ViewModel.ModuleOutput) {
+  class func configure(data:___VARIABLE_sceneName___ViewModel.ModuleInputData) -> (viewController: UIViewController, moduleOutput:___VARIABLE_sceneName___ViewModel.ModuleOutput) {
     return ___VARIABLE_sceneName___Configurator.configure(moduleInput: nil, data: data)
   }
   
   class func configure(moduleInput: ___VARIABLE_sceneName___ViewModel.ModuleInput?,
                        data:___VARIABLE_sceneName___ViewModel.ModuleInputData)
-    -> (viewControler: UIViewController, moduleOutput:___VARIABLE_sceneName___ViewModel.ModuleOutput)
+    -> (viewController: UIViewController, moduleOutput:___VARIABLE_sceneName___ViewModel.ModuleOutput)
   {
     //view controller
     let viewController = createViewController()
