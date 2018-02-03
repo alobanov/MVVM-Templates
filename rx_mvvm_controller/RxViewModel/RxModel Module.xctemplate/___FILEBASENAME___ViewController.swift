@@ -23,9 +23,13 @@ class ___VARIABLE_sceneName___ViewController: UIViewController {
   // Private
   
   // IBOutlet & UI
-  // @IBOutlet weak var tableView: UITableView!
+  lazy var customView = self.view as? AuthView
   
-  // MARK: - View Live Circle
+  // MARK: - View lifecycle
+  override func loadView() {
+    let view = ___VARIABLE_sceneName___View()
+    self.view = view
+  }
   
   override func awakeFromNib() {
     super.awakeFromNib()
@@ -53,7 +57,7 @@ class ___VARIABLE_sceneName___ViewController: UIViewController {
     let output = model.configure(input: input)
     
     //bind title
-    output.title.bind(to: self.rx.title).addDisposableTo(bag)
+    output.title.bind(to: self.rx.title).disposed(by: bag)
   }
   
   private func configureUI() {

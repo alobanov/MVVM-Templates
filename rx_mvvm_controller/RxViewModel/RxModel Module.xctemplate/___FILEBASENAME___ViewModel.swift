@@ -16,7 +16,7 @@ protocol ___VARIABLE_sceneName___ViewOutput {
 
 class ___VARIABLE_sceneName___ViewModel: RxViewModelType, RxViewModelModuleType, ___VARIABLE_sceneName___ViewOutput {
   
-  // MARK: In/Out parameters
+  // MARK: In/Out struct
   struct InputDependencies {
     
   }
@@ -39,7 +39,7 @@ class ___VARIABLE_sceneName___ViewModel: RxViewModelType, RxViewModelModuleType,
   private let bag = DisposeBag()
   private let modelState: RxViewModelStateProtocol = RxViewModelState()
   
-  // Observables Output
+  // MARK: Observables
   private let title = Observable.just("Title")
   
   // MARK: - initializer
@@ -52,6 +52,10 @@ class ___VARIABLE_sceneName___ViewModel: RxViewModelType, RxViewModelModuleType,
   // MARK: - ___VARIABLE_sceneName___ViewOutput
   
   func configure(input: Input) -> Output {
+    // Configure input
+    // input.
+    
+    // Configure output
     return Output(title: title.asObservable(),
                   state: modelState.state.asObservable(),
                   error: modelState.error.asObservable())
