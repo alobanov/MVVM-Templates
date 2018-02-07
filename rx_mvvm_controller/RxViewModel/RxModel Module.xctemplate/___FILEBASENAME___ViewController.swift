@@ -23,7 +23,7 @@ class ___VARIABLE_sceneName___ViewController: UIViewController {
   // Private
   
   // IBOutlet & UI
-  lazy var customView = self.view as? AuthView
+  lazy var customView = self.view as? ___VARIABLE_sceneName___View
   
   // MARK: - View lifecycle
   override func loadView() {

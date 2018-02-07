@@ -13,7 +13,7 @@ class ___VARIABLE_sceneName___View: UIView {
   override init(frame: CGRect = CGRect.zero) {
     super.init(frame: frame)
     
-    configure()
+    configureView()
     addSubviews()
     makeConstraints()
   }
@@ -22,7 +22,7 @@ class ___VARIABLE_sceneName___View: UIView {
     fatalError("init(coder:) has not been implemented")
   }
   
-  func configure() {
+  func configureView() {
    
   }
   
