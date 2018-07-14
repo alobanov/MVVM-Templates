@@ -1,9 +1,9 @@
 //
-//  RxViewModel.swift
-//  Creditclub
+//  RxViewModelProtocols.swift
+//  Lobanov Aleksey
 //
 //  Created by Lobanov Aleksey on 08.09.16.
-//  Copyright © 2016 Soft Media Lab. All rights reserved.
+//  Copyright © 2016 All rights reserved.
 //
 
 import Foundation
@@ -22,9 +22,4 @@ protocol RxViewModelModuleType {
   associatedtype ModuleOutput
   
   func configureModule(input: ModuleInput?) -> ModuleOutput
-}
-
-protocol RxModelOutput {
-  var modelState: Observable<LoadingState> {get}
-  var modelError: Observable<NSError> {get}
 }

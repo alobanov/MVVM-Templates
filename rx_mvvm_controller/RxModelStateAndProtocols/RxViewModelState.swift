@@ -1,31 +1,33 @@
 //
-//  ViewModelState.swift
-//  Puls
+//  ModelState.swift
+//  Aleksey Lobanov
 //
-//  Created by Lobanov Aleksey on 06/08/2017.
-//  Copyright © 2017 Lobanov Aleksey. All rights reserved.
+//  Created by Aleksey Lobanov on 06/08/2017.
+//  Copyright © 2017 Aleksey Lobanov. All rights reserved.
 //
 
 import Foundation
 import RxSwift
-import ALUtils
+import RxCocoa
 
 // MARK: - Enum Values
-public enum LoadingState: Equatable {
+
+public enum ModelState: Equatable {
   /// Content is available and not loading any content
   case normal
   /// No Content is available
   case empty
-  /// Got an error loading content
-  case error
+  /// Got an error
+  case error(NSError?)
   /// Is loading content
-  case loading
+  case networkActivity
   // Prepearing state
   case unknown
 }
 
 // MARK: - Equatable
-public func == (lhs: LoadingState, rhs: LoadingState) -> Bool {
+
+public func == (lhs: ModelState, rhs: ModelState) -> Bool {
   switch (lhs, rhs) {
   case (.normal, .normal):
     return true
@@ -33,7 +35,7 @@ public func == (lhs: LoadingState, rhs: LoadingState) -> Bool {
     return true
   case (.error, .error):
     return true
-  case (.loading, .loading):
+  case (.networkActivity, .networkActivity):
     return true
   default:
     return false
@@ -41,18 +43,18 @@ public func == (lhs: LoadingState, rhs: LoadingState) -> Bool {
 }
 
 protocol RxViewModelStateProtocol {
-  var state: Observable<LoadingState> { get }
+  var state: Observable<ModelState> { get }
   var error: Observable<NSError> { get }
   
   func isRequestInProcess() -> Bool
-  func change(state: LoadingState)
+  func change(state: ModelState)
   func show(error: NSError?)
   
   static func viewModelError() -> NSError
 }
 
 class RxViewModelState: RxViewModelStateProtocol {
-  var state: Observable<LoadingState> {
+  var state: Observable<ModelState> {
     return _state.asObservable()
   }
   
@@ -60,37 +62,32 @@ class RxViewModelState: RxViewModelStateProtocol {
     return _error.asObservable().filterNil()
   }
   
-  private var _state = Variable<LoadingState>(.unknown)
-  private var _error = Variable<NSError?>(nil)
+  private var _state = BehaviorRelay<ModelState>(value: .unknown)
+  private var _error = BehaviorRelay<NSError?>(value: nil)
   
   func isRequestInProcess() -> Bool {
-    guard _state.value != .loading else {
+    guard _state.value != .networkActivity else {
       return true
     }
     
     return false
   }
   
-  func change(state: LoadingState) {
-    _state.value = state
+  func change(state: ModelState) {
+    _state.accept(state)
   }
   
   func show(error: NSError?) {
     if let err = error {
-      _error.value = err
+      _error.accept(err)
     }
     
     defer {
-      _state.value = .error
+      _state.accept(.error(error))
     }
   }
   
   static func viewModelError() -> NSError {
-    let userInfo = [
-      NSLocalizedDescriptionKey: "Please, set ViewModel as dependency for \(#file)",
-      NSLocalizedFailureReasonErrorKey: "View model is not define."
-    ]
-    
-    return NSError(domain: "ru.alobanov", code: -1, userInfo: userInfo)
+    return NSError.define(description: "Please, set ViewModel as dependency for \(#file)")
   }
 }
