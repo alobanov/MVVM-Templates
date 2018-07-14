@@ -3,10 +3,6 @@
 
 This section about native templates used by xCode
 
-### Example of MVVM+Rx templates in action 
-
-Check this out [Client for Dribbble write with ❤️ and MVVM + Rx + Moya](https://github.com/alobanov/Dribbble)
-
 ### Auto syncing
 
 1) You need to clean up you Templates folder in xCode location. For this you need open in finder folder below and move all files to trash:
