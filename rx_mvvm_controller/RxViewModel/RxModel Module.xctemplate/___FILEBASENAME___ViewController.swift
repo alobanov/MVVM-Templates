@@ -50,7 +50,7 @@ class ___VARIABLE_sceneName___ViewController: UIViewController {
   
   private func configureRx() throws {
     guard let model = viewModel else {
-      throw RxViewModelState.viewModelError()
+      fatalError("Please, set ViewModel as dependency for ___VARIABLE_sceneName___")
     }
     
     let input = ___VARIABLE_sceneName___ViewModel.Input()

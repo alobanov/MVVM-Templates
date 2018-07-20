@@ -49,8 +49,6 @@ protocol RxViewModelStateProtocol {
   func isRequestInProcess() -> Bool
   func change(state: ModelState)
   func show(error: NSError?)
-  
-  static func viewModelError() -> NSError
 }
 
 class RxViewModelState: RxViewModelStateProtocol {
@@ -85,9 +83,5 @@ class RxViewModelState: RxViewModelStateProtocol {
     defer {
       _state.accept(.error(error))
     }
-  }
-  
-  static func viewModelError() -> NSError {
-    return NSError.define(description: "Please, set ViewModel as dependency for \(#file)")
   }
 }
