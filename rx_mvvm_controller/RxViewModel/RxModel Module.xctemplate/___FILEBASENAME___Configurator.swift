@@ -42,7 +42,7 @@ class ___VARIABLE_sceneName___Configurator {
     moduleInput: ___VARIABLE_sceneName___ViewModel.ModuleInput? = nil)
     -> (Presentable, ___VARIABLE_sceneName___ViewModel.ModuleOutput)? {
       do {
-        let output = try ___VARIABLE_sceneName___Configurator.configure(data: inputData, moduleInput: moduleInput)
+        let output = try ___VARIABLE_sceneName___Configurator.configure(inputData: inputData, moduleInput: moduleInput)
         return (output.viewController, output.moduleOutput)
       } catch let err {
         print(err)

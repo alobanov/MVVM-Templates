@@ -27,8 +27,7 @@ class ___VARIABLE_sceneName___ViewModel: RxViewModelType, RxViewModelModuleType,
   
   struct Output {
     let title: Observable<String>
-    let state: Observable<LoadingState>
-    let error: Observable<NSError>
+    let state: Observable<ModelState>
   }
   
   // MARK: Dependencies
@@ -40,7 +39,7 @@ class ___VARIABLE_sceneName___ViewModel: RxViewModelType, RxViewModelModuleType,
   private let modelState: RxViewModelStateProtocol = RxViewModelState()
   
   // MARK: Observables
-  private let title = Observable.just("Title")
+  private let title = Observable.just("___VARIABLE_sceneName___")
   
   // MARK: - initializer
   
@@ -56,9 +55,10 @@ class ___VARIABLE_sceneName___ViewModel: RxViewModelType, RxViewModelModuleType,
     // input.
     
     // Configure output
-    return Output(title: title.asObservable(),
-                  state: modelState.state.asObservable(),
-                  error: modelState.error.asObservable())
+    return Output(
+      title: title.asObservable(),
+      state: modelState.state.asObservable(),
+    )
   }
   
   // MARK: - Module configuration
