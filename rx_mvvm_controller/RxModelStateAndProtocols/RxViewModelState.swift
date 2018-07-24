@@ -12,6 +12,10 @@ import RxCocoa
 
 // MARK: - Enum Values
 
+public enum ViewAppearState {
+  case didAppear, willAppear, didDisappear, willDisappear, didDeinit
+}
+
 public enum ModelState: Equatable {
   /// Content is available and not loading any content
   case normal
@@ -19,8 +23,10 @@ public enum ModelState: Equatable {
   case empty
   /// Got an error
   case error(NSError?)
-  /// Is loading content
+  /// network activity
   case networkActivity
+  // custom activity
+  case customActivity(Any)
   // Prepearing state
   case unknown
 }
