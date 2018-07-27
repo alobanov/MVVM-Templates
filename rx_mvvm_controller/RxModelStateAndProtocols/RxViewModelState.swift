@@ -25,8 +25,6 @@ public enum ModelState: Equatable {
   case error(NSError?)
   /// network activity
   case networkActivity
-  // custom activity
-  case customActivity(Any)
   // Prepearing state
   case unknown
 }

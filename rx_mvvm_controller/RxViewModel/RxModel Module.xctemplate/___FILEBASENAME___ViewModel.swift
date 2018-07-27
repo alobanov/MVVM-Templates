@@ -57,7 +57,7 @@ class ___VARIABLE_sceneName___ViewModel: RxViewModelType, RxViewModelModuleType,
     // Configure output
     return Output(
       title: title.asObservable(),
-      state: modelState.state.asObservable(),
+      state: modelState.state.asObservable()
     )
   }
   
