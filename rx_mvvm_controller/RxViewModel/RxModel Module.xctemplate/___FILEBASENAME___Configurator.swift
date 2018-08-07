@@ -9,43 +9,44 @@
 import UIKit
 
 class ___VARIABLE_sceneName___Configurator {
-  // MARK: Configuration
-  
-  class func configure(data:___VARIABLE_sceneName___ViewModel.ModuleInputData) -> (viewControler: UIViewController, moduleOutput:___VARIABLE_sceneName___ViewModel.ModuleOutput) {
-    return ___VARIABLE_sceneName___Configurator.configure(moduleInput: nil, data: data)
-  }
-  
-  class func configure(moduleInput: ___VARIABLE_sceneName___ViewModel.ModuleInput?,
-                       data:___VARIABLE_sceneName___ViewModel.ModuleInputData)
-    -> (viewControler: UIViewController, moduleOutput:___VARIABLE_sceneName___ViewModel.ModuleOutput)
-  {
-    //view controller
+  class func configure(inputData:___VARIABLE_sceneName___ViewModel.ModuleInputData,
+                       moduleInput: ___VARIABLE_sceneName___ViewModel.ModuleInput? = nil) throws
+    -> (viewController: UIViewController, moduleOutput:___VARIABLE_sceneName___ViewModel.ModuleOutput) {
+    // View controller
     let viewController = createViewController()
-    
-    // dependencies
-    let dependencies = createDependencies()
-    
-    // view model
-    let viewModel = ___VARIABLE_sceneName___ViewModel(dependencies: dependencies, moduleInputData: data)
+      
+    // Dependencies
+    let dependencies = try createDependencies()
+      
+    // View model
+    let viewModel = ___VARIABLE_sceneName___ViewModel(dependencies: dependencies, moduleInputData: inputData)
     let moduleOutput = viewModel.configureModule(input: moduleInput)
     
-    // controller
     viewController.viewModel = viewModel
-    
+      
     return (viewController, moduleOutput)
   }
   
   private class func createViewController() -> ___VARIABLE_sceneName___ViewController {
-    //FIXME: create ___VARIABLE_sceneName___ViewController
     return ___VARIABLE_sceneName___ViewController()
   }
   
-  private class func createDependencies() -> ___VARIABLE_sceneName___ViewModel.InputDependencies {
-    //setup dependencies of outer servicces (API, DB, etc...)
-    
+  private class func createDependencies() throws -> ___VARIABLE_sceneName___ViewModel.InputDependencies {
     let dependencies =
       ___VARIABLE_sceneName___ViewModel.InputDependencies()
     return dependencies
   }
-  
+ 
+  static func module(
+    inputData: ___VARIABLE_sceneName___ViewModel.ModuleInputData,
+    moduleInput: ___VARIABLE_sceneName___ViewModel.ModuleInput? = nil)
+    -> (Presentable, ___VARIABLE_sceneName___ViewModel.ModuleOutput)? {
+      do {
+        let output = try ___VARIABLE_sceneName___Configurator.configure(inputData: inputData, moduleInput: moduleInput)
+        return (output.viewController, output.moduleOutput)
+      } catch let err {
+        print(err)
+        return nil
+      }
+  }
 }

@@ -40,7 +40,7 @@
 			<key>Identifier</key>
 			<string>viewControllerName</string>
 			<key>Name</key>
-			<string>View Controller Name:</string>
+			<string>View Controller:</string>
 			<key>Required</key>
 			<true/>
 			<key>Type</key>
@@ -54,7 +54,7 @@
 			<key>Identifier</key>
 			<string>structuresName</string>
 			<key>Name</key>
-			<string>Structures Name:</string>
+			<string>Structures:</string>
 			<key>Required</key>
 			<true/>
 			<key>Type</key>
@@ -68,7 +68,21 @@
 			<key>Identifier</key>
 			<string>configuratorName</string>
 			<key>Name</key>
-			<string>Configurator Name:</string>
+			<string>Configurator:</string>
+			<key>Required</key>
+			<true/>
+			<key>Type</key>
+			<string>static</string>
+		</dict>
+		<dict>
+			<key>Default</key>
+			<string>___VARIABLE_sceneName___View</string>
+			<key>Description</key>
+			<string>The view name</string>
+			<key>Identifier</key>
+			<string>viewName</string>
+			<key>Name</key>
+			<string>View:</string>
 			<key>Required</key>
 			<true/>
 			<key>Type</key>
@@ -82,7 +96,7 @@
 			<key>Identifier</key>
 			<string>modelFileName</string>
 			<key>Name</key>
-			<string>Model File Name:</string>
+			<string>View Model:</string>
 			<key>Required</key>
 			<true/>
 			<key>Type</key>
