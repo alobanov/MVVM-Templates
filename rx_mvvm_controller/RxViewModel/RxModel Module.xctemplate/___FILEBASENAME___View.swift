@@ -12,25 +12,27 @@ class ___VARIABLE_sceneName___View: UIView {
   
   override init(frame: CGRect = CGRect.zero) {
     super.init(frame: frame)
-    
     configureView()
     addSubviews()
-    makeConstraints()
   }
   
   required init?(coder aDecoder: NSCoder) {
-    fatalError("init(coder:) has not been implemented")
+    super.init(coder: aDecoder)
+  }
+    
+  public func configure(topLayoutGuide: UILayoutSupport, bottomLayoutGuide: UILayoutSupport) {
+    makeConstraints(topLayoutGuide: topLayoutGuide, bottomLayoutGuide: bottomLayoutGuide)
   }
   
-  func configureView() {
+  private func configureView() {
    
   }
   
-  func addSubviews() {
+  private func addSubviews() {
     
   }
   
-  func makeConstraints() {
+  private func makeConstraints(topLayoutGuide: UILayoutSupport, bottomLayoutGuide: UILayoutSupport) {
     
   }
 }

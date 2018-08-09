@@ -23,12 +23,14 @@ class ___VARIABLE_sceneName___ViewController: UIViewController {
   // Private
   
   // IBOutlet & UI
-  lazy var customView = self.view as? ___VARIABLE_sceneName___View
+  lazy var customView: ___VARIABLE_sceneName___View = {
+    let customView = ___VARIABLE_sceneName___View(frame: CGRect(x: 0, y: 0, width: 320, height: 480))
+    return customView
+  }()
   
   // MARK: - View lifecycle
   override func loadView() {
-    let view = ___VARIABLE_sceneName___View()
-    self.view = view
+    self.view = customView
   }
   
   override func awakeFromNib() {
@@ -61,7 +63,7 @@ class ___VARIABLE_sceneName___ViewController: UIViewController {
   }
   
   private func configureUI() {
-    
+    customView.configure(topLayoutGuide: topLayoutGuide, bottomLayoutGuide: bottomLayoutGuide)
   }
   
   // MARK: - Additional
