@@ -10,12 +10,12 @@ import UIKit
 import RxSwift
 import RxCocoa
 
-class ___VARIABLE_sceneName___ViewController: UIViewController {
+class ___FILEBASENAMEASIDENTIFIER___ViewController: UIViewController {
   
   // MARK: - Properties
   
   // Dependencies
-  var viewModel: ___VARIABLE_sceneName___ViewOutput?
+  var viewModel: ___FILEBASENAMEASIDENTIFIER___Output?
   
   // Public
   var bag = DisposeBag()
@@ -23,15 +23,9 @@ class ___VARIABLE_sceneName___ViewController: UIViewController {
   // Private
   
   // IBOutlet & UI
-  lazy var customView: ___VARIABLE_sceneName___View = {
-    let customView = ___VARIABLE_sceneName___View(frame: CGRect(x: 0, y: 0, width: 320, height: 480))
-    return customView
-  }()
+  // @IBOutlet weak var tableView: UITableView!
   
-  // MARK: - View lifecycle
-  override func loadView() {
-    self.view = customView
-  }
+  // MARK: - View Live Circle
   
   override func awakeFromNib() {
     super.awakeFromNib()
@@ -39,6 +33,8 @@ class ___VARIABLE_sceneName___ViewController: UIViewController {
   
   override func viewDidLoad() {
     super.viewDidLoad()
+    
+    // Do any additional setup after loading the view.
     self.configureUI()
     
     do {
@@ -52,23 +48,22 @@ class ___VARIABLE_sceneName___ViewController: UIViewController {
   
   private func configureRx() throws {
     guard let model = viewModel else {
-      fatalError("Please, set ViewModel as dependency for ___VARIABLE_sceneName___")
+      throw RxViewModel.bindingViewModelError()
     }
     
-    let input = ___VARIABLE_sceneName___ViewModel.Input()
-    let output = model.configure(input: input)
+    let output = model.configure(input: ___FILEBASENAMEASIDENTIFIER___ViewModel.Input())
     
     //bind title
-    output.title.bind(to: self.rx.title).disposed(by: bag)
+    output.title.bind(to: self.rx.title).addDisposableTo(bag)
   }
   
   private func configureUI() {
-    customView.configure(topLayoutGuide: topLayoutGuide, bottomLayoutGuide: bottomLayoutGuide)
+    self.title = "___FILEBASENAMEASIDENTIFIER___"
   }
   
   // MARK: - Additional
   
   deinit {
-    print("___VARIABLE_sceneName___ViewController deinit")
+    print("___FILEBASENAMEASIDENTIFIER___ViewController deinit")
   }
 }
