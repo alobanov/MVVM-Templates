@@ -15,33 +15,20 @@ import RxSwift
 
 extension ___VARIABLE_sceneName___ViewModel {
   // MARK: - initial module data
-  //   Immutable data, structures, for configure module
+  // Immutable data, structures, for configure module
+  
   struct ModuleInputData {
     
   }
   
   // MARK: - module input structure
-  // 
-  // Examples:
-  // 1. Parent module may have send some signals to this
-  //   sequence. Child (this) module subscribe to sequence.
-  //
-  //   var inputSignal:PublishSubject<Bool>
-  // 
-
+  
   struct ModuleInput {
     
   }
   
   // MARK: - module output structure
-  // 
-  // Examples:
-  // 1. Parent module may have subscribe to sequency
-  //   below for waitnig data
-  //
-  //   var result:Observable<LoginResponse>
-  // 
-
+  
   struct ModuleOutput {
     
   }

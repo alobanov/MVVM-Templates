@@ -22,7 +22,7 @@ class ___VARIABLE_sceneName___ViewModel: RxViewModelType, RxViewModelModuleType,
   }
   
   struct Input {
-    
+    let appearState: Observable<ViewAppearState>
   }
   
   struct Output {
@@ -52,7 +52,9 @@ class ___VARIABLE_sceneName___ViewModel: RxViewModelType, RxViewModelModuleType,
   
   func configure(input: Input) -> Output {
     // Configure input
-    // input.
+    input.appearState.subscribe(onNext: { _ in
+      // .willAppear and etc
+    }).disposed(by: bag)
     
     // Configure output
     return Output(

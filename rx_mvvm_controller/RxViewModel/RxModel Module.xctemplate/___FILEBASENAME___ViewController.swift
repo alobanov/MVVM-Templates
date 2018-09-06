@@ -21,6 +21,7 @@ class ___VARIABLE_sceneName___ViewController: UIViewController {
   var bag = DisposeBag()
   
   // Private
+  private let viewAppearState = PublishSubject<ViewAppearState>()
   
   // IBOutlet & UI
   lazy var customView: ___VARIABLE_sceneName___View = {
@@ -29,8 +30,14 @@ class ___VARIABLE_sceneName___ViewController: UIViewController {
   }()
   
   // MARK: - View lifecycle
+  
   override func loadView() {
     self.view = customView
+  }
+  
+  override func viewWillAppear(_ animated: Bool) {
+    super.viewWillAppear(animated)
+    viewAppearState.onNext(.willAppear)
   }
   
   override func awakeFromNib() {
