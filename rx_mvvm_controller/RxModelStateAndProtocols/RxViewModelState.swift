@@ -10,51 +10,58 @@ import Foundation
 import RxSwift
 import RxCocoa
 
-// MARK: - Enum Values
-
+// MARK: - Enums
 public enum ViewAppearState {
-  case didAppear, willAppear, didDisappear, willDisappear, didDeinit
+  case didLoad, didAppear, willAppear, didDisappear, willDisappear, didDeinit
 }
 
 public enum ModelState: Equatable {
-  /// Content is available and not loading any content
+  
   case normal
-  /// No Content is available
+  // Content is available and not loading any content
+  
   case empty
-  /// Got an error
-  case error(NSError?)
-  /// network activity
+  // No Content is available
+  
+  case error(NSError)
+  // Got an error
+  
+  
   case networkActivity
-  // Prepearing state
+  // Network activity
+  
   case unknown
-}
-
-// MARK: - Equatable
-
-public func == (lhs: ModelState, rhs: ModelState) -> Bool {
-  switch (lhs, rhs) {
-  case (.normal, .normal):
-    return true
-  case (.empty, .empty):
-    return true
-  case (.error, .error):
-    return true
-  case (.networkActivity, .networkActivity):
-    return true
-  default:
-    return false
+  // State is not defiend yet
+  
+  // for implementation of Equatable
+  var hash: Int {
+    switch self {
+    case .normal: return 0
+    case .empty: return 1
+    case .error: return 2
+    case .networkActivity: return 3
+    case .unknown: return 4
+    }
   }
+  
 }
 
+// MARK: - ModelState Equatable
+public func == (lhs: ModelState, rhs: ModelState) -> Bool {
+  return lhs.hash == rhs.hash
+}
+
+// MARK: - RxViewModelStateProtocol
 protocol RxViewModelStateProtocol {
   var state: Observable<ModelState> { get }
   var error: Observable<NSError> { get }
   
   func isRequestInProcess() -> Bool
   func change(state: ModelState)
-  func show(error: NSError?)
+  func show(error: NSError)
 }
 
+// MARK: - RxViewModelState
 class RxViewModelState: RxViewModelStateProtocol {
   var state: Observable<ModelState> {
     return _state.asObservable()
@@ -68,24 +75,32 @@ class RxViewModelState: RxViewModelStateProtocol {
   private var _error = BehaviorRelay<NSError?>(value: nil)
   
   func isRequestInProcess() -> Bool {
-    guard _state.value != .networkActivity else {
-      return true
-    }
-    
-    return false
+    return _state.value == .networkActivity
   }
   
   func change(state: ModelState) {
     _state.accept(state)
+    switch state {
+    case .error(let error):
+      _error.accept(error)
+    default: break
+    }
   }
   
-  func show(error: NSError?) {
-    if let err = error {
-      _error.accept(err)
-    }
-    
-    defer {
-      _state.accept(.error(error))
-    }
+  func show(error: NSError) {
+    _error.accept(error)
+    _state.accept(.error(error))
   }
+  
+  static func viewModelError() -> NSError {
+    let userInfo = [
+      NSLocalizedDescriptionKey: "Please, set ViewModel as dependency for \(#file)",
+      NSLocalizedFailureReasonErrorKey: "View model is not define."
+    ]
+    
+    let code = -1
+    
+    return NSError(domain: "com.rxmvvm.template", code: code, userInfo: userInfo)
+  }
+
 }

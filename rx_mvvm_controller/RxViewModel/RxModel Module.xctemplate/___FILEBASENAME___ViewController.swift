@@ -30,18 +30,8 @@ class ___VARIABLE_sceneName___ViewController: UIViewController {
   }()
   
   // MARK: - View lifecycle
-  
   override func loadView() {
     self.view = customView
-  }
-  
-  override func viewWillAppear(_ animated: Bool) {
-    super.viewWillAppear(animated)
-    viewAppearState.onNext(.willAppear)
-  }
-  
-  override func awakeFromNib() {
-    super.awakeFromNib()
   }
   
   override func viewDidLoad() {
@@ -53,20 +43,41 @@ class ___VARIABLE_sceneName___ViewController: UIViewController {
     } catch(let err) {
       print(err)
     }
+    viewAppearState.onNext(.didLoad)
+  }
+  
+  override func viewWillAppear(_ animated: Bool) {
+    super.viewWillAppear(animated)
+    viewAppearState.onNext(.willAppear)
+  }
+  
+  override func viewDidAppear(_ animated: Bool) {
+    super.viewDidAppear(animated)
+    viewAppearState.onNext(.didAppear)
+  }
+  
+  override func viewWillDisappear(_ animated: Bool) {
+    super.viewWillDisappear(animated)
+    viewAppearState.onNext(.willDisappear)
+  }
+  
+  override func viewDidDisappear(_ animated: Bool) {
+    super.viewDidDisappear(animated)
+    viewAppearState.onNext(.didDisappear)
   }
   
   // MARK: - Configuration
-  
   private func configureRx() throws {
     guard let model = viewModel else {
       fatalError("Please, set ViewModel as dependency for ___VARIABLE_sceneName___")
     }
     
-    let input = ___VARIABLE_sceneName___ViewModel.Input()
+    let input = ___VARIABLE_sceneName___ViewModel.Input(appearState: viewAppearState)
     let output = model.configure(input: input)
     
-    //bind title
-    output.title.bind(to: self.rx.title).disposed(by: bag)
+    output.title.subscribe(onNext: { [weak self] str in
+      self?.navigationItem.title = str
+    }).disposed(by: bag)
   }
   
   private func configureUI() {
