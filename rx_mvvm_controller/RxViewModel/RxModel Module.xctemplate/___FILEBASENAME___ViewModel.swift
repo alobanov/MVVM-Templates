@@ -53,7 +53,7 @@ class ___VARIABLE_sceneName___ViewModel: RxViewModelType, RxViewModelModuleType,
   func configure(input: Input) -> Output {
     // Configure input
     input.appearState.subscribe(onNext: { _ in
-      // .willAppear and etc
+      // .didLoad and etc
     }).disposed(by: bag)
     
     // Configure output
