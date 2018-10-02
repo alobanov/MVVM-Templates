@@ -10,6 +10,10 @@ import RxSwift
 
 extension ___VARIABLE_sceneName___ViewModel {
   
+  enum OutputModuleActionType {
+    
+  }
+  
   // MARK: - initial module data
   struct ModuleInputData {
     
@@ -22,7 +26,7 @@ extension ___VARIABLE_sceneName___ViewModel {
   
   // MARK: - module output structure
   struct ModuleOutput {
-    
+    let moduleAction: Observable<OutputModuleActionType>
   }
   
 }

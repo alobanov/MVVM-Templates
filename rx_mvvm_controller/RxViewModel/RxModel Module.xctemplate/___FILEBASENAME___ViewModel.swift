@@ -40,6 +40,7 @@ class ___VARIABLE_sceneName___ViewModel: RxViewModelType, RxViewModelModuleType,
   
   // MARK: Observables
   private let title = Observable.just("___VARIABLE_sceneName___")
+  private let outputModuleAction = PublishSubject<OutputModuleActionType>()
   
   // MARK: - initializer
   
@@ -69,7 +70,9 @@ class ___VARIABLE_sceneName___ViewModel: RxViewModelType, RxViewModelModuleType,
     // Configure input signals
     
     // Configure module output
-    return ModuleOutput()
+    return ModuleOutput(
+      moduleAction: outputModuleAction.asObservable()
+    )
   }
   
   // MARK: - Additional
