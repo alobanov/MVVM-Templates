@@ -37,12 +37,7 @@ class ___VARIABLE_sceneName___ViewController: UIViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
     self.configureUI()
-    
-    do {
-      try self.configureRx()
-    } catch(let err) {
-      print(err)
-    }
+    try self.configureRx()
     viewAppearState.onNext(.didLoad)
   }
   
@@ -69,7 +64,8 @@ class ___VARIABLE_sceneName___ViewController: UIViewController {
   // MARK: - Configuration
   private func configureRx() throws {
     guard let model = viewModel else {
-      fatalError("Please, set ViewModel as dependency for ___VARIABLE_sceneName___")
+      assertionFailure("Please, set ViewModel as dependency for ___VARIABLE_sceneName___")
+      return
     }
     
     let input = ___VARIABLE_sceneName___ViewModel.Input(appearState: viewAppearState)
@@ -77,6 +73,10 @@ class ___VARIABLE_sceneName___ViewController: UIViewController {
     
     output.title.subscribe(onNext: { [weak self] str in
       self?.navigationItem.title = str
+    }).disposed(by: bag)
+    
+    output.state.subscribe(onNext: { [weak self] state in
+      /// put here state handler
     }).disposed(by: bag)
   }
   
