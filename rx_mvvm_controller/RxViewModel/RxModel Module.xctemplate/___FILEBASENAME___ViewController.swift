@@ -36,8 +36,8 @@ class ___VARIABLE_sceneName___ViewController: UIViewController {
   
   override func viewDidLoad() {
     super.viewDidLoad()
-    self.configureUI()
-    try self.configureRx()
+    configureUI()
+    configureRx()
     viewAppearState.onNext(.didLoad)
   }
   
@@ -62,7 +62,7 @@ class ___VARIABLE_sceneName___ViewController: UIViewController {
   }
   
   // MARK: - Configuration
-  private func configureRx() throws {
+  private func configureRx() {
     guard let model = viewModel else {
       assertionFailure("Please, set ViewModel as dependency for ___VARIABLE_sceneName___")
       return
