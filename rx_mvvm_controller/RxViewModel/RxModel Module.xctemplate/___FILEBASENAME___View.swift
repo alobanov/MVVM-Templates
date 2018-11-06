@@ -19,10 +19,6 @@ class ___VARIABLE_sceneName___View: UIView {
   required init?(coder aDecoder: NSCoder) {
     super.init(coder: aDecoder)
   }
-    
-  public func configure(topLayoutGuide: UILayoutSupport, bottomLayoutGuide: UILayoutSupport) {
-    makeConstraints(topLayoutGuide: topLayoutGuide, bottomLayoutGuide: bottomLayoutGuide)
-  }
   
   private func configureView() {
    
@@ -32,7 +28,7 @@ class ___VARIABLE_sceneName___View: UIView {
     
   }
   
-  private func makeConstraints(topLayoutGuide: UILayoutSupport, bottomLayoutGuide: UILayoutSupport) {
+  public func makeConstraints(vc: UIViewController) {
     
   }
 }

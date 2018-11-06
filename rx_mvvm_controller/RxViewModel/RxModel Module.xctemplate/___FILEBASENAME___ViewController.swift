@@ -76,12 +76,12 @@ class ___VARIABLE_sceneName___ViewController: UIViewController {
     }).disposed(by: bag)
     
     output.state.subscribe(onNext: { [weak self] state in
-      /// put here state handler
+      // state handler
     }).disposed(by: bag)
   }
   
   private func configureUI() {
-    customView.configure(topLayoutGuide: topLayoutGuide, bottomLayoutGuide: bottomLayoutGuide)
+    customView.makeConstraints(vc: self)
   }
   
   // MARK: - Additional
