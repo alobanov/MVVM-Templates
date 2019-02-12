@@ -21,7 +21,7 @@ protocol RxViewModelModuleType {
   associatedtype ModuleInput
   associatedtype ModuleOutput
   
-  func configureModule(input: ModuleInput?) -> ModuleOutput
+  func configureModule(input: ModuleInput) -> ModuleOutput
 }
 
 // MARK: - Enums
