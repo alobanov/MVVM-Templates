@@ -66,7 +66,7 @@ class ___VARIABLE_sceneName___ViewModel: RxViewModelType, RxViewModelModuleType,
   
   // MARK: - Module configuration
   
-  func configureModule(input: ModuleInput?) -> ModuleOutput {
+  func configureModule(input: ModuleInput) -> ModuleOutput {
     // Configure input signals
     
     // Configure module output

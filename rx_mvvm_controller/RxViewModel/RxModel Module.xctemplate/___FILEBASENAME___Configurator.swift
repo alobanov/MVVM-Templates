@@ -10,13 +10,13 @@ import UIKit
 
 class ___VARIABLE_sceneName___Configurator {
   class func configure(inputData:___VARIABLE_sceneName___ViewModel.ModuleInputData,
-                       moduleInput: ___VARIABLE_sceneName___ViewModel.ModuleInput? = nil) throws
+                       moduleInput: ___VARIABLE_sceneName___ViewModel.ModuleInput)
     -> (viewController: UIViewController, moduleOutput:___VARIABLE_sceneName___ViewModel.ModuleOutput) {
     // View controller
     let viewController = createViewController()
       
     // Dependencies
-    let dependencies = try createDependencies()
+    let dependencies = createDependencies()
       
     // View model
     let viewModel = ___VARIABLE_sceneName___ViewModel(dependencies: dependencies, moduleInputData: inputData)
@@ -31,22 +31,9 @@ class ___VARIABLE_sceneName___Configurator {
     return ___VARIABLE_sceneName___ViewController()
   }
   
-  private class func createDependencies() throws -> ___VARIABLE_sceneName___ViewModel.InputDependencies {
-    let dependencies =
-      ___VARIABLE_sceneName___ViewModel.InputDependencies()
+  private class func createDependencies() -> ___VARIABLE_sceneName___ViewModel.InputDependencies {
+    let dependencies = ___VARIABLE_sceneName___ViewModel.InputDependencies()
     return dependencies
   }
- 
-  static func module(
-    inputData: ___VARIABLE_sceneName___ViewModel.ModuleInputData,
-    moduleInput: ___VARIABLE_sceneName___ViewModel.ModuleInput? = nil)
-    -> (Presentable, ___VARIABLE_sceneName___ViewModel.ModuleOutput)? {
-      do {
-        let output = try ___VARIABLE_sceneName___Configurator.configure(inputData: inputData, moduleInput: moduleInput)
-        return (output.viewController, output.moduleOutput)
-      } catch let err {
-        print(err)
-        return nil
-      }
-  }
+
 }
