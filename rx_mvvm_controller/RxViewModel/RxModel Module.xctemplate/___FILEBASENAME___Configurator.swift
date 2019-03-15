@@ -37,8 +37,8 @@ class ___VARIABLE_sceneName___Configurator {
   }
  
   static func module(
-    inputData: ___VARIABLE_sceneName___ViewModel.ModuleInputData,
-    moduleInput: ___VARIABLE_sceneName___ViewModel.ModuleInput)
+    inputData: ___VARIABLE_sceneName___ViewModel.ModuleInputData = .init(),
+    moduleInput: ___VARIABLE_sceneName___ViewModel.ModuleInput = .init())
     -> (Presentable, ___VARIABLE_sceneName___ViewModel.ModuleOutput)? {
       do {
         let output = try ___VARIABLE_sceneName___Configurator.configure(inputData: inputData, moduleInput: moduleInput)
