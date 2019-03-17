@@ -9,8 +9,8 @@
 import UIKit
 
 class ___VARIABLE_sceneName___Configurator {
-  class func configure(inputData:___VARIABLE_sceneName___ViewModel.ModuleInputData,
-                       moduleInput: ___VARIABLE_sceneName___ViewModel.ModuleInput) throws
+  class func configure(inputData:___VARIABLE_sceneName___ViewModel.ModuleInputData = .init(),
+                       moduleInput: ___VARIABLE_sceneName___ViewModel.ModuleInput = .init()) throws
     -> (viewController: UIViewController, moduleOutput:___VARIABLE_sceneName___ViewModel.ModuleOutput) {
     // View controller
     let viewController = createViewController()
