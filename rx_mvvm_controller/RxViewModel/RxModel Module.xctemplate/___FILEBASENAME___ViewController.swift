@@ -88,7 +88,7 @@ class ___VARIABLE_sceneName___ViewController: UIViewController {
   }
   
   private func configureUI() {
-    customView.makeConstraints(vc: self)
+    customView.makeConstraints(viewController: self)
   }
   
   // MARK: - Additional

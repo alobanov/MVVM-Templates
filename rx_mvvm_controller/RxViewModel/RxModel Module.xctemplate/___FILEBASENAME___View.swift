@@ -28,7 +28,7 @@ class ___VARIABLE_sceneName___View: UIView {
     
   }
   
-  public func makeConstraints(vc: UIViewController) {
+  public func makeConstraints(viewController: UIViewController) {
     
   }
 }
