@@ -61,6 +61,10 @@ class ___VARIABLE_sceneName___ViewController: UIViewController {
     viewAppearState.onNext(.didDisappear)
   }
   
+  deinit {
+    print("___VARIABLE_sceneName___ViewController deinit")
+  }
+  
   // MARK: - Configuration
   private func configureRx() {
     guard let model = viewModel else {
@@ -68,7 +72,9 @@ class ___VARIABLE_sceneName___ViewController: UIViewController {
       return
     }
     
-    let input = ___VARIABLE_sceneName___ViewModel.Input(appearState: viewAppearState)
+    let input = ___VARIABLE_sceneName___ViewModel.Input(
+      appearState: viewAppearState
+    )
     let output = model.configure(input: input)
     
     output.title.subscribe(onNext: { [weak self] str in
@@ -77,6 +83,7 @@ class ___VARIABLE_sceneName___ViewController: UIViewController {
     
     output.state.subscribe(onNext: { [weak self] state in
       // state handler
+      print(state)
     }).disposed(by: bag)
   }
   
@@ -86,7 +93,4 @@ class ___VARIABLE_sceneName___ViewController: UIViewController {
   
   // MARK: - Additional
   
-  deinit {
-    print("___VARIABLE_sceneName___ViewController deinit")
-  }
 }
