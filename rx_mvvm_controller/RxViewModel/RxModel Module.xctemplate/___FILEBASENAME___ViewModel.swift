@@ -53,8 +53,13 @@ class ___VARIABLE_sceneName___ViewModel: RxViewModelType, RxViewModelModuleType,
   
   func configure(input: Input) -> Output {
     // Configure input
-    input.appearState.subscribe(onNext: { _ in
-      // .didLoad and etc
+    input.appearState.subscribe(onNext: { [weak self] (state) in
+      switch state {
+        case .didLoad:
+          self?.start()
+        default:
+          break
+      }
     }).disposed(by: bag)
     
     // Configure output
@@ -76,6 +81,10 @@ class ___VARIABLE_sceneName___ViewModel: RxViewModelType, RxViewModelModuleType,
   }
   
   // MARK: - Additional
+
+  func start() {
+
+  }
 
   deinit {
     print("-- ___VARIABLE_sceneName___ViewModel dead")

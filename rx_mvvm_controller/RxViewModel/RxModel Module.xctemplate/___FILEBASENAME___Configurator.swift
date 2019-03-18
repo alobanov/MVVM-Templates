@@ -9,9 +9,12 @@
 import UIKit
 
 class ___VARIABLE_sceneName___Configurator {
+  typealias Result = (
+    viewController: UIViewController,
+    moduleOutput: ___VARIABLE_sceneName___ViewModel.ModuleOutput)
+
   class func configure(inputData:___VARIABLE_sceneName___ViewModel.ModuleInputData = .init(),
-                       moduleInput: ___VARIABLE_sceneName___ViewModel.ModuleInput = .init()) throws
-    -> (viewController: UIViewController, moduleOutput:___VARIABLE_sceneName___ViewModel.ModuleOutput) {
+                       moduleInput: ___VARIABLE_sceneName___ViewModel.ModuleInput = .init()) throws -> Result {
     // View controller
     let viewController = createViewController()
       
@@ -32,8 +35,7 @@ class ___VARIABLE_sceneName___Configurator {
   }
   
   private class func createDependencies() throws -> ___VARIABLE_sceneName___ViewModel.InputDependencies {
-    let dependencies = ___VARIABLE_sceneName___ViewModel.InputDependencies()
-    return dependencies
+    return ___VARIABLE_sceneName___ViewModel.InputDependencies()
   }
  
   static func module(
