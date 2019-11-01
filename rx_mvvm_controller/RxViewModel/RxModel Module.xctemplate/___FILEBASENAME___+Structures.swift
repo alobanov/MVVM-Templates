@@ -6,7 +6,7 @@
 //  Copyright (c) ___YEAR___ ___ORGANIZATIONNAME___. All rights reserved.
 
 import Foundation
-import RxSwift
+import RxCocoa
 
 extension ___VARIABLE_sceneName___ViewModel {
   
@@ -26,7 +26,7 @@ extension ___VARIABLE_sceneName___ViewModel {
   
   // MARK: - module output structure
   struct ModuleOutput {
-    let moduleAction: Observable<OutputModuleActionType>
+    let moduleAction: Signal<OutputModuleActionType>
   }
   
 }

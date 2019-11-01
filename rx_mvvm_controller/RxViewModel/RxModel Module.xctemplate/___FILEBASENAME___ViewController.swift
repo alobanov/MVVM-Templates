@@ -21,7 +21,7 @@ class ___VARIABLE_sceneName___ViewController: UIViewController {
   var bag = DisposeBag()
   
   // Private
-  private let viewAppearState = PublishSubject<ViewAppearState>()
+  private let viewAppearState = PublishRelay<ViewAppearState>()
   
   // IBOutlet & UI
   lazy var customView: ___VARIABLE_sceneName___View = {
@@ -38,27 +38,27 @@ class ___VARIABLE_sceneName___ViewController: UIViewController {
     super.viewDidLoad()
     configureUI()
     configureRx()
-    viewAppearState.onNext(.didLoad)
+    viewAppearState.accept(.didLoad)
   }
   
   override func viewWillAppear(_ animated: Bool) {
     super.viewWillAppear(animated)
-    viewAppearState.onNext(.willAppear)
+    viewAppearState.accept(.willAppear)
   }
   
   override func viewDidAppear(_ animated: Bool) {
     super.viewDidAppear(animated)
-    viewAppearState.onNext(.didAppear)
+    viewAppearState.accept(.didAppear)
   }
   
   override func viewWillDisappear(_ animated: Bool) {
     super.viewWillDisappear(animated)
-    viewAppearState.onNext(.willDisappear)
+    viewAppearState.accept(.willDisappear)
   }
   
   override func viewDidDisappear(_ animated: Bool) {
     super.viewDidDisappear(animated)
-    viewAppearState.onNext(.didDisappear)
+    viewAppearState.accept(.didDisappear)
   }
   
   deinit {
@@ -73,15 +73,15 @@ class ___VARIABLE_sceneName___ViewController: UIViewController {
     }
     
     let input = ___VARIABLE_sceneName___ViewModel.Input(
-      appearState: viewAppearState
+      appearState: viewAppearState.asSignal()
     )
     let output = model.configure(input: input)
     
-    output.title.subscribe(onNext: { [weak self] str in
+    output.title.drive(onNext: { [weak self] str in
       self?.navigationItem.title = str
     }).disposed(by: bag)
     
-    output.state.subscribe(onNext: { [weak self] state in
+    output.state.drive(onNext: { [weak self] state in
       // state handler
       print(state)
     }).disposed(by: bag)

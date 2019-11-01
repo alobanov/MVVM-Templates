@@ -22,12 +22,12 @@ class ___VARIABLE_sceneName___ViewModel: RxViewModelType, RxViewModelModuleType,
   }
   
   struct Input {
-    let appearState: Observable<ViewAppearState>
+    let appearState: Signal<ViewAppearState>
   }
   
   struct Output {
-    let title: Observable<String>
-    let state: Observable<ModelState>
+    let title: Driver<String>
+    let state: Driver<ModelState>
   }
   
   // MARK: Dependencies
@@ -36,11 +36,11 @@ class ___VARIABLE_sceneName___ViewModel: RxViewModelType, RxViewModelModuleType,
   
   // MARK: Properties
   private let bag = DisposeBag()
-  private let modelState: RxViewModelStateProtocol = RxViewModelState()
+  private let modelState = BehaviorRelay<ModelState>(value: .unknown)
   
   // MARK: Observables
   private let title = Observable.just("___VARIABLE_sceneName___")
-  private let outputModuleAction = PublishSubject<OutputModuleActionType>()
+  private let outputModuleAction = PublishRelay<OutputModuleActionType>()
   
   // MARK: - initializer
   
@@ -53,19 +53,19 @@ class ___VARIABLE_sceneName___ViewModel: RxViewModelType, RxViewModelModuleType,
   
   func configure(input: Input) -> Output {
     // Configure input
-    input.appearState.subscribe(onNext: { [weak self] (state) in
+    input.appearState.emit(onNext: { [weak self] state in
       switch state {
-        case .didLoad:
-          self?.start()
-        default:
-          break
+      case .didLoad:
+        self?.start()
+      default:
+        break
       }
     }).disposed(by: bag)
     
     // Configure output
     return Output(
-      title: title.asObservable(),
-      state: modelState.state.asObservable()
+      title: title.asDriver(onErrorJustReturn: ""),
+      state: modelState.asDriver(onErrorJustReturn: .unknown)
     )
   }
   
@@ -76,7 +76,7 @@ class ___VARIABLE_sceneName___ViewModel: RxViewModelType, RxViewModelModuleType,
     
     // Configure module output
     return ModuleOutput(
-      moduleAction: outputModuleAction.asObservable()
+      moduleAction: outputModuleAction.asSignal()
     )
   }
   
