@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ___VARIABLE_sceneName___Configurator {
+public class ___VARIABLE_sceneName___Configurator {
   typealias Result = (
     viewController: UIViewController,
     moduleOutput: ___VARIABLE_sceneName___ViewModel.ModuleOutput)
@@ -41,7 +41,7 @@ class ___VARIABLE_sceneName___Configurator {
   static func module(
     inputData: ___VARIABLE_sceneName___ViewModel.ModuleInputData,
     moduleInput: ___VARIABLE_sceneName___ViewModel.ModuleInput)
-    -> (Presentable, ___VARIABLE_sceneName___ViewModel.ModuleOutput)? {
+    -> ___VARIABLE_sceneName___Configurator.Result? {
       do {
         let output = try ___VARIABLE_sceneName___Configurator.configure(inputData: inputData, moduleInput: moduleInput)
         return (output.viewController, output.moduleOutput)

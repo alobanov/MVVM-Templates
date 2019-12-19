@@ -10,22 +10,22 @@ import Foundation
 import RxSwift
 import RxCocoa
 
-protocol ___VARIABLE_sceneName___ViewOutput {
+public protocol ___VARIABLE_sceneName___ViewOutput {
   func configure(input: ___VARIABLE_sceneName___ViewModel.Input) -> ___VARIABLE_sceneName___ViewModel.Output
 }
 
-class ___VARIABLE_sceneName___ViewModel: RxViewModelType, RxViewModelModuleType, ___VARIABLE_sceneName___ViewOutput {
+public class ___VARIABLE_sceneName___ViewModel: RxViewModelType, RxViewModelModuleType, ___VARIABLE_sceneName___ViewOutput {
   
   // MARK: In/Out struct
-  struct InputDependencies {
+  public struct InputDependencies {
     
   }
   
-  struct Input {
+  public struct Input {
     let appearState: Signal<ViewAppearState>
   }
   
-  struct Output {
+  public struct Output {
     let title: Driver<String>
     let state: Driver<ModelState>
   }
@@ -44,14 +44,18 @@ class ___VARIABLE_sceneName___ViewModel: RxViewModelType, RxViewModelModuleType,
   
   // MARK: - initializer
   
-  init(dependencies: InputDependencies, moduleInputData: ModuleInputData) {
+  public init(dependencies: InputDependencies, moduleInputData: ModuleInputData) {
     self.dp = dependencies
     self.moduleInputData = moduleInputData
   }
   
+  private func start() {
+    
+  }
+  
   // MARK: - ___VARIABLE_sceneName___ViewOutput
   
-  func configure(input: Input) -> Output {
+  public func configure(input: Input) -> Output {
     // Configure input
     input.appearState.emit(onNext: { [weak self] state in
       switch state {
@@ -71,7 +75,7 @@ class ___VARIABLE_sceneName___ViewModel: RxViewModelType, RxViewModelModuleType,
   
   // MARK: - Module configuration
   
-  func configureModule(input: ModuleInput) -> ModuleOutput {
+  public func configureModule(input: ModuleInput) -> ModuleOutput {
     // Configure input signals
     
     // Configure module output
@@ -81,10 +85,6 @@ class ___VARIABLE_sceneName___ViewModel: RxViewModelType, RxViewModelModuleType,
   }
   
   // MARK: - Additional
-
-  func start() {
-
-  }
 
   deinit {
     print("-- ___VARIABLE_sceneName___ViewModel dead")

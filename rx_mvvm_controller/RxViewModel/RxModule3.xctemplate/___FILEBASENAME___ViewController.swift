@@ -10,12 +10,12 @@ import UIKit
 import RxSwift
 import RxCocoa
 
-class ___VARIABLE_sceneName___ViewController: Controller<___VARIABLE_sceneName___View>  {
+public class ___VARIABLE_sceneName___ViewController: Controller<___VARIABLE_sceneName___View>  {
   
   // MARK: - Properties
   
   // Dependencies
-  var viewModel: ___VARIABLE_sceneName___ViewOutput?
+  public var viewModel: ___VARIABLE_sceneName___ViewOutput?
   
   // Private
     

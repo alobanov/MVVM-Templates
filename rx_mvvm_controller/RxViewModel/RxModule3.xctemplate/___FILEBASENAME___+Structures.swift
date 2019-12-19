@@ -8,7 +8,7 @@
 import Foundation
 import RxCocoa
 
-extension ___VARIABLE_sceneName___ViewModel {
+public extension ___VARIABLE_sceneName___ViewModel {
   
   enum OutputModuleActionType {
     

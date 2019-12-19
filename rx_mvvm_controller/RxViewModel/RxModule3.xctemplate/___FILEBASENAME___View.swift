@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ___VARIABLE_sceneName___View: UIView, ViewProtocol {
+public class ___VARIABLE_sceneName___View: UIView, ViewProtocol {
   
   override init(frame: CGRect = CGRect.zero) {
     super.init(frame: frame)
@@ -25,10 +25,10 @@ class ___VARIABLE_sceneName___View: UIView, ViewProtocol {
   }
   
   private func addSubviews() {
-    
+
   }
   
-  public func makeConstraints(viewController: UIViewController) {}
+  public func makeConstraints(viewController: UIViewController) {
     
   }
 }
