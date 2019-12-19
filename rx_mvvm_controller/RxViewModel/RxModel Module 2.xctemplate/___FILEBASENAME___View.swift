@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ___VARIABLE_sceneName___View: UIView {
+class ___VARIABLE_sceneName___View: UIView, ViewProtocol {
   
   override init(frame: CGRect = CGRect.zero) {
     super.init(frame: frame)
@@ -28,7 +28,7 @@ class ___VARIABLE_sceneName___View: UIView {
     
   }
   
-  public func makeConstraints(viewController: UIViewController) {
+  public func makeConstraints(viewController: UIViewController) {}
     
   }
 }
