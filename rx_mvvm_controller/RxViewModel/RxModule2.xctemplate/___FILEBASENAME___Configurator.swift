@@ -13,8 +13,8 @@ class ___VARIABLE_sceneName___Configurator {
     viewController: UIViewController,
     moduleOutput: ___VARIABLE_sceneName___ViewModel.ModuleOutput)
 
-  class func configure(inputData:___VARIABLE_sceneName___ViewModel.ModuleInputData = .init(),
-                       moduleInput: ___VARIABLE_sceneName___ViewModel.ModuleInput = .init()) throws -> Result {
+  class func configure(inputData:___VARIABLE_sceneName___ViewModel.ModuleInputData,
+                       moduleInput: ___VARIABLE_sceneName___ViewModel.ModuleInput) throws -> Result {
     // View controller
     let viewController = createViewController()
       
@@ -39,8 +39,8 @@ class ___VARIABLE_sceneName___Configurator {
   }
  
   static func module(
-    inputData: ___VARIABLE_sceneName___ViewModel.ModuleInputData = .init(),
-    moduleInput: ___VARIABLE_sceneName___ViewModel.ModuleInput = .init())
+    inputData: ___VARIABLE_sceneName___ViewModel.ModuleInputData,
+    moduleInput: ___VARIABLE_sceneName___ViewModel.ModuleInput)
     -> (Presentable, ___VARIABLE_sceneName___ViewModel.ModuleOutput)? {
       do {
         let output = try ___VARIABLE_sceneName___Configurator.configure(inputData: inputData, moduleInput: moduleInput)
