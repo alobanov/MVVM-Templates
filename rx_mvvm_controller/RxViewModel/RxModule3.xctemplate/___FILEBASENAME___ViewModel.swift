@@ -39,7 +39,7 @@ public class ___VARIABLE_sceneName___ViewModel: RxViewModelType, RxViewModelModu
   private let modelState = BehaviorRelay<ModelState>(value: .unknown)
   
   // MARK: Observables
-  private let title = Observable.just("___VARIABLE_sceneName___")
+  
   private let outputModuleAction = PublishRelay<OutputModuleActionType>()
   
   // MARK: - initializer
@@ -49,26 +49,19 @@ public class ___VARIABLE_sceneName___ViewModel: RxViewModelType, RxViewModelModu
     self.moduleInputData = moduleInputData
   }
   
-  private func start() {
-    
+  private var start: Binder<ViewAppearState> {
+    return Binder(self) { base, _ in }
   }
   
   // MARK: - ___VARIABLE_sceneName___ViewOutput
   
   public func configure(input: Input) -> Output {
     // Configure input
-    input.appearState.emit(onNext: { [weak self] state in
-      switch state {
-      case .didLoad:
-        self?.start()
-      default:
-        break
-      }
-    }).disposed(by: bag)
+    input.appearState.filter { $0 == .didLoad }.emit(to: start).disposed(by: bag)
     
     // Configure output
     return Output(
-      title: title.asDriver(onErrorJustReturn: ""),
+      title: Driver.just("___VARIABLE_sceneName___"),
       state: modelState.asDriver(onErrorJustReturn: .unknown)
     )
   }
@@ -88,5 +81,30 @@ public class ___VARIABLE_sceneName___ViewModel: RxViewModelType, RxViewModelModu
 
   deinit {
     print("-- ___VARIABLE_sceneName___ViewModel dead")
+  }
+}
+
+
+/// Module struct
+
+public extension ___VARIABLE_sceneName___ViewModel {
+  // MARK: - initial module data
+  struct ModuleInputData {
+    
+  }
+  
+  // MARK: - module input structure
+  struct ModuleInput {
+    
+  }
+  
+  // MARK: - module output structure
+  
+  enum OutputModuleActionType {
+    
+  }
+  
+  struct ModuleOutput {
+    let moduleAction: Signal<OutputModuleActionType>
   }
 }

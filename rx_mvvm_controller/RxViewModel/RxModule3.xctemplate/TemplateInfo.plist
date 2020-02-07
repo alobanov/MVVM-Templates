@@ -48,20 +48,6 @@
 		</dict>
 		<dict>
 			<key>Default</key>
-			<string>___VARIABLE_sceneName___+Structures</string>
-			<key>Description</key>
-			<string>The structures name</string>
-			<key>Identifier</key>
-			<string>structuresName</string>
-			<key>Name</key>
-			<string>Structures:</string>
-			<key>Required</key>
-			<true/>
-			<key>Type</key>
-			<string>static</string>
-		</dict>
-		<dict>
-			<key>Default</key>
 			<string>___VARIABLE_sceneName___Configurator</string>
 			<key>Description</key>
 			<string>The configurator name</string>

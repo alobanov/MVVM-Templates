@@ -15,7 +15,7 @@ public class ___VARIABLE_sceneName___ViewController: Controller<___VARIABLE_scen
   // MARK: - Properties
   
   // Dependencies
-  public var viewModel: ___VARIABLE_sceneName___ViewOutput?
+  public var viewModel: ___VARIABLE_sceneName___ViewOutput!
   
   // Private
     
@@ -32,19 +32,20 @@ public class ___VARIABLE_sceneName___ViewController: Controller<___VARIABLE_scen
   }
   
   public override func configureRx() {
-    guard let model = viewModel else {
-      assertionFailure("Empty ViewModel")
-      return
-    }
+    /// Commands
     
     let input = ___VARIABLE_sceneName___ViewModel.Input(
       appearState: viewAppearState.asSignal()
     )
     
-    let output = model.configure(input: input)
+    /// Bindings
     
-    output.title.drive(rx.title).disposed(by: bag)
-    output.state.drive(stateHandler).disposed(by: bag)
+    configureBindings(viewModel.configure(input: input))
+  }
+  
+  private func configureBindings(_ bindings: ___VARIABLE_sceneName___ViewModel.Output) {
+    bindings.title.drive(rx.title).disposed(by: bag)
+    bindings.state.drive(stateHandler).disposed(by: bag)
   }
   
   // MARK: - Additional
