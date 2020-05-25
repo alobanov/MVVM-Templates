@@ -10,7 +10,7 @@ import UIKit
 import RxSwift
 import RxCocoa
 
-public class ___VARIABLE_sceneName___ViewController: Controller<___VARIABLE_sceneName___View>  {
+public class ___VARIABLE_sceneName___Controller: Controller<___VARIABLE_sceneName___View>  {
   
   // MARK: - Properties
   
@@ -33,13 +33,11 @@ public class ___VARIABLE_sceneName___ViewController: Controller<___VARIABLE_scen
   
   public override func configureRx() {
     /// Commands
-    
     let input = ___VARIABLE_sceneName___ViewModel.Input(
       appearState: viewAppearState.asSignal()
     )
     
     /// Bindings
-    
     configureBindings(viewModel.configure(input: input))
   }
   

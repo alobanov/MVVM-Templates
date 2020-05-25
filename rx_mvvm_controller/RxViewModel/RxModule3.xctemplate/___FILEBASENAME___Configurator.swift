@@ -37,10 +37,10 @@ public class ___VARIABLE_sceneName___Configurator {
   }
   
   private class func createDependencies() throws -> ___VARIABLE_sceneName___ViewModel.InputDependencies {
-    return ___VARIABLE_sceneName___ViewModel.InputDependencies()
+    return .init()
   }
  
-  static func module(input: Input) -> ___VARIABLE_sceneName___Configurator.Result {
+  static func module(input: Input) -> Result {
     do {
       let output = try ___VARIABLE_sceneName___Configurator.configure(input: input)
       return (output.viewController, output.moduleOutput)

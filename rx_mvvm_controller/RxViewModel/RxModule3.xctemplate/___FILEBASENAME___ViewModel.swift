@@ -40,7 +40,7 @@ public class ___VARIABLE_sceneName___ViewModel: RxViewModelType, RxViewModelModu
   
   // MARK: Observables
   
-  private let outputModuleAction = PublishRelay<OutputModuleActionType>()
+  private let moduleAction = PublishRelay<ModuleAction>()
   
   // MARK: - initializer
   
@@ -73,7 +73,7 @@ public class ___VARIABLE_sceneName___ViewModel: RxViewModelType, RxViewModelModu
     
     // Configure module output
     return ModuleOutput(
-      moduleAction: outputModuleAction.asSignal()
+      moduleAction: moduleAction.asSignal()
     )
   }
   
@@ -100,11 +100,11 @@ public extension ___VARIABLE_sceneName___ViewModel {
   
   // MARK: - module output structure
   
-  enum OutputModuleActionType {
+  enum ModuleAction {
     
   }
   
   struct ModuleOutput {
-    let moduleAction: Signal<OutputModuleActionType>
+    let moduleAction: Signal<ModuleAction>
   }
 }
