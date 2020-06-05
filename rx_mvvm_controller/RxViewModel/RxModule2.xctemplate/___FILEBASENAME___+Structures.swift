@@ -9,24 +9,19 @@ import Foundation
 import RxCocoa
 
 extension ___VARIABLE_sceneName___ViewModel {
-  
-  enum OutputModuleActionType {
-    
-  }
-  
-  // MARK: - initial module data
-  struct ModuleInputData {
-    
-  }
-  
-  // MARK: - module input structure
-  struct ModuleInput {
-    
-  }
-  
-  // MARK: - module output structure
-  struct ModuleOutput {
-    let moduleAction: Signal<OutputModuleActionType>
-  }
-  
+    enum OutputModuleActionType {}
+
+    // MARK: - initial module data
+
+    struct ModuleInputData {}
+
+    // MARK: - module input structure
+
+    struct ModuleInput {}
+
+    // MARK: - module output structure
+
+    struct ModuleOutput {
+        let moduleAction: Signal<OutputModuleActionType>
+    }
 }
